@@ -35,7 +35,8 @@ space = {lines}|[ \t\f]
 comment = \/\/.*
 decimal = [0-9]+
 ident = [A-Za-z_$][A-Za-z0-9_$]*
-
+characters = '.'
+hexa = 0c[0-9a-fa-F]
 
 //Definition
 %%
@@ -47,12 +48,14 @@ ident = [A-Za-z_$][A-Za-z0-9_$]*
 "-" {return symbol(Sym.MINUS);}
 "*" {return symbol(Sym.STAR);}
 "/" {return symbol(Sym.SLASH);}
+
 "[" {return symbol(Sym.LBRACK);}
 "]" {return symbol(Sym.RBRACK);}
 "(" {return symbol(Sym.LPAREN);}
 ")" {return symbol(Sym.RPAREN);}
 "{" {return symbol(Sym.LCURL);}
 "}" {return symbol(Sym.RCURL);}
+
 "<" {return symbol(Sym.LT);}
 "<=" {return symbol(Sym.LE);}
 ">" {return symbol(Sym.GT);}
@@ -63,23 +66,29 @@ ident = [A-Za-z_$][A-Za-z0-9_$]*
 ">=" {return symbol(Sym.COMMA);}
 "!=" {return symbol(Sym.COLON);}
 "==" {return symbol(Sym.SEMIC);}
-// Noch zu machen
-">" {return symbol(Sym.ASGN);}
-">=" {return symbol(Sym.TYPE);}
-"!=" {return symbol(Sym.PROC);}
-"==" {return symbol(Sym.ARRAY);}
-">" {return symbol(Sym.OF);}
-">=" {return symbol(Sym.REF);}
-"!=" {return symbol(Sym.VAR);}
-"==" {return symbol(Sym.IF);}
-"!=" {return symbol(Sym.ELSE);}
-"==" {return symbol(Sym.WHILE);}
+":="  {return symbol(Sym.ASGN);}
+","   {return symbol(Sym.COMMA);}
+":"   {return symbol(Sym.COLON);}
+";"   {return symbol(Sym.SEMIC);}
+
+type   {return symbol(Sym.TYPE);}
+proc   {return symbol(Sym.PROC);}
+array  {return symbol(Sym.ARRAY);}
+of     {return symbol(Sym.OF);}
+ref    {return symbol(Sym.REF);}
+var    {return symbol(Sym.VAR);}
+if     {return symbol(Sym.IF);}
+else   {return symbol(Sym.ELSE);}
+while  {return symbol(Sym.WHILE);}
+
 
 // Tokens weiter beschreiben
 {space} {}
 {comment} {}
 {decimal} {return symbol(Sym.INTLIT,Integer.parseInt(yytext()));}
 {ident} {return symbol(Sym.IDENT,yytext());}
+{characters} {return symbol(Sym.INTLIT, (int)yytext().charAt(1));}
+{hexa} {return symbol (Sym.INTLIT, Integer.decode(yytext()));}
 
 
 
