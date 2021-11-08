@@ -50,7 +50,46 @@ terminal Identifier IDENT;    //Identifiers
 terminal Integer INTLIT;      //Integer literals
 
 non terminal Program program;
+non terminal ArrayAccess ArrayAccess;
+non terminal ArrayTypeExpression ArrayTypeExpression;
+non terminal AssignStatement AssignStatement;
+non terminal BinaryExpression BinaryExpression;
+non terminal CallStatement CallStatement;
+non terminal CompoundStatement CompoundStatement;
+non terminal EmptyStatement EmptyStatement;
+non terminal Expression Expression;
+non terminal GlobalDeclaration GlobalDeclaration;
+non terminal IfStatement IfStatement;
+non terminal IntLiteral IntLiteral;
+non terminal NamedTypeExpression NamedTypeExpression;
+non terminal NamedVariable NamedVariable;
+non terminal ParameterDeclaration ParameterDeclaration;
+non terminal ProcedureDeclaration ProcDeclaration;
+non terminal Statement Statement;
+non terminal TypeDeclaration TypeDeclaration;
+non terminal TypeExpression TypeExpression;
+non terminal Variable Var;
+non terminal VariableDeclaration VarDeclaration;
+non terminal VariableExpression VarExpression;
+non terminal WhileStatement WhileStatement;
+non terminal List<GlobalDeclaration> GlobalDeclarationList;
+non terminal List<Statement> StatementList;
+non terminal List<ParameterDeclaration> ParameterList;
+non terminal List<Expression> Arguments;
+non terminal List<Statement> StatementList;
+non terminal List<VariableDeclaration> VarList;
+
+
 
 start with program;
 
 program ::= INTLIT; //TODO (assignment 2 and 3): Just a dummy, needs to be replaced by the actual spl grammar.
+
+GlobalDeclarationList ::= GlobalDeclaration GlobalDeclarationList |  ;
+GlobalDeclaration ::= TypeDeclaration | ProcDeclaration;
+TypeDeclaration ::= TYPE IDENT EQ NamedTypeExpression SEMIC;
+ProcDeclaration ::= PROC IDENT LPAREN ParameterList RPAREN LCURL StatementList RCURL;
+NamedTypeExpression ::= IDENT | ArrayTypeExpression;
+ParameterList ::= ParameterDeclaration ParameterList | ;
+ParameterDeclaration ::= IDENT COLON NamedTypeExpression | REF COLON NamedTypeExpression ;
+// eigenständig

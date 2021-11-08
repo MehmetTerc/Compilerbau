@@ -60,12 +60,10 @@ hexa = 0c[0-9a-fa-F]
 "<=" {return symbol(Sym.LE);}
 ">" {return symbol(Sym.GT);}
 ">=" {return symbol(Sym.GE);}
-"!=" {return symbol(Sym.NE);}
-"==" {return symbol(Sym.EQ);}
+"#" {return symbol(Sym.NE);}
+"=" {return symbol(Sym.EQ);}
 ">" {return symbol(Sym.ASGN);}
 ">=" {return symbol(Sym.COMMA);}
-"!=" {return symbol(Sym.COLON);}
-"==" {return symbol(Sym.SEMIC);}
 ":="  {return symbol(Sym.ASGN);}
 ","   {return symbol(Sym.COMMA);}
 ":"   {return symbol(Sym.COLON);}
