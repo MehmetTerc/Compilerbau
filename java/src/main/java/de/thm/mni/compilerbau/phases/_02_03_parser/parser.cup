@@ -76,20 +76,37 @@ non terminal List<GlobalDeclaration> GlobalDeclarationList;
 non terminal List<Statement> StatementList;
 non terminal List<ParameterDeclaration> ParameterList;
 non terminal List<Expression> Arguments;
+non terminal List<Expression> ArgList;
+non terminal Expression NotEmptyArg;
 non terminal List<Statement> StatementList;
 non terminal List<VariableDeclaration> VarList;
+non terminal Comma;
 
 
 
 start with program;
 
-program ::= INTLIT; //TODO (assignment 2 and 3): Just a dummy, needs to be replaced by the actual spl grammar.
-
+program ::= GlobalDeclarationList; //TODO (assignment 2 and 3): Just a dummy, needs to be replaced by the actual spl grammar.
 GlobalDeclarationList ::= GlobalDeclaration GlobalDeclarationList |  ;
 GlobalDeclaration ::= TypeDeclaration | ProcDeclaration;
+
 TypeDeclaration ::= TYPE IDENT EQ NamedTypeExpression SEMIC;
-ProcDeclaration ::= PROC IDENT LPAREN ParameterList RPAREN LCURL StatementList RCURL;
 NamedTypeExpression ::= IDENT | ArrayTypeExpression;
+ProcDeclaration ::= PROC IDENT LPAREN ParameterList RPAREN LCURL StatementList RCURL;
 ParameterList ::= ParameterDeclaration ParameterList | ;
-ParameterDeclaration ::= IDENT COLON NamedTypeExpression | REF COLON NamedTypeExpression ;
+ParameterDeclaration ::= IDENT COLON NamedTypeExpression Comma | REF COLON NamedTypeExpression Comma ;
+Comma ::= | COMMA;
 // eigenständig
+StatementList ::= | Statement StatementList;
+Statement ::= IfStatement | WhileStatement | AssignStatement | EmptyStatement | CompoundStatement | CallStatement;
+IfStatement ::= IF LPAREN Expression RPAREN  StatementList
+    | IF LPAREN Expression RPAREN StatementList  ELSE StatementList;
+WhileStatement ::= WHILE LPAREN Expression RPAREN StatementList;
+EmptyStatement ::= SEMIC;
+AssignStatement ::= IDENT ASGN Expression;
+CompoundStatement ::= LCURL StatementList RCURL;
+//Verwendungsgrund Arguments: mehrere Argumente können übergeben werden
+CallStatement ::= IDENT LPAREN Arguments  RPAREN;
+Arguments ::= ArgList | ;
+ArgList ::= NotEmptyArg | NotEmptyArg COMMA ArgList;
+NotEmptyArg ::= Expression;
