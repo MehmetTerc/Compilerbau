@@ -58,11 +58,16 @@ non terminal CallStatement CallStatement;
 non terminal CompoundStatement CompoundStatement;
 non terminal EmptyStatement EmptyStatement;
 non terminal Expression Expression;
+non terminal Expression CompareExpression;
+non terminal Expression MulExpression;
+non terminal Expression AddExpression;
+non terminal Expression UnaryExpression;
+non terminal Expression PrimaryExpression;
 non terminal GlobalDeclaration GlobalDeclaration;
 non terminal IfStatement IfStatement;
 non terminal IntLiteral IntLiteral;
 non terminal NamedTypeExpression NamedTypeExpression;
-non terminal NamedVariable NamedVariable;
+non terminal Variable NamedVariable;
 non terminal ParameterDeclaration ParameterDeclaration;
 non terminal ProcedureDeclaration ProcDeclaration;
 non terminal Statement Statement;
@@ -77,11 +82,12 @@ non terminal List<Statement> StatementList;
 non terminal List<ParameterDeclaration> ParameterList;
 non terminal List<Expression> Arguments;
 non terminal List<Expression> ArgList;
+non terminal List<VariableDeclaration> VarList;
 non terminal Expression NotEmptyArg;
 non terminal List<Statement> StatementList;
 non terminal List<VariableDeclaration> VarList;
 non terminal Comma;
-
+non terminal CompOperator;
 
 
 start with program;
@@ -92,11 +98,16 @@ GlobalDeclaration ::= TypeDeclaration | ProcDeclaration;
 
 TypeDeclaration ::= TYPE IDENT EQ NamedTypeExpression SEMIC;
 NamedTypeExpression ::= IDENT | ArrayTypeExpression;
-ProcDeclaration ::= PROC IDENT LPAREN ParameterList RPAREN LCURL StatementList RCURL;
+ArrayTypeExpression ::= ARRAY LBRACK INTLIT RBRACK OF NamedTypeExpression;
+
+ProcDeclaration ::= PROC IDENT LPAREN ParameterList RPAREN LCURL VarList StatementList RCURL;
+VarList ::= VarDeclaration VarList | ;
+VarDeclaration ::= VAR IDENT COLON NamedTypeExpression SEMIC;
 ParameterList ::= ParameterDeclaration ParameterList | ;
 ParameterDeclaration ::= IDENT COLON NamedTypeExpression Comma | REF COLON NamedTypeExpression Comma ;
 Comma ::= | COMMA;
 // eigenständig
+
 StatementList ::= | Statement StatementList;
 Statement ::= IfStatement | WhileStatement | AssignStatement | EmptyStatement | CompoundStatement | CallStatement;
 IfStatement ::= IF LPAREN Expression RPAREN  StatementList
@@ -110,3 +121,14 @@ CallStatement ::= IDENT LPAREN Arguments  RPAREN;
 Arguments ::= ArgList | ;
 ArgList ::= NotEmptyArg | NotEmptyArg COMMA ArgList;
 NotEmptyArg ::= Expression;
+Expression ::= CompareExpression;
+CompOperator ::= LT | LE | GT | GE | NE | EQ;
+CompareExpression ::= AddExpression | AddExpression CompOperator AddExpression;
+AddExpression ::= MulExpression | AddExpression PLUS MulExpression | AddExpression MINUS MulExpression;
+MulExpression ::= UnaryExpression | MulExpression STAR UnaryExpression | MulExpression SLASH UnaryExpression;
+UnaryExpression ::= PrimaryExpression | MINUS UnaryExpression;
+PrimaryExpression ::= LPAREN Expression RPAREN | IntLiteral | VarExpression;
+IntLiteral ::= INTLIT;
+VarExpression ::= NamedVariable;
+NamedVariable ::= IDENT | ArrayAccess;
+ArrayAccess ::= NamedVariable LBRACK Expression RBRACK;
