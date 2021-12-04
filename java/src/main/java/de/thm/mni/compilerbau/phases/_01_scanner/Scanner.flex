@@ -36,7 +36,7 @@ comment = \/\/.*
 decimal = [0-9]+
 ident = [A-Za-z_$][A-Za-z0-9_$]*
 characters = '.'
-hexa = 0c[0-9a-fa-F]
+hexa = 0c[0-9a-fA-F]
 
 //Definition
 %%

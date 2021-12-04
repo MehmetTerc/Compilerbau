@@ -84,8 +84,6 @@ non terminal List<Expression> Arguments;
 non terminal List<Expression> ArgList;
 non terminal List<VariableDeclaration> VarList;
 non terminal Expression NotEmptyArg;
-non terminal List<Statement> StatementList;
-non terminal List<VariableDeclaration> VarList;
 non terminal Comma;
 non terminal CompOperator;
 
@@ -110,9 +108,9 @@ Comma ::= | COMMA;
 
 StatementList ::= | Statement StatementList;
 Statement ::= IfStatement | WhileStatement | AssignStatement | EmptyStatement | CompoundStatement | CallStatement;
-IfStatement ::= IF LPAREN Expression RPAREN  StatementList
-    | IF LPAREN Expression RPAREN StatementList  ELSE StatementList;
-WhileStatement ::= WHILE LPAREN Expression RPAREN StatementList;
+IfStatement ::= IF LPAREN Expression RPAREN  Statement
+    | IF LPAREN Expression RPAREN Statement ELSE Statement;
+WhileStatement ::= WHILE LPAREN Expression RPAREN Statement;
 EmptyStatement ::= SEMIC;
 AssignStatement ::= IDENT ASGN Expression;
 CompoundStatement ::= LCURL StatementList RCURL;
