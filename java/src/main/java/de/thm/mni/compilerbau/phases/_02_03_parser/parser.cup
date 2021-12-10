@@ -89,37 +89,39 @@ non terminal CompOperator;
 
 
 start with program;
+//alle nonterminale Begriffe definieren
+//REKursion kommt öfters vor
+//abstrakte Klassen weiterleiten (Bsp. GlobalDecl
 
-program ::= GlobalDeclarationList; //TODO (assignment 2 and 3): Just a dummy, needs to be replaced by the actual spl grammar.
-GlobalDeclarationList ::= GlobalDeclaration GlobalDeclarationList |  ;
-GlobalDeclaration ::= TypeDeclaration | ProcDeclaration;
+program ::= GlobalDeclarationList:gdl {:RESULT= new Program(new Position(gdlleft,gdlright),gdl);:};
+GlobalDeclarationList ::= GlobalDeclaration:gd  GlobalDeclarationList:gdl {:RESULT=cons(gd,gdl);:}|  {:RESULT=nil();:} ;
+GlobalDeclaration ::= TypeDeclaration:td {:RESULT=td;:}| ProcDeclaration:pd {:RESULT=pd;:};
 
-TypeDeclaration ::= TYPE IDENT EQ NamedTypeExpression SEMIC;
-NamedTypeExpression ::= IDENT | ArrayTypeExpression;
-ArrayTypeExpression ::= ARRAY LBRACK INTLIT RBRACK OF NamedTypeExpression;
+TypeDeclaration ::= TYPE:typ IDENT:id EQ NamedTypeExpression:npe SEMIC {:RESULT= new TypeDeclaration(new Position(typleft,typright),id,npe);:};
+NamedTypeExpression ::= IDENT | ArrayTypeExpression:ate {:RESULT=ate;:};
+ArrayTypeExpression ::= ARRAY:arr LBRACK INTLIT:inl RBRACK OF NamedTypeExpression:nte {:RESULT= new ArrayTypeExpression(new Position(arrleft,arrright),nte,inl);:};
 
-ProcDeclaration ::= PROC IDENT LPAREN ParameterList RPAREN LCURL VarList StatementList RCURL;
-VarList ::= VarDeclaration VarList | ;
-VarDeclaration ::= VAR IDENT COLON NamedTypeExpression SEMIC;
-ParameterList ::= ParameterDeclaration ParameterList | ;
+ProcDeclaration ::= PROC:proc IDENT:id LPAREN ParameterList:pl RPAREN LCURL VarList:vl StatementList:sl RCURL {:RESULT= new ProcedureDeclaration(new Position(procleft,profright),id,pl,vl,sl);:};
+VarList ::= VarDeclaration:vd VarList:vl {:RESULT=cons(vd,vl);:}| {:RESULT=nil();:};
+VarDeclaration ::= VAR:vr IDENT:id COLON NamedTypeExpression:nte SEMIC {:RESULT= new VariableDeclaration(new Position(vrleft,vrright),id,nte);:};
+ParameterList ::= ParameterDeclaration:pd ParameterList:pl {:RESULT=cons(pd,pl);:}| {:RESULT=nil();:};
 ParameterDeclaration ::= IDENT COLON NamedTypeExpression Comma | REF COLON NamedTypeExpression Comma ;
-Comma ::= | COMMA;
+Comma ::= {:RESULT=nil();:} | COMMA;
 // eigenständig
 
-StatementList ::= | Statement StatementList;
-Statement ::= IfStatement | WhileStatement | AssignStatement | EmptyStatement | CompoundStatement | CallStatement;
-IfStatement ::= IF LPAREN Expression RPAREN  Statement
-    | IF LPAREN Expression RPAREN Statement ELSE Statement;
-WhileStatement ::= WHILE LPAREN Expression RPAREN Statement;
+StatementList ::= {:RESULT=nil();:} | Statement:sm StatementList:sl {:RESULT=cons(sm,sl);:};
+Statement ::= IfStatement:is {:RESULT=is;:}| WhileStatement:ws {:RESULT=ws;:} | AssignStatement:as {:RESULT=as;:} | EmptyStatement:es {:RESULT=es;:}| CompoundStatement:cos {:RESULT=cos;:} | CallStatement:cas {:RESULT=cas;:};
+IfStatement ::= IF:if LPAREN Expression:ex RPAREN  Statement:sm
+    | IF:if LPAREN Expression:ex RPAREN Statement:sm ELSE Statement:sm;
+WhileStatement ::= WHILE:wh LPAREN Expression:exp RPAREN Statement:sm {:RESULT= new WhileStatement(new Position(whleft,whright),exp,sm);:};
 EmptyStatement ::= SEMIC;
-AssignStatement ::= IDENT ASGN Expression;
-CompoundStatement ::= LCURL StatementList RCURL;
-//Verwendungsgrund Arguments: mehrere Argumente können übergeben werden
+AssignStatement ::= IDENT:id ASGN:asg Expression:exp {:RESULT= new WhileStatement(new Position(whleft,whright),asg,exp);:};
+CompoundStatement ::= LCURL StatementList:sl RCURL {:RESULT=sl;:};
 CallStatement ::= IDENT LPAREN Arguments  RPAREN;
-Arguments ::= ArgList | ;
-ArgList ::= NotEmptyArg | NotEmptyArg COMMA ArgList;
-NotEmptyArg ::= Expression;
-Expression ::= CompareExpression;
+Arguments ::= ArgList:al {:RESULT=al;:}|  {:RESULT=nil();:} ;
+ArgList ::= NotEmptyArg:nea {:RESULT=nea;:} | NotEmptyArg:nea  COMMA ArgList:al {:RESULT=nea,al;:};
+NotEmptyArg ::= Expression:exp {:RESULT=exp;:};
+Expression ::= CompareExpression:coe {:RESULT=coe;:};
 CompOperator ::= LT | LE | GT | GE | NE | EQ;
 CompareExpression ::= AddExpression | AddExpression CompOperator AddExpression;
 AddExpression ::= MulExpression | AddExpression PLUS MulExpression | AddExpression MINUS MulExpression;
