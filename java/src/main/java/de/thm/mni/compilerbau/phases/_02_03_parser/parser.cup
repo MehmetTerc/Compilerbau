@@ -65,10 +65,10 @@ non terminal Expression UnaryExpression;
 non terminal Expression PrimaryExpression;
 non terminal GlobalDeclaration GlobalDeclaration;
 non terminal IfStatement IfStatement;
-non terminal IntLiteral IntLiteral;
-non terminal NamedTypeExpression NamedTypeExpression;
+non terminal TypeExpression NamedTypeExpression;
 non terminal Variable NamedVariable;
 non terminal ParameterDeclaration ParameterDeclaration;
+non terminal ParameterDeclaration NotEmptyParam;
 non terminal ProcedureDeclaration ProcDeclaration;
 non terminal Statement Statement;
 non terminal TypeDeclaration TypeDeclaration;
@@ -80,53 +80,55 @@ non terminal WhileStatement WhileStatement;
 non terminal List<GlobalDeclaration> GlobalDeclarationList;
 non terminal List<Statement> StatementList;
 non terminal List<ParameterDeclaration> ParameterList;
+non terminal List<ParameterDeclaration> Parameter;
 non terminal List<Expression> Arguments;
 non terminal List<Expression> ArgList;
 non terminal List<VariableDeclaration> VarList;
 non terminal Expression NotEmptyArg;
-non terminal Comma;
-non terminal CompOperator;
-
+non terminal ParameterDeclaration NotEmptyPar;
+non terminal BinaryExpression.Operator CompOperator;
+non terminal IntLiteral IntLiteral;
 
 start with program;
 
-program ::= GlobalDeclarationList; //TODO (assignment 2 and 3): Just a dummy, needs to be replaced by the actual spl grammar.
-GlobalDeclarationList ::= GlobalDeclaration GlobalDeclarationList |  ;
-GlobalDeclaration ::= TypeDeclaration | ProcDeclaration;
 
-TypeDeclaration ::= TYPE IDENT EQ NamedTypeExpression SEMIC;
-NamedTypeExpression ::= IDENT | ArrayTypeExpression;
-ArrayTypeExpression ::= ARRAY LBRACK INTLIT RBRACK OF NamedTypeExpression;
+program ::= GlobalDeclarationList:gdl {:RESULT= new Program(new Position(gdlleft,gdlright),gdl);:};
+GlobalDeclarationList ::= GlobalDeclaration:gd  GlobalDeclarationList:gdl {:RESULT=cons(gd,gdl);:}|  {:RESULT=nil();:} ;
+GlobalDeclaration ::= TypeDeclaration:td {:RESULT=td;:}| ProcDeclaration:pd {:RESULT=pd;:};
 
-ProcDeclaration ::= PROC IDENT LPAREN ParameterList RPAREN LCURL VarList StatementList RCURL;
-VarList ::= VarDeclaration VarList | ;
-VarDeclaration ::= VAR IDENT COLON NamedTypeExpression SEMIC;
-ParameterList ::= ParameterDeclaration ParameterList | ;
-ParameterDeclaration ::= IDENT COLON NamedTypeExpression Comma | REF COLON NamedTypeExpression Comma ;
-Comma ::= | COMMA;
-// eigenständig
+TypeDeclaration ::= TYPE:typ IDENT:id EQ NamedTypeExpression:npe SEMIC {:RESULT= new TypeDeclaration(new Position(typleft,typright),id,npe);:};
+NamedTypeExpression ::= IDENT:id {:RESULT= new NamedTypeExpression(new Position(idleft,idright),id);:} | ArrayTypeExpression:ate {:RESULT=ate;:};
+ArrayTypeExpression ::= ARRAY:arr LBRACK INTLIT:inl RBRACK OF NamedTypeExpression:nte {:RESULT= new ArrayTypeExpression(new Position(arrleft,arrright),nte,inl);:};
 
-StatementList ::= | Statement StatementList;
-Statement ::= IfStatement | WhileStatement | AssignStatement | EmptyStatement | CompoundStatement | CallStatement;
-IfStatement ::= IF LPAREN Expression RPAREN  Statement
-    | IF LPAREN Expression RPAREN Statement ELSE Statement;
-WhileStatement ::= WHILE LPAREN Expression RPAREN Statement;
-EmptyStatement ::= SEMIC;
-AssignStatement ::= IDENT ASGN Expression;
-CompoundStatement ::= LCURL StatementList RCURL;
-//Verwendungsgrund Arguments: mehrere Argumente können übergeben werden
-CallStatement ::= IDENT LPAREN Arguments  RPAREN;
-Arguments ::= ArgList | ;
-ArgList ::= NotEmptyArg | NotEmptyArg COMMA ArgList;
-NotEmptyArg ::= Expression;
-Expression ::= CompareExpression;
-CompOperator ::= LT | LE | GT | GE | NE | EQ;
-CompareExpression ::= AddExpression | AddExpression CompOperator AddExpression;
-AddExpression ::= MulExpression | AddExpression PLUS MulExpression | AddExpression MINUS MulExpression;
-MulExpression ::= UnaryExpression | MulExpression STAR UnaryExpression | MulExpression SLASH UnaryExpression;
-UnaryExpression ::= PrimaryExpression | MINUS UnaryExpression;
-PrimaryExpression ::= LPAREN Expression RPAREN | IntLiteral | VarExpression;
-IntLiteral ::= INTLIT;
-VarExpression ::= NamedVariable;
-NamedVariable ::= IDENT | ArrayAccess;
-ArrayAccess ::= NamedVariable LBRACK Expression RBRACK;
+ProcDeclaration ::= PROC:proc IDENT:id LPAREN Parameter:pl RPAREN LCURL VarList:vl StatementList:sl RCURL {:RESULT= new ProcedureDeclaration(new Position(procleft,procright),id,pl,vl,sl);:};
+VarList ::= VarDeclaration:vd VarList:vl {:RESULT=cons(vd,vl);:}| {:RESULT=nil();:};
+VarDeclaration ::= VAR:vr IDENT:id COLON NamedTypeExpression:nte SEMIC {:RESULT= new VariableDeclaration(new Position(vrleft,vrright),id,nte);:};
+Parameter ::= ParameterList:pl {:RESULT=pl;:}| {:RESULT=nil();:};
+ParameterList ::= NotEmptyPar:nep COMMA ParameterList:pl {:RESULT=cons(nep,pl);:} | NotEmptyPar:nta {:RESULT=cons(nta,nil());:}; //ParameterDeclaration:pd ParameterList:pl {:RESULT=cons(pd,pl);:}| {:RESULT=nil();:};
+NotEmptyPar ::= ParameterDeclaration:pd {:RESULT=pd;:};
+ParameterDeclaration ::= IDENT:id COLON NamedTypeExpression:nte {:RESULT = new ParameterDeclaration(new Position(idleft, idright), id, nte, false);:} | REF IDENT:id COLON NamedTypeExpression:nte  {:RESULT = new ParameterDeclaration(new Position(idleft, idright), id, nte, true);:};
+
+StatementList ::= {:RESULT=nil();:} | Statement:sm StatementList:sl {:RESULT=cons(sm,sl);:};
+Statement ::= IfStatement:is {:RESULT=is;:}| WhileStatement:ws {:RESULT=ws;:} | AssignStatement:as {:RESULT=as;:} | EmptyStatement:es {:RESULT=es;:}| CompoundStatement:cos {:RESULT=cos;:} | CallStatement:cas {:RESULT=cas;:};
+IfStatement ::= IF:i LPAREN Expression:ex RPAREN  Statement:sm {:RESULT= new IfStatement(new Position(ileft,iright),ex,sm,new EmptyStatement(Position.ERROR_POSITION));:}
+    | IF:i LPAREN Expression:ex RPAREN Statement:sm1 ELSE Statement:sm2 {:RESULT= new IfStatement(new Position(ileft,iright),ex,sm1,sm2);:};
+WhileStatement ::= WHILE:wh LPAREN Expression:exp RPAREN Statement:sm {:RESULT= new WhileStatement(new Position(whleft,whright),exp,sm);:};
+EmptyStatement ::= SEMIC:sem {:RESULT= new EmptyStatement(new Position(semleft,semright));:};
+AssignStatement ::= NamedVariable:id ASGN:asg Expression:exp SEMIC {:RESULT= new AssignStatement(new Position(idleft,idright),id,exp);:};
+CompoundStatement ::= LCURL:lc StatementList:sl RCURL {:RESULT= new CompoundStatement(new Position(lcleft,lcright) ,sl);:};
+CallStatement ::= IDENT:id LPAREN ArgList:arg  RPAREN {:RESULT= new CallStatement(new Position(idleft,idright),id ,arg);:};
+Arguments ::= ArgList:al {:RESULT=al;:}|  {:RESULT=nil();:} ;
+ArgList ::= NotEmptyArg:nea COMMA ArgList:al {:RESULT=cons(nea,al);:} | NotEmptyArg:nta {:RESULT=cons(nta,nil());:}; //NotEmptyArg:nea  COMMA ArgList:al {:RESULT=nea,al;:};
+NotEmptyArg ::= Expression:exp {:RESULT=exp;:};
+Expression ::= CompareExpression:coe {:RESULT=coe;:};
+CompOperator ::= LT:lt {:RESULT=BinaryExpression.Operator.LST;:} | LE:le {:RESULT=BinaryExpression.Operator.LSE;:}| GT:gt {:RESULT=BinaryExpression.Operator.GRT;:} | GE:ge {:RESULT=BinaryExpression.Operator.GRE;:} | NE:ne {:RESULT=BinaryExpression.Operator.NEQ;:} | EQ:eq {:RESULT=BinaryExpression.Operator.EQU;:};
+CompareExpression ::= AddExpression:ae {:RESULT=ae;:}| AddExpression:ae1 CompOperator:co AddExpression:ae2  {:RESULT= new BinaryExpression(new Position(ae1left,ae1right),co,ae1,ae2);:};
+AddExpression ::= MulExpression:me {:RESULT=me;:} | AddExpression:ae PLUS MulExpression:me  {:RESULT= new BinaryExpression(new Position(aeleft,aeright),BinaryExpression.Operator.ADD,ae,me);:} | AddExpression:ae MINUS MulExpression:me {:RESULT= new BinaryExpression(new Position(aeleft,aeright),BinaryExpression.Operator.SUB,ae,me);:};
+MulExpression ::= UnaryExpression:ue {:RESULT=ue;:} | MulExpression:me STAR UnaryExpression:ue {:RESULT= new BinaryExpression(new Position(meleft,meright),BinaryExpression.Operator.MUL,me,ue);:} | MulExpression:me SLASH UnaryExpression:ue {:RESULT= new BinaryExpression(new Position(meleft,meright),BinaryExpression.Operator.DIV,me,ue);:};
+
+UnaryExpression ::= PrimaryExpression:pe {:RESULT=pe;:}| MINUS:mi UnaryExpression:ue {:RESULT=new BinaryExpression(new Position(ueleft,ueright),BinaryExpression.Operator.SUB,new IntLiteral(new Position(mileft,miright),0),ue);:};  //bin mir nicht sicher
+PrimaryExpression ::= LPAREN Expression:exp {:RESULT=exp;:} RPAREN |  IntLiteral:il {:RESULT=il;:} | VarExpression:ve {:RESULT=ve;:}; //auch net sicher
+IntLiteral ::= INTLIT:i1 {:RESULT= new IntLiteral(new Position(i1left,i1right), i1);:};
+VarExpression ::= NamedVariable:nv {:RESULT= new VariableExpression(new Position(nvleft,nvright),nv);:};
+NamedVariable ::= IDENT:id {:RESULT= new NamedVariable(new Position(idleft,idright),id);:}  | ArrayAccess:aa {:RESULT=aa;:};
+ArrayAccess ::= NamedVariable:nv LBRACK Expression:ex RBRACK {:RESULT= new ArrayAccess(new Position(nvleft,nvright),nv,ex);:};
