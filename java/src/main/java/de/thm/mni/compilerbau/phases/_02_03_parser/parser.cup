@@ -122,10 +122,11 @@ NotEmptyArg ::= Expression:exp {:RESULT=exp;:};
 Expression ::= CompareExpression:coe {:RESULT=coe;:};
 CompOperator ::= LT:lt {:RESULT=BinaryExpression.Operator.LST;:} | LE:le {:RESULT=BinaryExpression.LSE;:}| GT:gt {:RESULT=BinaryExpression.GRT;:} | GE:ge {:RESULT=BinaryExpression.GRE;:} | NE:ne {:RESULT=BinaryExpression.NEQ;:} | EQ:eq {:RESULT=BinaryExpression.EQU;:};
 //CompareExpression ::= AddExpression | AddExpression CompOperator AddExpression;
-AddExpression ::= MulExpression:me {:RESULT=me;:} | AddExpression:ae PLUS MulExpression:me  {:RESULT= new BinaryExpression(new Position(aeleft,aeright),BinaryExpression.Operator.ADD,ae,me);:}  | AddExpression MINUS MulExpression;
-MulExpression ::= UnaryExpression | MulExpression STAR UnaryExpression | MulExpression SLASH UnaryExpression;
-UnaryExpression ::= PrimaryExpression | MINUS UnaryExpression;
-PrimaryExpression ::= LPAREN Expression RPAREN | INTLIT | NamedVariable;
+AddExpression ::= MulExpression:me {:RESULT=me;:} | AddExpression:ae PLUS MulExpression:me  {:RESULT= new BinaryExpression(new Position(aeleft,aeright),BinaryExpression.Operator.ADD,ae,me);:} | AddExpression:ae MINUS MulExpression:me {:RESULT= new BinaryExpression(new Position(aeleft,aeright),BinaryExpression.Operator.SUB,ae,me);:};
+MulExpression ::= UnaryExpression:ue {:RESULT=ue;:} | MulExpression:me STAR UnaryExpression:ue {:RESULT= new BinaryExpression(new Position(meleft,meright),BinaryExpression.Operator.MUL,me,ue);:} | MulExpression:me SLASH UnaryExpression:ue {:RESULT= new BinaryExpression(new Position(meleft,meright),BinaryExpression.Operator.DIV,me,ue);:};
+
+UnaryExpression ::= PrimaryExpression:pe {:RESULT=pe;:}| MINUS UnaryExpression:ue;  //bin mir nicht sicher
+PrimaryExpression ::= LPAREN Expression RPAREN | INTLIT | NamedVariable; //auch net sicher
 //VarExpression ::= NamedVariable;
 NamedVariable ::= IDENT:id {:RESULT= new NamedTypeExpression(new Position(idleft,idright),id);:}  | ArrayAccess:aa {:RESULT=aa;:};
 ArrayAccess ::= NamedVariable:nv LBRACK Expression:ex RBRACK {:RESULT= new ArrayAccess(new Position(nvleft,nvright),nv,ex);:};
