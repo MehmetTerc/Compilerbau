@@ -115,8 +115,8 @@ IfStatement ::= IF:i LPAREN Expression:ex RPAREN  Statement:sm {:RESULT= new IfS
 WhileStatement ::= WHILE:wh LPAREN Expression:exp RPAREN Statement:sm {:RESULT= new WhileStatement(new Position(whleft,whright),exp,sm);:};
 EmptyStatement ::= SEMIC:sem {:RESULT= new EmptyStatement(new Position(semleft,semright));:};
 AssignStatement ::= NamedVariable:id ASGN:asg Expression:exp SEMIC {:RESULT= new AssignStatement(new Position(idleft,idright),id,exp);:};
-CompoundStatement ::= LCURL:lc StatementList:sl RCURL {:RESULT= new CompoundStatement(new Position(lcleft,lcright) ,sl);:};
-CallStatement ::= IDENT:id LPAREN ArgList:arg  RPAREN {:RESULT= new CallStatement(new Position(idleft,idright),id ,arg);:};
+CompoundStatement ::= LCURL:lc StatementList:sl RCURL  {:RESULT= new CompoundStatement(new Position(lcleft,lcright) ,sl);:};
+CallStatement ::= IDENT:id LPAREN Arguments:arg  RPAREN SEMIC {:RESULT= new CallStatement(new Position(idleft,idright),id ,arg);:};
 Arguments ::= ArgList:al {:RESULT=al;:}|  {:RESULT=nil();:} ;
 ArgList ::= NotEmptyArg:nea COMMA ArgList:al {:RESULT=cons(nea,al);:} | NotEmptyArg:nta {:RESULT=cons(nta,nil());:}; //NotEmptyArg:nea  COMMA ArgList:al {:RESULT=nea,al;:};
 NotEmptyArg ::= Expression:exp {:RESULT=exp;:};
