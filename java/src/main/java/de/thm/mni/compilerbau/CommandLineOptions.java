@@ -12,7 +12,7 @@ public class CommandLineOptions {
     public PhaseOption phaseOption = null;
     public boolean ershovOptimization = false;
     public boolean doWhileEnabled = false;
-    public String inFilename = "";
+    public String inFilename = "fak.spl";
     public String outFilename = "";
 
     private static void usageError(String format, Object... args) {

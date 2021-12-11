@@ -36,7 +36,7 @@ comment = \/\/.*
 decimal = [0-9]+
 ident = [A-Za-z_$][A-Za-z0-9_$]*
 characters = '.'
-hexa = 0c[0-9a-fA-F]
+hexa = 0x[0-9a-fA-F]+
 
 //Definition
 %%
@@ -80,14 +80,13 @@ else   {return symbol(Sym.ELSE);}
 while  {return symbol(Sym.WHILE);}
 
 
-// Tokens weiter beschreiben
 {space} {}
 {comment} {}
 {decimal} {return symbol(Sym.INTLIT,Integer.parseInt(yytext()));}
-{ident} {return symbol(Sym.IDENT,yytext());}
+{ident} {return symbol(Sym.IDENT,new Identifier(yytext()));}
 {characters} {return symbol(Sym.INTLIT, (int)yytext().charAt(1));}
 {hexa} {return symbol (Sym.INTLIT, Integer.decode(yytext()));}
-
+'\\n' {return symbol(Sym.INTLIT, new Integer('\n'));}
 
 
 [^]		{throw SplError.IllegalCharacter(new Position(yyline + 1, yycolumn + 1), yytext().charAt(0));}
