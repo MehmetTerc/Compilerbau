@@ -15,6 +15,7 @@ final class TableInitializer {
      *
      * @return A new instance of the symbol table representing the global definition scope.
      */
+    // durch den retunrbefehl kann man direkt ein table hinzufügen
     static SymbolTable initializeGlobalTable() {
         SymbolTable table = new SymbolTable();
         enterPredefinedTypes(table);

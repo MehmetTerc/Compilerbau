@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 /**
  * Represents the table entry for procedure declarations in SPL.
  */
+
 public class ProcedureEntry implements Entry {
     public final SymbolTable localTable;
     public final List<ParameterType> parameterTypes;
@@ -21,6 +22,8 @@ public class ProcedureEntry implements Entry {
      * @param parameterTypes A list describing the parameters of the procedure.
      *                       See {@link ParameterType} for more information.
      */
+
+    //Wird genutzt um etwas einzutragen, es wird ein Entry vom typ symboltable benötigt
     public ProcedureEntry(SymbolTable localTable, List<ParameterType> parameterTypes) {
         this.localTable = localTable;
         this.parameterTypes = parameterTypes;

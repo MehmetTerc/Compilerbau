@@ -59,18 +59,22 @@ public class SplError extends RuntimeException {
         return new SplError(108, position, "assignment has different types");
     }
 
+    //fehlerhaft
     public static SplError AssignmentRequiresIntegers(Position position) {
         return new SplError(109, position, "assignment requires integer variable");
     }
 
+    //erledigt
     public static SplError IfConditionMustBeBoolean(Position position) {
         return new SplError(110, position, "'if' test expression must be of type boolean");
     }
 
+    //erledigt
     public static SplError WhileConditionMustBeBoolean(Position position) {
         return new SplError(111, position, "'while' test expression must be of type boolean");
     }
 
+    //
     public static SplError UndefinedProcedure(Position position, Identifier name) {
         return new SplError(112, position, "undefined procedure %s", name);
     }

@@ -12,7 +12,7 @@ public class CommandLineOptions {
     public PhaseOption phaseOption = null;
     public boolean ershovOptimization = false;
     public boolean doWhileEnabled = false;
-    public String inFilename = "tests/runtime_tests/twodim.spl";
+    public String inFilename = "tests/runtime_tests/fak.spl";
     public String outFilename = "";
 
     private static void usageError(String format, Object... args) {
