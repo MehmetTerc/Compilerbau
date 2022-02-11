@@ -37,7 +37,9 @@ public class TableBuilder extends DoNothingVisitor {
     public SymbolTable buildSymbolTable(Program program) {
         //TODO (assignment 4a): Initialize a symbol table with all predefined symbols and fill it with user-defined symbols
         program.accept(this);
+        //SPL errors hier rein
         return globalTable;
+
     }
 
 

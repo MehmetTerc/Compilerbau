@@ -42,30 +42,34 @@ public class ProcedureBodyChecker {
         }
     }
 
-    public void visit(ArrayTypeExpression arrayTypeExpression) {
-        arrayTypeExpression.baseType.accept((Visitor) this);
-        if (arrayTypeExpression.dataType != ArrayType.) {
-            throw SplError.UndefinedType(arrayTypeExpression.position, arrayTypeExpression.)
-        }
-    }
-
+    // value mit target vergleichen
     // SPL Error AssignmentRequiresIntegers
     public void visit(AssignStatement assignStatement) {
         assignStatement.accept((Visitor) this);
-        if (assignStatement.value !=) {
-
+        if (assignStatement.target.dataType != PrimitiveType.intType) {
+            throw SplError.AssignmentRequiresIntegers(assignStatement.position);
+        }
+        if (assignStatement.target.dataType != assignStatement.value.dataType) {
+            throw SplError.AssignmentHasDifferentTypes(assignStatement.position);
         }
     }
 
     //  UndefinedProcedure
-    public void visit(ProcedureDeclaration procedureDeclaration) {
-        procedureDeclaration.accept((Visitor) this);
-        procedureDeclaration.name.
+    public void visit(ArrayAccess arrayAccess) {
+        arrayAccess.accept((Visitor) this);
+
+        if (!(arrayAccess.array.dataType instanceof ArrayType)) {
+            throw SplError.IndexingNonArray(arrayAccess.position);
+        }
+        if (arrayAccess.index.dataType != PrimitiveType.intType) {
+            throw SplError.IndexingWithNonInteger(arrayAccess.position);
+        }
     }
-}
-
-
-
 
 
 }
+
+
+
+
+
