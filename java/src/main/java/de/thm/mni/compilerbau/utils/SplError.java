@@ -109,16 +109,19 @@ public class SplError extends RuntimeException {
     }
 
     //operanten vergleichen bei binary
+    //erledigt
     public static SplError OperatorDifferentTypes(Position position) {
         return new SplError(118, position, "expression combines different types");
     }
 
     //binary kein integer
+    //erledigt
     public static SplError ComparisonNonInteger(Position position) {
         return new SplError(119, position, "comparison requires integer operands");
     }
 
     // siehe oben
+    //erledigt
     public static SplError ArithmeticOperatorNonInteger(Position position) {
         return new SplError(120, position, "arithmetic operation requires integer operands");
     }

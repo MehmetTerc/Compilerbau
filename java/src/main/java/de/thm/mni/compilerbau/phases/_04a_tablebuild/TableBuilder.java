@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 //Aufgabe Tabelle erstellen, worauf der SPL prüft, ob es bei den Eingaben soweit passt
+
 /**
  * This class is used to create and populate a {@link SymbolTable} containing entries for every symbol in the currently
  * compiled SPL program.
@@ -37,11 +38,19 @@ public class TableBuilder extends DoNothingVisitor {
     public SymbolTable buildSymbolTable(Program program) {
         //TODO (assignment 4a): Initialize a symbol table with all predefined symbols and fill it with user-defined symbols
         program.accept(this);
-        //SPL errors hier rein
+        Entry mainError = globalTable.lookup(new Identifier("main"), SplError.MainIsMissing());
+
+        if (!(mainError instanceof ProcedureEntry)) {
+            throw SplError.MainIsNotAProcedure();
+        } else {
+            if (!((ProcedureEntry) mainError).parameterTypes.isEmpty()) {
+                throw SplError.MainMustNotHaveParameters();
+            }
+        }
         return globalTable;
 
-    }
 
+    }
 
 
     /**
@@ -85,30 +94,30 @@ public class TableBuilder extends DoNothingVisitor {
     public void visit(ProcedureDeclaration procedureDeclaration) {
         List<ParameterType> paraType = new ArrayList<>();
         localTable = new SymbolTable(globalTable);
-        procedureDeclaration.parameters.forEach(n->{
+        procedureDeclaration.parameters.forEach(n -> {
             n.accept(this);
             paraType.add(new ParameterType(n.typeExpression.dataType, n.isReference));
         });
-        procedureDeclaration.variables.forEach((m->m.accept(this)));
-        globalTable.enter(procedureDeclaration.name,new ProcedureEntry(localTable,paraType));
-        printSymbolTableAtEndOfProcedure(procedureDeclaration.name,new ProcedureEntry(localTable,paraType));
+        procedureDeclaration.variables.forEach((m -> m.accept(this)));
+        globalTable.enter(procedureDeclaration.name, new ProcedureEntry(localTable, paraType));
+        printSymbolTableAtEndOfProcedure(procedureDeclaration.name, new ProcedureEntry(localTable, paraType));
     }
 
     @Override
     public void visit(Program program) {
-        program.declarations.forEach(d->d.accept(this));
+        program.declarations.forEach(d -> d.accept(this));
     }
 
     @Override
     public void visit(TypeDeclaration typeDeclaration) {
         typeDeclaration.typeExpression.accept(this);
-        globalTable.enter(typeDeclaration.name,new TypeEntry(typeDeclaration.typeExpression.dataType));
+        globalTable.enter(typeDeclaration.name, new TypeEntry(typeDeclaration.typeExpression.dataType));
     }
 
     @Override
     public void visit(VariableDeclaration variableDeclaration) {
         variableDeclaration.typeExpression.accept(this);
-        localTable.enter(variableDeclaration.name,new VariableEntry(variableDeclaration.typeExpression.dataType,false),SplError.RedeclarationAsVariable(variableDeclaration.position, variableDeclaration.name));
+        localTable.enter(variableDeclaration.name, new VariableEntry(variableDeclaration.typeExpression.dataType, false), SplError.RedeclarationAsVariable(variableDeclaration.position, variableDeclaration.name));
     }
 
 }

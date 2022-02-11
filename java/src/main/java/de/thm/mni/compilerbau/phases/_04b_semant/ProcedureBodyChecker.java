@@ -3,6 +3,8 @@ package de.thm.mni.compilerbau.phases._04b_semant;
 import de.thm.mni.compilerbau.absyn.*;
 import de.thm.mni.compilerbau.absyn.visitor.DoNothingVisitor;
 import de.thm.mni.compilerbau.absyn.visitor.Visitor;
+import de.thm.mni.compilerbau.phases._04a_tablebuild.TableBuilder;
+import de.thm.mni.compilerbau.table.Entry;
 import de.thm.mni.compilerbau.table.ProcedureEntry;
 import de.thm.mni.compilerbau.table.SymbolTable;
 import de.thm.mni.compilerbau.table.VariableEntry;
@@ -54,7 +56,6 @@ public class ProcedureBodyChecker {
         }
     }
 
-    //  UndefinedProcedure
     public void visit(ArrayAccess arrayAccess) {
         arrayAccess.accept((Visitor) this);
 
@@ -66,8 +67,44 @@ public class ProcedureBodyChecker {
         }
     }
 
+    public void visit(CallStatement callStatement) {
+        callStatement.accept((Visitor) this);
+        callStatement.arguments.forEach(n -> n.accept((Visitor) this));
+            //many Arguments
+        //if(>callStatement.arguments.size())
+    }
+
+    public void visit(BinaryExpression binaryExpression) {
+        binaryExpression.accept((Visitor) this);
+
+        if (binaryExpression.leftOperand.dataType != binaryExpression.rightOperand.dataType) {
+            throw SplError.OperatorDifferentTypes(binaryExpression.position);
+        }
+
+        if (binaryExpression.operator.isComparison() && (binaryExpression.leftOperand.dataType != PrimitiveType.intType ||
+                binaryExpression.rightOperand.dataType != PrimitiveType.intType)) {
+            throw SplError.ComparisonNonInteger(binaryExpression.position);
+        }
+
+        if (binaryExpression.operator.isArithmetic() && (binaryExpression.leftOperand.dataType != PrimitiveType.intType ||
+                binaryExpression.rightOperand.dataType != PrimitiveType.intType)) {
+            throw SplError.ArithmeticOperatorNonInteger(binaryExpression.position);
+        }
+    }
+
+    public void visit(NamedTypeExpression namedTypeExpression){
+        namedTypeExpression.accept((Visitor) this);
+
+        //not a type
+    }
+
+    public void visit(NamedVariable namedVariable){
+        namedVariable.accept((Visitor) this);
+    }
 
 }
+
+
 
 
 
