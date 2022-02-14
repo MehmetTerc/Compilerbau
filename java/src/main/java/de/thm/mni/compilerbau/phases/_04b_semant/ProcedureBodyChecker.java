@@ -22,6 +22,7 @@ import de.thm.mni.compilerbau.utils.SplError;
  * Calculated {@link Type}s can be stored in and read from the dataType field of the {@link Expression} and {@link Variable} classes.
  */
 public class ProcedureBodyChecker {
+    public SymbolTable globalTable;
 
     public void checkProcedures(Program program, SymbolTable globalTable) {
         //TODO (assignment 4b): Check all procedure bodies for semantic errors
@@ -68,10 +69,18 @@ public class ProcedureBodyChecker {
     }
 
     public void visit(CallStatement callStatement) {
-        callStatement.accept((Visitor) this);
         callStatement.arguments.forEach(n -> n.accept((Visitor) this));
-            //many Arguments
-        //if(>callStatement.arguments.size())
+        Entry entry = globalTable.lookup(callStatement.procedureName,SplError.UndefinedProcedure(callStatement.position,callStatement.procedureName));
+        if(!(entry instanceof ProcedureEntry)){
+            throw SplError.CallOfNonProcedure(callStatement.position,callStatement.procedureName);
+        }
+        ProcedureEntry procedureEntry = (ProcedureEntry) entry;
+        if(procedureEntry.parameterTypes.size()>callStatement.arguments.size()){
+            throw SplError.TooFewArguments(callStatement.position,callStatement.procedureName);
+        }
+        if(procedureEntry.parameterTypes.size()<callStatement.arguments.size()){
+            throw SplError.TooManyArguments(callStatement.position,callStatement.procedureName);
+        }
     }
 
     public void visit(BinaryExpression binaryExpression) {
@@ -93,9 +102,7 @@ public class ProcedureBodyChecker {
     }
 
     public void visit(NamedTypeExpression namedTypeExpression){
-        namedTypeExpression.accept((Visitor) this);
 
-        //not a type
     }
 
     public void visit(NamedVariable namedVariable){
