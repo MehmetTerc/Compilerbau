@@ -25,6 +25,73 @@ public class CodeGenerator {
      * @param output             The PrintWriter to the output file.
      * @param ershovOptimization Whether the ershov register optimization should be used (--ershov)
      */
+
+    private class CodeGeneratorVisitor extends DoNothingVisitor {
+        SymbolTable localTable;
+        SymbolTable globalTable;
+        int lblCounter = 0;
+
+        public CodeGeneratorVisitor(SymbolTable symbolTable) {
+            this.globalTable = symbolTable;
+        }
+
+        Register register = new Register(8);
+
+        public void visit(IntLiteral intLiteral) {
+            output.emitInstruction("add", register, new Register(0), intLiteral.value);
+        }
+
+        public void visit(BinaryExpression binaryExpression) {
+            binaryExpression.leftOperand.accept(this);
+            binaryExpression.rightOperand.accept(this);
+            switch (binaryExpression.operator) {
+                case ADD:
+                    output.emitInstruction("add", register.minus(2), register.minus(2), register.minus(1));
+                    break;
+                case SUB:
+                    output.emitInstruction("sub", register.minus(2), register.minus(2), register.minus(1));
+                    break;
+                case MUL:
+                    output.emitInstruction("mul", register.minus(2), register.minus(2), register.minus(1));
+                    break;
+                case DIV:
+                    output.emitInstruction("div", register.minus(2), register.minus(2), register.minus(1));
+                    break;
+            }
+            register = register.minus(1);
+        }
+
+        public void logicOperator(BinaryExpression binaryExpression, String label) {
+            binaryExpression.leftOperand.accept(this);
+            binaryExpression.rightOperand.accept(this);
+
+            switch (binaryExpression.operator) {
+                case EQU:
+                    output.emitInstruction("equ", register.minus(2), register.minus(1), label);
+                    break;
+                case NEQ:
+                    output.emitInstruction("neq", register.minus(2), register.minus(1), label);
+                    break;
+                case GRE:
+                    output.emitInstruction("gre", register.minus(2), register.minus(1), label);
+                    break;
+                case LSE:
+                    output.emitInstruction("lse", register.minus(2), register.minus(1), label);
+                    break;
+                case GRT:
+                    output.emitInstruction("grt", register.minus(2), register.minus(1), label);
+                    break;
+                case LST:
+                    output.emitInstruction("lst", register.minus(2), register.minus(1), label);
+                    break;
+
+            }
+            register = register.minus(2);
+        }
+
+
+    }
+
     public CodeGenerator(PrintWriter output, boolean ershovOptimization) {
         this.output = new CodePrinter(output);
         this.ershovOptimization = ershovOptimization;
@@ -55,6 +122,8 @@ public class CodeGenerator {
         assemblerProlog();
 
         //TODO (assignment 6): generate eco32 assembler code for the spl program
+        //Visitorklasse
+
 
         throw new NotImplemented();
     }
