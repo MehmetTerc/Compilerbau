@@ -19,8 +19,12 @@ public class StackLayout {
      */
     public boolean isLeafProcedure() {
         //TODO (assignment 5): Think about how to encode the absence of calls and use this to implement this method
+        if (outgoingAreaSize == -1) {
+            return true;
+        } else {
+            return false;
+        }
 
-        throw new NotImplemented();
     }
 
     /**
@@ -28,8 +32,11 @@ public class StackLayout {
      */
     public int frameSize() {
         //TODO (assignment 5): Calculate the size of the stack frame
-
-        throw new NotImplemented();
+        if(isLeafProcedure()){
+            return localVarAreaSize+4;
+        }else {
+            return  localVarAreaSize+outgoingAreaSize+4+4;
+        }
     }
 
     /**
@@ -37,8 +44,12 @@ public class StackLayout {
      */
     public int oldFramePointerOffset() {
         //TODO (assignment 5): Calculate the offset of the old frame pointer
+        if(isLeafProcedure()){
+            return 0;
+        }else{
+            return outgoingAreaSize+4;
+        }
 
-        throw new NotImplemented();
     }
 
     /**
@@ -46,7 +57,6 @@ public class StackLayout {
      */
     public int oldReturnAddressOffset() {
         //TODO (assignment 5): Calculate the offset of the old return address
-
-        throw new NotImplemented();
+        return -4-4-localVarAreaSize;
     }
 }
