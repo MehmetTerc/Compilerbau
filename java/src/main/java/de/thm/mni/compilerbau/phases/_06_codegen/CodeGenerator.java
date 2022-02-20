@@ -184,6 +184,10 @@ public class CodeGenerator {
             program.declarations.forEach(pd -> pd.accept(this));
         }
 
+        public void visit(CompoundStatement compoundStatement){
+            compoundStatement.statements.forEach(cs->cs.accept(this));
+        }
+
 
     }
 
