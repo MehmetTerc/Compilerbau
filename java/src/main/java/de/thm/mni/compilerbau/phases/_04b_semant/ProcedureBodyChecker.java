@@ -29,6 +29,7 @@ public class ProcedureBodyChecker extends DoNothingVisitor {
 
     class ProcedureBodyCheckerVisitor extends DoNothingVisitor {
         private SymbolTable table;
+        private SymbolTable localTable;
 
         public ProcedureBodyCheckerVisitor(SymbolTable symbolTable) {
             this.table = symbolTable;
@@ -103,6 +104,12 @@ public class ProcedureBodyChecker extends DoNothingVisitor {
             }
         }
 
+        public void visit(ProcedureDeclaration procedureDeclaration){
+            ProcedureEntry entry =(ProcedureEntry) table.lookup(procedureDeclaration.name);
+            localTable = entry.localTable;
+            procedureDeclaration.body.forEach(n->n.accept(this));
+        }
+
         public void visit(BinaryExpression binaryExpression) {
             binaryExpression.leftOperand.accept(this);
             binaryExpression.rightOperand.accept(this);
@@ -127,7 +134,7 @@ public class ProcedureBodyChecker extends DoNothingVisitor {
         }
 
         public void visit(NamedVariable namedVariable) {
-            Entry entry = table.lookup(namedVariable.name, SplError.UndefinedVariable(namedVariable.position, namedVariable.name));
+            Entry entry = localTable.lookup(namedVariable.name, SplError.UndefinedVariable(namedVariable.position, namedVariable.name));
             if (!(entry instanceof VariableEntry)) {
                 throw SplError.NotAVariable(namedVariable.position, namedVariable.name);
             }
