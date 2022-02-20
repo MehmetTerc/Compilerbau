@@ -93,6 +93,7 @@ public class ProcedureBodyChecker extends DoNothingVisitor {
             if (procedureEntry.parameterTypes.size() < callStatement.arguments.size()) {
                 throw SplError.TooManyArguments(callStatement.position, callStatement.procedureName);
             }
+            callStatement.arguments.forEach(cs->cs.accept(this));
             for (int i = 0; i < callStatement.arguments.size(); i++) {
                 if (procedureEntry.parameterTypes.get(i).isReference && !(callStatement.arguments.get(i) instanceof VariableExpression)) {
                     throw SplError.ArgumentMustBeAVariable(callStatement.position, callStatement.procedureName, i + 1);
@@ -100,7 +101,7 @@ public class ProcedureBodyChecker extends DoNothingVisitor {
                 if (procedureEntry.parameterTypes.get(i).type != callStatement.arguments.get(i).dataType) {
                     throw SplError.ArgumentTypeMismatch(callStatement.position, callStatement.procedureName, i + 1);
                 }
-                callStatement.arguments.get(i).accept(this);
+
             }
 
         }
