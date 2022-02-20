@@ -12,8 +12,9 @@ public class CommandLineOptions {
     public PhaseOption phaseOption = null;
     public boolean ershovOptimization = false;
     public boolean doWhileEnabled = false;
-    public String inFilename = "tests/runtime_tests/fak.spl";
+    public String inFilename = "";
     public String outFilename = "";
+    //tests/runtime_tests/fak.spl
 
     private static void usageError(String format, Object... args) {
         System.err.printf("Usage error: " + format, args);

@@ -24,7 +24,6 @@ public class VarAllocator {
     public static final int REFERENCE_BYTESIZE = 4;
     private final boolean showVarAlloc;
     private final boolean ershovOptimization;
-    public int frameSize = 0;
 
     /**
      * @param showVarAlloc       Whether to show the results of the variable allocation after it is finished
@@ -39,25 +38,22 @@ public class VarAllocator {
     class VariableAllocVisitor extends DoNothingVisitor {
         SymbolTable table;
 
+
         public VariableAllocVisitor(SymbolTable table) {
             this.table = table;
         }
 
-        public void visit(Program program) {
-            program.declarations.forEach(pd -> pd.accept(this));
-        }
-
         public void visit(ProcedureDeclaration procedureDeclaration) {
+            ProcedureEntry procEntry = (ProcedureEntry) table.lookup(procedureDeclaration.name);
             int localVariableAreaSize = 0;
             int argumentAreaSize = 0;
-            ProcedureEntry procEntry = (ProcedureEntry) table.lookup(procedureDeclaration.name);
             for (int i = 0; i < procedureDeclaration.parameters.size(); i++) {
                 ParameterDeclaration parameterDeclaration = procedureDeclaration.parameters.get(i);
                 ParameterType parameterType = procEntry.parameterTypes.get(i);
                 VariableEntry variableEntry = (VariableEntry) procEntry.localTable.lookup(parameterDeclaration.name);
                 parameterType.offset = argumentAreaSize;
                 variableEntry.offset = argumentAreaSize;
-                if (parameterType.isReference) {
+                if (parameterDeclaration.isReference) {
                     argumentAreaSize = argumentAreaSize + REFERENCE_BYTESIZE;
                 } else {
                     argumentAreaSize = argumentAreaSize + parameterType.type.byteSize;
@@ -65,19 +61,23 @@ public class VarAllocator {
             }
             procEntry.stackLayout.argumentAreaSize = argumentAreaSize;
             for (int i = 0; i < procedureDeclaration.variables.size(); i++) {
-                VariableDeclaration variableDeclaration = procedureDeclaration.variables.get(i);
-                VariableEntry variableEntry = (VariableEntry) procEntry.localTable.lookup(variableDeclaration.name);
-                localVariableAreaSize = localVariableAreaSize - variableEntry.type.byteSize;
+                VariableEntry variableEntry = (VariableEntry) procEntry.localTable.lookup(procedureDeclaration.variables.get(i).name);
+                localVariableAreaSize -= variableEntry.type.byteSize;
                 variableEntry.offset = localVariableAreaSize;
             }
             procEntry.stackLayout.localVarAreaSize = -localVariableAreaSize;
-            frameSize = localVariableAreaSize + argumentAreaSize + 4;
+
         }
+
+        public void visit(Program program) {
+            program.declarations.forEach(pd -> pd.accept(this));
+        }
+
     }
 
     class VariableAllocVisitor2 extends DoNothingVisitor {
         SymbolTable symbolTable;
-        int outgoingAreaSize;
+        int outgoingAreaSize = 0;
 
         public VariableAllocVisitor2(SymbolTable symbolTable) {
             this.symbolTable = symbolTable;
@@ -91,18 +91,20 @@ public class VarAllocator {
         public void visit(ProcedureDeclaration procedureDeclaration) {
             ProcedureEntry procedureEntry = (ProcedureEntry) symbolTable.lookup(procedureDeclaration.name);
             outgoingAreaSize = -1;
-            procedureDeclaration.body.forEach(pd->pd.accept(this));
+            procedureDeclaration.body.forEach(pd -> pd.accept(this));
+            procedureEntry.stackLayout.outgoingAreaSize = outgoingAreaSize;
         }
 
-        public void visit(CallStatement callStatement){
-            ProcedureEntry procedureEntry= (ProcedureEntry) symbolTable.lookup(callStatement.procedureName);
-            if(procedureEntry.stackLayout.argumentAreaSize>outgoingAreaSize){
-                outgoingAreaSize=procedureEntry.stackLayout.argumentAreaSize;
+        public void visit(CallStatement callStatement) {
+            ProcedureEntry procedureEntry = (ProcedureEntry) symbolTable.lookup(callStatement.procedureName);
+            if (procedureEntry.stackLayout.argumentAreaSize > outgoingAreaSize) {
+                outgoingAreaSize = procedureEntry.stackLayout.argumentAreaSize;
             }
         }
 
         public void visit(IfStatement ifStatement) {
-            ifStatement.accept(this);
+            ifStatement.thenPart.accept(this);
+            ifStatement.elsePart.accept(this);
         }
 
         public void visit(WhileStatement whileStatement) {
@@ -111,12 +113,13 @@ public class VarAllocator {
 
     }
 
+
     public void allocVars(Program program, SymbolTable table) {
         //TODO (assignment 5): Allocate stack slots for all parameters and local variables
         VariableAllocVisitor variableAllocVisitor = new VariableAllocVisitor(table);
         program.accept(variableAllocVisitor);
         VariableAllocVisitor2 variableAllocVisitor2 = new VariableAllocVisitor2(table);
-        program.accept(variableAllocVisitor);
+        program.accept(variableAllocVisitor2);
 
 
         //TODO: Uncomment this when the above exception is removed!
