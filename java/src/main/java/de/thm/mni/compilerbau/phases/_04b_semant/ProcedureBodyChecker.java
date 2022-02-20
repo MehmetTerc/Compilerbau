@@ -60,7 +60,7 @@ public class ProcedureBodyChecker extends DoNothingVisitor {
         }
 
         public void visit(ArrayAccess arrayAccess) {
-            arrayAccess.accept((Visitor) this);
+            arrayAccess.accept( this);
             if (!(arrayAccess.array.dataType instanceof ArrayType)) {
                 throw SplError.IndexingNonArray(arrayAccess.position);
             }
@@ -70,7 +70,7 @@ public class ProcedureBodyChecker extends DoNothingVisitor {
         }
 
         public void visit(CallStatement callStatement) {
-            callStatement.arguments.forEach(n -> n.accept((Visitor) this));
+            callStatement.arguments.forEach(n -> n.accept( this));
             Entry entry = table.lookup(callStatement.procedureName, SplError.UndefinedProcedure(callStatement.position, callStatement.procedureName));
             if (!(entry instanceof ProcedureEntry)) {
                 throw SplError.CallOfNonProcedure(callStatement.position, callStatement.procedureName);

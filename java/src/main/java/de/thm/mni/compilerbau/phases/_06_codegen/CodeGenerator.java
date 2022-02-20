@@ -23,9 +23,11 @@ public class CodeGenerator {
         SymbolTable localTable;
         SymbolTable globalTable;
         int lblCounter = 0;
+        CodePrinter output;
 
-        public CodeGeneratorVisitor(SymbolTable symbolTable) {
+        public CodeGeneratorVisitor(SymbolTable symbolTable,CodePrinter output) {
             this.globalTable = symbolTable;
+            this.output=output;
         }
 
         Register register = new Register(8);
@@ -178,6 +180,10 @@ public class CodeGenerator {
             output.emitInstruction("jr",new Register(31),"return to Adress");
         }
 
+        public void visit(Program program){
+            program.declarations.forEach(pd -> pd.accept(this));
+        }
+
 
     }
 
@@ -216,7 +222,7 @@ public class CodeGenerator {
 
     public void generateCode(Program program, SymbolTable table) {
         assemblerProlog();
-        CodeGeneratorVisitor codeGeneratorVisitor = new CodeGeneratorVisitor(table);
+        CodeGeneratorVisitor codeGeneratorVisitor = new CodeGeneratorVisitor(table,output);
         program.accept(codeGeneratorVisitor);
         //TODO (assignment 6): generate eco32 assembler code for the spl program
     }
