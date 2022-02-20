@@ -1,0 +1,1381 @@
+[2022-02-20 19:01:15.710001] Start of evaluation log for submission '74066609-25d8-4bb2-9914-c0c2af9fb2ca'.
+[2022-02-20 19:01:15.710337] Team member: ('Tercüman', 'Mehmet Duhan', '5296149')
+[2022-02-20 19:01:15.710516] Team member: ("M'Sallem", 'Samir Faycal Tahar', '5276295')
+[2022-02-20 19:01:15.738079] Preparing the sandbox
+[2022-02-20 19:01:16.502606] Unpacking submission in sandbox
+[2022-02-20 19:01:16.938744] Building the test subject
+[2022-02-20 19:01:16.939106] Identified the Java variant.
+[2022-02-20 19:01:17.078894] Building Java solution with maven.
+[2022-02-20 19:01:28.761269] Maven log:
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------< de.thm.mni.compilerbau.spl-reference:spl >--------------
+[INFO] Building spl 0.1
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- jflex-maven-plugin:1.7.0:generate (default) @ spl ---
+[INFO]   generated /home/solution/java/target/generated-sources/jflex/de/thm/mni/compilerbau/phases/_01_scanner/Scanner.java
+[INFO] 
+[INFO] --- cup-maven-plugin:11b-20160615:generate (default) @ spl ---
+Warning : Non terminal "Var" was declared but never used
+Warning : Non terminal "NotEmptyParam" was declared but never used
+Warning : Non terminal "TypeExpression" was declared but never used
+Warning : Non terminal "BinaryExpression" was declared but never used
+Warning : *** Shift/Reduce conflict found in state #91
+  between IfStatement ::= IF LPAREN Expression RPAREN Statement (*) 
+  and     IfStatement ::= IF LPAREN Expression RPAREN Statement (*) ELSE Statement 
+  under symbol ELSE
+  Resolved in favor of shifting.
+
+[INFO]   generated /home/solution/java/target/generated-sources/cup/de/thm/mni/compilerbau/phases/_02_03_parser/Parser.java
+[INFO]   generated /home/solution/java/target/generated-sources/cup/de/thm/mni/compilerbau/phases/_02_03_parser/Sym.java
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ spl ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/solution/java/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ spl ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 57 source files to /home/solution/java/target/classes
+[INFO] /home/solution/java/target/generated-sources/jflex/de/thm/mni/compilerbau/phases/_01_scanner/Scanner.java: /home/solution/java/target/generated-sources/jflex/de/thm/mni/compilerbau/phases/_01_scanner/Scanner.java uses or overrides a deprecated API.
+[INFO] /home/solution/java/target/generated-sources/jflex/de/thm/mni/compilerbau/phases/_01_scanner/Scanner.java: Recompile with -Xlint:deprecation for details.
+[INFO] /home/solution/java/target/generated-sources/cup/de/thm/mni/compilerbau/phases/_02_03_parser/Parser.java: /home/solution/java/target/generated-sources/cup/de/thm/mni/compilerbau/phases/_02_03_parser/Parser.java uses unchecked or unsafe operations.
+[INFO] /home/solution/java/target/generated-sources/cup/de/thm/mni/compilerbau/phases/_02_03_parser/Parser.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ spl ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/solution/java/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ spl ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ spl ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ spl ---
+[INFO] Building jar: /home/solution/java/target/spl.jar
+[INFO] 
+[INFO] --- maven-shade-plugin:3.1.0:shade (default) @ spl ---
+[INFO] Including com.github.vbmacher:java-cup-runtime:jar:11b-20160615 in the shaded jar.
+[INFO] Replacing original artifact with shaded artifact.
+[INFO] Replacing /home/solution/java/target/spl.jar with /home/solution/java/target/spl-0.1-shaded.jar
+[INFO] Dependency-reduced POM written at: /home/solution/java/dependency-reduced-pom.xml
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.402 s
+[INFO] Finished at: 2022-02-20T18:01:28Z
+[INFO] ------------------------------------------------------------------------
+[2022-02-20 19:01:28.897617] Beginning evaluation.
+[2022-02-20 19:01:28.898223] Evaluating 101_undefined_type.spl with the submitted solution.
+[2022-02-20 19:01:29.255358] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:29.256504] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/101_undefined_type.spl /home/temp/101_undefined_type.spl.s' (Limited to 50 lines/10000 characters):
+An error occurred: null
+java.lang.NullPointerException
+	at de.thm.mni.compilerbau.phases._04a_tablebuild.TableBuilder$TableBuilderVisitor.visit(TableBuilder.java:84)
+	at de.thm.mni.compilerbau.absyn.NamedTypeExpression.accept(NamedTypeExpression.java:28)
+	at de.thm.mni.compilerbau.phases._04a_tablebuild.TableBuilder$TableBuilderVisitor.visit(TableBuilder.java:119)
+	at de.thm.mni.compilerbau.absyn.TypeDeclaration.accept(TypeDeclaration.java:29)
+	at de.thm.mni.compilerbau.phases._04a_tablebuild.TableBuilder$TableBuilderVisitor.lambda$visit$2(TableBuilder.java:114)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at de.thm.mni.compilerbau.phases._04a_tablebuild.TableBuilder$TableBuilderVisitor.visit(TableBuilder.java:114)
+	at de.thm.mni.compilerbau.absyn.Program.accept(Program.java:29)
+	at de.thm.mni.compilerbau.phases._04a_tablebuild.TableBuilder.buildSymbolTable(TableBuilder.java:38)
+	at de.thm.mni.compilerbau.Main.main(Main.java:83)
+[2022-02-20 19:01:29.256656] Test not passed.
+[2022-02-20 19:01:29.256672] Running Score: 0/1
+
+[2022-02-20 19:01:29.256703] Evaluating 102_not_a_type.spl with the submitted solution.
+[2022-02-20 19:01:29.719461] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:29.720626] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/102_not_a_type.spl /home/temp/102_not_a_type.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'A':
+  level 0
+    <empty>
+  level 1
+    A               --> proc: ()
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: class de.thm.mni.compilerbau.table.ProcedureEntry cannot be cast to class de.thm.mni.compilerbau.table.TypeEntry (de.thm.mni.compilerbau.table.ProcedureEntry and de.thm.mni.compilerbau.table.TypeEntry are in unnamed module of loader 'app')
+java.lang.ClassCastException: class de.thm.mni.compilerbau.table.ProcedureEntry cannot be cast to class de.thm.mni.compilerbau.table.TypeEntry (de.thm.mni.compilerbau.table.ProcedureEntry and de.thm.mni.compilerbau.table.TypeEntry are in unnamed module of loader 'app')
+	at de.thm.mni.compilerbau.phases._04a_tablebuild.TableBuilder$TableBuilderVisitor.visit(TableBuilder.java:83)
+	at de.thm.mni.compilerbau.absyn.NamedTypeExpression.accept(NamedTypeExpression.java:28)
+	at de.thm.mni.compilerbau.phases._04a_tablebuild.TableBuilder$TableBuilderVisitor.visit(TableBuilder.java:119)
+	at de.thm.mni.compilerbau.absyn.TypeDeclaration.accept(TypeDeclaration.java:29)
+	at de.thm.mni.compilerbau.phases._04a_tablebuild.TableBuilder$TableBuilderVisitor.lambda$visit$2(TableBuilder.java:114)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at de.thm.mni.compilerbau.phases._04a_tablebuild.TableBuilder$TableBuilderVisitor.visit(TableBuilder.java:114)
+	at de.thm.mni.compilerbau.absyn.Program.accept(Program.java:29)
+	at de.thm.mni.compilerbau.phases._04a_tablebuild.TableBuilder.buildSymbolTable(TableBuilder.java:38)
+	at de.thm.mni.compilerbau.Main.main(Main.java:83)
+[2022-02-20 19:01:29.720851] Test not passed.
+[2022-02-20 19:01:29.720868] Running Score: 0/2
+
+[2022-02-20 19:01:29.720900] Evaluating 103_redeclaration_as_type.spl with the submitted solution.
+[2022-02-20 19:01:30.206999] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:30.207085] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/103_redeclaration_as_type.spl /home/temp/103_redeclaration_as_type.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    <empty>
+  level 1
+    A               --> type: int
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:30.207240] Test not passed.
+[2022-02-20 19:01:30.207260] Running Score: 0/3
+
+[2022-02-20 19:01:30.207288] Evaluating 104_must_be_reference_parameter.spl with the submitted solution.
+[2022-02-20 19:01:30.529049] Test subject results match (Compiler Failure).
+[2022-02-20 19:01:30.529195] Exit code matches the expected exit code (104).
+[2022-02-20 19:01:30.529239] Test passed.
+[2022-02-20 19:01:30.529256] Running Score: 1/4
+
+[2022-02-20 19:01:30.529284] Evaluating 105_redeclaration_as_procedure.spl with the submitted solution.
+[2022-02-20 19:01:31.032876] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:31.032961] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/105_redeclaration_as_procedure.spl /home/temp/105_redeclaration_as_procedure.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'f':
+  level 0
+    <empty>
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    f               --> proc: ()
+    int             --> type: int
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+Symbol table at end of procedure 'f':
+  level 0
+    <empty>
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    f               --> proc: ()
+    int             --> type: int
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+Symbol table at end of procedure 'main':
+  level 0
+    <empty>
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    f               --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+[2022-02-20 19:01:31.033264] Test not passed.
+[2022-02-20 19:01:31.033281] Running Score: 1/5
+
+[2022-02-20 19:01:31.033311] Evaluating 106_redeclaration_as_parameter.spl with the submitted solution.
+[2022-02-20 19:01:31.355545] Test subject results match (Compiler Failure).
+[2022-02-20 19:01:31.355590] Exit code matches the expected exit code (106).
+[2022-02-20 19:01:31.355624] Test passed.
+[2022-02-20 19:01:31.355642] Running Score: 2/6
+
+[2022-02-20 19:01:31.355669] Evaluating 107_redeclaration_as_variable.spl with the submitted solution.
+[2022-02-20 19:01:31.671689] Test subject results match (Compiler Failure).
+[2022-02-20 19:01:31.671842] Exit code matches the expected exit code (107).
+[2022-02-20 19:01:31.671886] Test passed.
+[2022-02-20 19:01:31.671903] Running Score: 3/7
+
+[2022-02-20 19:01:31.671932] Evaluating 112_undefined_procedure.spl with the submitted solution.
+[2022-02-20 19:01:32.171359] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:32.171438] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/112_undefined_procedure.spl /home/temp/112_undefined_procedure.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    <empty>
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+java.lang.NullPointerException
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.visit(VarAllocator.java:100)
+	at de.thm.mni.compilerbau.absyn.CallStatement.accept(CallStatement.java:35)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.lambda$visit$1(VarAllocator.java:94)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.visit(VarAllocator.java:94)
+	at de.thm.mni.compilerbau.absyn.ProcedureDeclaration.accept(ProcedureDeclaration.java:49)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.lambda$visit$0(VarAllocator.java:87)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.visit(VarAllocator.java:87)
+	at de.thm.mni.compilerbau.absyn.Program.accept(Program.java:29)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator.allocVars(VarAllocator.java:122)
+	at de.thm.mni.compilerbau.Main.main(Main.java:92)
+[2022-02-20 19:01:32.171659] Test not passed.
+[2022-02-20 19:01:32.171674] Running Score: 3/8
+
+[2022-02-20 19:01:32.171701] Evaluating 113_call_of_non_procedure.spl with the submitted solution.
+[2022-02-20 19:01:32.655255] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:32.655332] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/113_call_of_non_procedure.spl /home/temp/113_call_of_non_procedure.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    <empty>
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    f               --> type: int
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: class de.thm.mni.compilerbau.table.TypeEntry cannot be cast to class de.thm.mni.compilerbau.table.ProcedureEntry (de.thm.mni.compilerbau.table.TypeEntry and de.thm.mni.compilerbau.table.ProcedureEntry are in unnamed module of loader 'app')
+java.lang.ClassCastException: class de.thm.mni.compilerbau.table.TypeEntry cannot be cast to class de.thm.mni.compilerbau.table.ProcedureEntry (de.thm.mni.compilerbau.table.TypeEntry and de.thm.mni.compilerbau.table.ProcedureEntry are in unnamed module of loader 'app')
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.visit(VarAllocator.java:99)
+	at de.thm.mni.compilerbau.absyn.CallStatement.accept(CallStatement.java:35)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.lambda$visit$1(VarAllocator.java:94)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.visit(VarAllocator.java:94)
+	at de.thm.mni.compilerbau.absyn.ProcedureDeclaration.accept(ProcedureDeclaration.java:49)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.lambda$visit$0(VarAllocator.java:87)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.visit(VarAllocator.java:87)
+	at de.thm.mni.compilerbau.absyn.Program.accept(Program.java:29)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator.allocVars(VarAllocator.java:122)
+	at de.thm.mni.compilerbau.Main.main(Main.java:92)
+[2022-02-20 19:01:32.656701] Test not passed.
+[2022-02-20 19:01:32.656730] Running Score: 3/9
+
+[2022-02-20 19:01:32.656761] Evaluating 114_argument_type_mismatch.spl with the submitted solution.
+[2022-02-20 19:01:33.135831] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:33.135911] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/114_argument_type_mismatch.spl /home/temp/114_argument_type_mismatch.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'f':
+  level 0
+    a               --> var: ref int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    f               --> proc: (ref int)
+    int             --> type: int
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+Symbol table at end of procedure 'main':
+  level 0
+    a               --> var: array [3] of int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    f               --> proc: (ref int)
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:33.136139] Test not passed.
+[2022-02-20 19:01:33.136155] Running Score: 3/10
+
+[2022-02-20 19:01:33.136182] Evaluating 115_argument_must_be_variable.spl with the submitted solution.
+[2022-02-20 19:01:33.615420] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:33.615513] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/115_argument_must_be_variable.spl /home/temp/115_argument_must_be_variable.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'f':
+  level 0
+    a               --> var: ref int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    f               --> proc: (ref int)
+    int             --> type: int
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+Symbol table at end of procedure 'main':
+  level 0
+    <empty>
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    f               --> proc: (ref int)
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:33.615748] Test not passed.
+[2022-02-20 19:01:33.615764] Running Score: 3/11
+
+[2022-02-20 19:01:33.615792] Evaluating 116_procedure_too_few_arguments.spl with the submitted solution.
+[2022-02-20 19:01:34.087088] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:34.087701] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/116_procedure_too_few_arguments.spl /home/temp/116_procedure_too_few_arguments.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'f':
+  level 0
+    a               --> var: int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    f               --> proc: (int)
+    int             --> type: int
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+Symbol table at end of procedure 'main':
+  level 0
+    <empty>
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    f               --> proc: (int)
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:34.088059] Test not passed.
+[2022-02-20 19:01:34.088082] Running Score: 3/12
+
+[2022-02-20 19:01:34.088122] Evaluating 117_procedure_too_many_arguments.spl with the submitted solution.
+[2022-02-20 19:01:34.567272] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:34.567359] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/117_procedure_too_many_arguments.spl /home/temp/117_procedure_too_many_arguments.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'f':
+  level 0
+    a               --> var: int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    f               --> proc: (int)
+    int             --> type: int
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+Symbol table at end of procedure 'main':
+  level 0
+    <empty>
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    f               --> proc: (int)
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:34.567605] Test not passed.
+[2022-02-20 19:01:34.567624] Running Score: 3/13
+
+[2022-02-20 19:01:34.567651] Evaluating 121_undefined_variable.spl with the submitted solution.
+[2022-02-20 19:01:35.044553] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:35.044626] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/121_undefined_variable.spl /home/temp/121_undefined_variable.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    <empty>
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:35.045205] Test not passed.
+[2022-02-20 19:01:35.045234] Running Score: 3/14
+
+[2022-02-20 19:01:35.045265] Evaluating 122_not_a_variable.spl with the submitted solution.
+[2022-02-20 19:01:35.539919] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:35.540015] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/122_not_a_variable.spl /home/temp/122_not_a_variable.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'f':
+  level 0
+    <empty>
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    f               --> proc: ()
+    int             --> type: int
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+Symbol table at end of procedure 'main':
+  level 0
+    <empty>
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    f               --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:35.540262] Test not passed.
+[2022-02-20 19:01:35.540280] Running Score: 3/15
+
+[2022-02-20 19:01:35.540308] Evaluating 123_indexing_non_array.spl with the submitted solution.
+[2022-02-20 19:01:36.007670] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:36.007762] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/123_indexing_non_array.spl /home/temp/123_indexing_non_array.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    a               --> var: int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:36.008998] Test not passed.
+[2022-02-20 19:01:36.009048] Running Score: 3/16
+
+[2022-02-20 19:01:36.009081] Evaluating 124_indexing_with_non_integer.spl with the submitted solution.
+[2022-02-20 19:01:36.484674] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:36.484767] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/124_indexing_with_non_integer.spl /home/temp/124_indexing_with_non_integer.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    a               --> var: array [3] of int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:36.484935] Test not passed.
+[2022-02-20 19:01:36.484957] Running Score: 3/17
+
+[2022-02-20 19:01:36.484990] Evaluating 126_main_not_a_procedure.spl with the submitted solution.
+[2022-02-20 19:01:36.799711] Test subject results match (Compiler Failure).
+[2022-02-20 19:01:36.800961] Exit code matches the expected exit code (126).
+[2022-02-20 19:01:36.801032] Test passed.
+[2022-02-20 19:01:36.801052] Running Score: 4/18
+
+[2022-02-20 19:01:36.801083] Evaluating 127_main_must_not_have_parameters.spl with the submitted solution.
+[2022-02-20 19:01:37.227852] Test subject results match (Compiler Failure).
+[2022-02-20 19:01:37.227897] Exit code matches the expected exit code (127).
+[2022-02-20 19:01:37.228965] Test passed.
+[2022-02-20 19:01:37.228999] Running Score: 5/19
+
+[2022-02-20 19:01:37.229050] Evaluating acker.spl with the submitted solution.
+[2022-02-20 19:01:37.723118] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:37.723216] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/acker.spl /home/temp/acker.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'ackermann':
+  level 0
+    a               --> var: int
+    i               --> var: int
+    j               --> var: int
+    k               --> var: ref int
+  level 1
+    ackermann       --> proc: (int, int, ref int)
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+Symbol table at end of procedure 'main':
+  level 0
+    i               --> var: int
+    j               --> var: int
+    k               --> var: int
+  level 1
+    ackermann       --> proc: (int, int, ref int)
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:37.723480] Test not passed.
+[2022-02-20 19:01:37.723498] Running Score: 5/20
+
+[2022-02-20 19:01:37.723526] Evaluating bigtest.spl with the submitted solution.
+[2022-02-20 19:01:38.327863] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:38.328021] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/bigtest.spl /home/temp/bigtest.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'callbyval':
+  level 0
+    x               --> var: int
+    y               --> var: int
+  level 1
+    callbyval       --> proc: (int, int)
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    myInt           --> type: int
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+Symbol table at end of procedure 'callbyref':
+  level 0
+    x               --> var: ref int
+    y               --> var: ref int
+  level 1
+    callbyref       --> proc: (ref int, ref int)
+    callbyval       --> proc: (int, int)
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    myInt           --> type: int
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+    vektor          --> type: array [10] of int
+
+Symbol table at end of procedure 'callArray':
+  level 0
+    v               --> var: ref array [10] of int
+  level 1
+    callArray       --> proc: (ref array [10] of int)
+    callbyref       --> proc: (ref int, ref int)
+    callbyval       --> proc: (int, int)
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+[2022-02-20 19:01:38.328734] Test not passed.
+[2022-02-20 19:01:38.328763] Running Score: 5/21
+
+[2022-02-20 19:01:38.328795] Evaluating bits.spl with the submitted solution.
+[2022-02-20 19:01:38.825088] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:38.825157] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/bits.spl /home/temp/bits.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    arr             --> var: array [32] of int
+    eing            --> var: int
+    i               --> var: int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:38.825309] Test not passed.
+[2022-02-20 19:01:38.825325] Running Score: 5/22
+
+[2022-02-20 19:01:38.825352] Evaluating gcd.spl with the submitted solution.
+[2022-02-20 19:01:39.341679] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:39.343045] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/gcd.spl /home/temp/gcd.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    a               --> var: int
+    b               --> var: int
+    c               --> var: int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+Symbol table at end of procedure 'gcd':
+  level 0
+    a               --> var: int
+    b               --> var: int
+    r               --> var: ref int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    gcd             --> proc: (int, int, ref int)
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:39.343325] Test not passed.
+[2022-02-20 19:01:39.343343] Running Score: 5/23
+
+[2022-02-20 19:01:39.343375] Evaluating inttest.spl with the submitted solution.
+[2022-02-20 19:01:39.828354] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:39.828433] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/inttest.spl /home/temp/inttest.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    i1              --> var: int
+    i2              --> var: int
+    i3              --> var: int
+    i4              --> var: int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:39.828593] Test not passed.
+[2022-02-20 19:01:39.828609] Running Score: 5/24
+
+[2022-02-20 19:01:39.828643] Evaluating multiply.spl with the submitted solution.
+[2022-02-20 19:01:40.308634] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:40.308724] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/multiply.spl /home/temp/multiply.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    i               --> var: int
+    j               --> var: int
+    n               --> var: int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:40.308989] Test not passed.
+[2022-02-20 19:01:40.309028] Running Score: 5/25
+
+[2022-02-20 19:01:40.309059] Evaluating partind1.spl with the submitted solution.
+[2022-02-20 19:01:40.806906] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:40.806986] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/partind1.spl /home/temp/partind1.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'p':
+  level 0
+    i               --> var: int
+    x               --> var: ref array [7] of int
+  level 1
+    A               --> type: array [7] of int
+    B               --> type: array [5] of array [7] of int
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    p               --> proc: (ref array [7] of int)
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+Symbol table at end of procedure 'main':
+  level 0
+    b               --> var: array [5] of array [7] of int
+    i               --> var: int
+    j               --> var: int
+  level 1
+    A               --> type: array [7] of int
+    B               --> type: array [5] of array [7] of int
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    p               --> proc: (ref array [7] of int)
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:40.807251] Test not passed.
+[2022-02-20 19:01:40.807267] Running Score: 5/26
+
+[2022-02-20 19:01:40.807294] Evaluating partind2.spl with the submitted solution.
+[2022-02-20 19:01:41.304451] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:41.304561] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/partind2.spl /home/temp/partind2.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'p':
+  level 0
+    i               --> var: int
+    j               --> var: int
+    x               --> var: ref array [5] of array [7] of int
+  level 1
+    A               --> type: array [7] of int
+    B               --> type: array [5] of array [7] of int
+    C               --> type: array [3] of array [5] of array [7] of int
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    p               --> proc: (ref array [5] of array [7] of int)
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+Symbol table at end of procedure 'main':
+  level 0
+    c               --> var: array [3] of array [5] of array [7] of int
+    i               --> var: int
+    j               --> var: int
+    k               --> var: int
+  level 1
+    A               --> type: array [7] of int
+    B               --> type: array [5] of array [7] of int
+    C               --> type: array [3] of array [5] of array [7] of int
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    p               --> proc: (ref array [5] of array [7] of int)
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:41.304860] Test not passed.
+[2022-02-20 19:01:41.304878] Running Score: 5/27
+
+[2022-02-20 19:01:41.304911] Evaluating swap.spl with the submitted solution.
+[2022-02-20 19:01:41.783874] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:41.783964] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/swap.spl /home/temp/swap.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'swap':
+  level 0
+    k               --> var: int
+    m               --> var: ref int
+    n               --> var: ref int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    swap            --> proc: (ref int, ref int)
+    time            --> proc: (ref int)
+
+Symbol table at end of procedure 'main':
+  level 0
+    i               --> var: int
+    j               --> var: int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    swap            --> proc: (ref int, ref int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:41.784219] Test not passed.
+[2022-02-20 19:01:41.784236] Running Score: 5/28
+
+[2022-02-20 19:01:41.784264] Evaluating test1.spl with the submitted solution.
+[2022-02-20 19:01:42.319600] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:42.319677] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/test1.spl /home/temp/test1.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    x               --> var: int
+    y               --> var: int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:42.319856] Test not passed.
+[2022-02-20 19:01:42.319879] Running Score: 5/29
+
+[2022-02-20 19:01:42.320016] Evaluating test2.spl with the submitted solution.
+[2022-02-20 19:01:42.796729] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:42.796801] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/test2.spl /home/temp/test2.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'summe':
+  level 0
+    m               --> var: int
+    n               --> var: int
+    s               --> var: ref int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    summe           --> proc: (int, int, ref int)
+    time            --> proc: (ref int)
+
+Symbol table at end of procedure 'main':
+  level 0
+    s               --> var: int
+    x               --> var: int
+    y               --> var: int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    summe           --> proc: (int, int, ref int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:42.797062] Test not passed.
+[2022-02-20 19:01:42.797078] Running Score: 5/30
+
+[2022-02-20 19:01:42.797105] Evaluating test3.spl with the submitted solution.
+[2022-02-20 19:01:43.286053] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:43.286139] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/test3.spl /home/temp/test3.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'sort':
+  level 0
+    a               --> var: ref array [10] of int
+    i               --> var: int
+    j               --> var: int
+    t               --> var: int
+  level 1
+    A               --> type: array [10] of int
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    sort            --> proc: (ref array [10] of int)
+    time            --> proc: (ref int)
+
+Symbol table at end of procedure 'main':
+  level 0
+    a               --> var: array [10] of int
+    i               --> var: int
+  level 1
+    A               --> type: array [10] of int
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    sort            --> proc: (ref array [10] of int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:43.286513] Test not passed.
+[2022-02-20 19:01:43.286535] Running Score: 5/31
+
+[2022-02-20 19:01:43.286565] Evaluating test4.spl with the submitted solution.
+[2022-02-20 19:01:43.787684] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:43.787912] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/test4.spl /home/temp/test4.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'fak1':
+  level 0
+    m               --> var: ref int
+    n               --> var: int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    fak1            --> proc: (int, ref int)
+    int             --> type: int
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+Symbol table at end of procedure 'fak2':
+  level 0
+    m               --> var: ref int
+    n               --> var: int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    fak1            --> proc: (int, ref int)
+    fak2            --> proc: (int, ref int)
+    int             --> type: int
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+Symbol table at end of procedure 'main':
+  level 0
+    m               --> var: int
+    n               --> var: int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    fak1            --> proc: (int, ref int)
+    fak2            --> proc: (int, ref int)
+    int             --> type: int
+    main            --> proc: ()
+[2022-02-20 19:01:43.788214] Test not passed.
+[2022-02-20 19:01:43.788231] Running Score: 5/32
+
+[2022-02-20 19:01:43.788268] Evaluating test5.spl with the submitted solution.
+[2022-02-20 19:01:44.270669] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:44.270746] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/test5.spl /home/temp/test5.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    i               --> var: int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:44.270896] Test not passed.
+[2022-02-20 19:01:44.270912] Running Score: 5/33
+
+[2022-02-20 19:01:44.270940] Evaluating test7.spl with the submitted solution.
+[2022-02-20 19:01:44.749411] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:44.750580] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/test7.spl /home/temp/test7.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    a               --> var: array [3] of int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:44.750756] Test not passed.
+[2022-02-20 19:01:44.750773] Running Score: 5/34
+
+[2022-02-20 19:01:44.750802] Evaluating test8.spl with the submitted solution.
+[2022-02-20 19:01:45.237705] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:45.237780] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/test8.spl /home/temp/test8.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    a               --> var: array [3] of int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:45.237929] Test not passed.
+[2022-02-20 19:01:45.237944] Running Score: 5/35
+
+[2022-02-20 19:01:45.237973] Evaluating test9.spl with the submitted solution.
+[2022-02-20 19:01:45.708280] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:45.709135] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/test9.spl /home/temp/test9.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    a               --> var: array [3] of int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:45.709316] Test not passed.
+[2022-02-20 19:01:45.709333] Running Score: 5/36
+
+[2022-02-20 19:01:45.709362] Evaluating threedim.spl with the submitted solution.
+[2022-02-20 19:01:46.201317] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:46.201396] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/threedim.spl /home/temp/threedim.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    a               --> var: array [5] of array [5] of array [5] of int
+    i               --> var: int
+    j               --> var: int
+    k               --> var: int
+  level 1
+    A               --> type: array [5] of array [5] of array [5] of int
+    M               --> type: array [5] of array [5] of int
+    V               --> type: array [5] of int
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:46.201568] Test not passed.
+[2022-02-20 19:01:46.201584] Running Score: 5/37
+
+[2022-02-20 19:01:46.201610] Evaluating twodim.spl with the submitted solution.
+[2022-02-20 19:01:46.684668] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:46.684750] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/twodim.spl /home/temp/twodim.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    a               --> var: array [5] of array [5] of int
+    i               --> var: int
+    j               --> var: int
+  level 1
+    A               --> type: array [5] of array [5] of int
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:46.685111] Test not passed.
+[2022-02-20 19:01:46.685137] Running Score: 5/38
+
+[2022-02-20 19:01:46.685233] Final score: 5/38 (13%). 
+[2022-02-20 19:01:46.686585] 80% are needed to pass.
+[2022-02-20 19:01:46.882360] You have NOT PASSED this assignment.
+[2022-02-20 19:01:46.882708] You can try again. Deadline: 20.02.2022 23:59
+

@@ -1,0 +1,2561 @@
+[2022-02-20 19:01:06.938839] Bootstrap log:
+Identified Python 3.8.10 at /usr/bin/python3.8
+[Bootstrap] Identified pip 20.0.2 from /usr/lib/python3/dist-packages/pip (python 3.8)' at /usr/bin/python3.8 -m pip
+[Bootstrap] Identified 'pipenv, version 2020.11.15' at /usr/bin/python3.8 -m pipenv
+[Bootstrap] Running '/usr/bin/python3.8 -m pipenv install --python 3.8' to ensure the existence of a virtual environment.
+[Bootstrap] This may take a moment.
+Virtualenv already exists!
+Removing existing virtualenv...
+Creating a virtualenv for this project...
+Pipfile: /mnt/c/users/msall/documents/uni/CB/compilerbau/.submitscript/src/Pipfile
+Using /usr/bin/python3.8 (3.8.10) to create virtualenv...
+
+⠋ Creating virtual environment...
+⠙ Creating virtual environment...
+⠹ Creating virtual environment...created virtual environment CPython3.8.10.final.0-64 in 134ms
+  creator CPython3Posix(dest=/home/samir/.local/share/virtualenvs/src-w06T69KL, clear=False, no_vcs_ignore=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/home/samir/.local/share/virtualenv)
+    added seed packages: pip==21.3.1, setuptools==58.3.0, wheel==0.37.0
+  activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+
+✔ Successfully created virtual environment! 
+Virtualenv location: /home/samir/.local/share/virtualenvs/src-w06T69KL
+Installing dependencies from Pipfile.lock (da6003)...
+To activate this project's virtualenv, run pipenv shell.
+Alternatively, run a command inside the virtualenv with pipenv run.
+[Bootstrap] Running the script in a virtual environment.
+/usr/bin/python3.8 -m pipenv run python3 ./main.py
+
+[2022-02-20 19:01:06.939124] === Welcome ===
+[2022-02-20 19:01:07.097491] Please review the currently saved information about your team:
+[2022-02-20 19:01:07.099285]  1 - First name: Mehmet Duhan; Last name: Tercüman; Matriculation number: 5296149
+[2022-02-20 19:01:07.099393]  2 - First name: Samir Faycal Tahar; Last name: M'Sallem; Matriculation number: 5276295
+[2022-02-20 19:01:08.552785] 
+[2022-02-20 19:01:09.381806] 
+[2022-02-20 19:01:09.382059] === Submitting ===
+[2022-02-20 19:01:10.001933] 
+[2022-02-20 19:01:10.004834] 
+[2022-02-20 19:01:10.004947] Selected variant 'Java SPL Compiler' for assignment 'Aufgabe-2'.
+[2022-02-20 19:01:11.049054] === Building submission ===
+[2022-02-20 19:01:11.049220] Running 'mvn clean compile'.
+[2022-02-20 19:01:11.049350] === Building submission finished ===
+[2022-02-20 19:01:13.976233] === Cleaning directory for submission ===
+[2022-02-20 19:01:13.982571] === Cleaning directory finished ===
+[2022-02-20 19:01:13.999369] === Starting Upload ===
+[2022-02-20 19:01:14.487781] === Upload finished ===
+[2022-02-20 19:01:14.487913] === BEGIN Upload Log
+[2022-02-20 19:01:14.488039] [2022-02-20 19:01:15.377937] Received submission 74066609-25d8-4bb2-9914-c0c2af9fb2ca
+[2022-02-20 19:01:15.378687] Ip: 10.196.108.159
+[2022-02-20 19:01:15.378889] Team members: [('Tercüman', 'Mehmet Duhan', '5296149'), ("M'Sallem", 'Samir Faycal Tahar', '5276295')]
+[2022-02-20 19:01:15.707931] Your submission was ACCEPTED for course 'Compilerbau-ws21', assignment 'Aufgabe-2'.
+[2022-02-20 19:01:15.708244] Your submission has the id 74066609-25d8-4bb2-9914-c0c2af9fb2ca.
+[2022-02-20 19:01:15.708789] It will be evaluated shortly. Please check back soon for your results.
+
+[2022-02-20 19:01:14.488150] === END Upload Log
+[2022-02-20 19:01:14.488258] Successfully submitted your solution. Please see the upload log above for more details.
+[2022-02-20 19:01:14.503613] Polling for results (Press CTRL + C to abort).
+[2022-02-20 19:01:14.577889] .
+[2022-02-20 19:01:15.653824] .
+[2022-02-20 19:01:16.727267] .
+[2022-02-20 19:01:17.797206] .
+[2022-02-20 19:01:18.859495] .
+[2022-02-20 19:01:19.945225] .
+[2022-02-20 19:01:21.011120] .
+[2022-02-20 19:01:22.079795] .
+[2022-02-20 19:01:23.152028] .
+[2022-02-20 19:01:24.219295] .
+[2022-02-20 19:01:25.310386] .
+[2022-02-20 19:01:26.383946] .
+[2022-02-20 19:01:27.457627] .
+[2022-02-20 19:01:28.529238] .
+[2022-02-20 19:01:29.608720] .
+[2022-02-20 19:01:30.703221] .
+[2022-02-20 19:01:31.780554] .
+[2022-02-20 19:01:32.855778] .
+[2022-02-20 19:01:33.926212] .
+[2022-02-20 19:01:35.019910] .
+[2022-02-20 19:01:36.100321] .
+[2022-02-20 19:01:37.192694] .
+[2022-02-20 19:01:38.269112] .
+[2022-02-20 19:01:39.340328] .
+[2022-02-20 19:01:40.440622] .
+[2022-02-20 19:01:41.510873] .
+[2022-02-20 19:01:42.582037] .
+[2022-02-20 19:01:43.657688] .
+[2022-02-20 19:01:44.735500] .
+[2022-02-20 19:01:45.984382] 
+=== Evaluation results for submission '74066609-25d8-4bb2-9914-c0c2af9fb2ca' retrieved. ===
+[2022-02-20 19:01:45.984517] You achieved the score 5/38 (13%).
+[2022-02-20 19:01:45.984624] You have NOT PASSED this assignment.
+[2022-02-20 19:01:49.416132] === BEGIN Evaluation Log
+[2022-02-20 19:01:49.416554] [2022-02-20 19:01:15.710001] Start of evaluation log for submission '74066609-25d8-4bb2-9914-c0c2af9fb2ca'.
+[2022-02-20 19:01:15.710337] Team member: ('Tercüman', 'Mehmet Duhan', '5296149')
+[2022-02-20 19:01:15.710516] Team member: ("M'Sallem", 'Samir Faycal Tahar', '5276295')
+[2022-02-20 19:01:15.738079] Preparing the sandbox
+[2022-02-20 19:01:16.502606] Unpacking submission in sandbox
+[2022-02-20 19:01:16.938744] Building the test subject
+[2022-02-20 19:01:16.939106] Identified the Java variant.
+[2022-02-20 19:01:17.078894] Building Java solution with maven.
+[2022-02-20 19:01:28.761269] Maven log:
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------< de.thm.mni.compilerbau.spl-reference:spl >--------------
+[INFO] Building spl 0.1
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- jflex-maven-plugin:1.7.0:generate (default) @ spl ---
+[INFO]   generated /home/solution/java/target/generated-sources/jflex/de/thm/mni/compilerbau/phases/_01_scanner/Scanner.java
+[INFO] 
+[INFO] --- cup-maven-plugin:11b-20160615:generate (default) @ spl ---
+Warning : Non terminal "Var" was declared but never used
+Warning : Non terminal "NotEmptyParam" was declared but never used
+Warning : Non terminal "TypeExpression" was declared but never used
+Warning : Non terminal "BinaryExpression" was declared but never used
+Warning : *** Shift/Reduce conflict found in state #91
+  between IfStatement ::= IF LPAREN Expression RPAREN Statement (*) 
+  and     IfStatement ::= IF LPAREN Expression RPAREN Statement (*) ELSE Statement 
+  under symbol ELSE
+  Resolved in favor of shifting.
+
+[INFO]   generated /home/solution/java/target/generated-sources/cup/de/thm/mni/compilerbau/phases/_02_03_parser/Parser.java
+[INFO]   generated /home/solution/java/target/generated-sources/cup/de/thm/mni/compilerbau/phases/_02_03_parser/Sym.java
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ spl ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/solution/java/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ spl ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 57 source files to /home/solution/java/target/classes
+[INFO] /home/solution/java/target/generated-sources/jflex/de/thm/mni/compilerbau/phases/_01_scanner/Scanner.java: /home/solution/java/target/generated-sources/jflex/de/thm/mni/compilerbau/phases/_01_scanner/Scanner.java uses or overrides a deprecated API.
+[INFO] /home/solution/java/target/generated-sources/jflex/de/thm/mni/compilerbau/phases/_01_scanner/Scanner.java: Recompile with -Xlint:deprecation for details.
+[INFO] /home/solution/java/target/generated-sources/cup/de/thm/mni/compilerbau/phases/_02_03_parser/Parser.java: /home/solution/java/target/generated-sources/cup/de/thm/mni/compilerbau/phases/_02_03_parser/Parser.java uses unchecked or unsafe operations.
+[INFO] /home/solution/java/target/generated-sources/cup/de/thm/mni/compilerbau/phases/_02_03_parser/Parser.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ spl ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/solution/java/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ spl ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ spl ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ spl ---
+[INFO] Building jar: /home/solution/java/target/spl.jar
+[INFO] 
+[INFO] --- maven-shade-plugin:3.1.0:shade (default) @ spl ---
+[INFO] Including com.github.vbmacher:java-cup-runtime:jar:11b-20160615 in the shaded jar.
+[INFO] Replacing original artifact with shaded artifact.
+[INFO] Replacing /home/solution/java/target/spl.jar with /home/solution/java/target/spl-0.1-shaded.jar
+[INFO] Dependency-reduced POM written at: /home/solution/java/dependency-reduced-pom.xml
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.402 s
+[INFO] Finished at: 2022-02-20T18:01:28Z
+[INFO] ------------------------------------------------------------------------
+[2022-02-20 19:01:28.897617] Beginning evaluation.
+[2022-02-20 19:01:28.898223] Evaluating 101_undefined_type.spl with the submitted solution.
+[2022-02-20 19:01:29.255358] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:29.256504] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/101_undefined_type.spl /home/temp/101_undefined_type.spl.s' (Limited to 50 lines/10000 characters):
+An error occurred: null
+java.lang.NullPointerException
+	at de.thm.mni.compilerbau.phases._04a_tablebuild.TableBuilder$TableBuilderVisitor.visit(TableBuilder.java:84)
+	at de.thm.mni.compilerbau.absyn.NamedTypeExpression.accept(NamedTypeExpression.java:28)
+	at de.thm.mni.compilerbau.phases._04a_tablebuild.TableBuilder$TableBuilderVisitor.visit(TableBuilder.java:119)
+	at de.thm.mni.compilerbau.absyn.TypeDeclaration.accept(TypeDeclaration.java:29)
+	at de.thm.mni.compilerbau.phases._04a_tablebuild.TableBuilder$TableBuilderVisitor.lambda$visit$2(TableBuilder.java:114)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at de.thm.mni.compilerbau.phases._04a_tablebuild.TableBuilder$TableBuilderVisitor.visit(TableBuilder.java:114)
+	at de.thm.mni.compilerbau.absyn.Program.accept(Program.java:29)
+	at de.thm.mni.compilerbau.phases._04a_tablebuild.TableBuilder.buildSymbolTable(TableBuilder.java:38)
+	at de.thm.mni.compilerbau.Main.main(Main.java:83)
+[2022-02-20 19:01:29.256656] Test not passed.
+[2022-02-20 19:01:29.256672] Running Score: 0/1
+
+[2022-02-20 19:01:29.256703] Evaluating 102_not_a_type.spl with the submitted solution.
+[2022-02-20 19:01:29.719461] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:29.720626] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/102_not_a_type.spl /home/temp/102_not_a_type.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'A':
+  level 0
+    <empty>
+  level 1
+    A               --> proc: ()
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: class de.thm.mni.compilerbau.table.ProcedureEntry cannot be cast to class de.thm.mni.compilerbau.table.TypeEntry (de.thm.mni.compilerbau.table.ProcedureEntry and de.thm.mni.compilerbau.table.TypeEntry are in unnamed module of loader 'app')
+java.lang.ClassCastException: class de.thm.mni.compilerbau.table.ProcedureEntry cannot be cast to class de.thm.mni.compilerbau.table.TypeEntry (de.thm.mni.compilerbau.table.ProcedureEntry and de.thm.mni.compilerbau.table.TypeEntry are in unnamed module of loader 'app')
+	at de.thm.mni.compilerbau.phases._04a_tablebuild.TableBuilder$TableBuilderVisitor.visit(TableBuilder.java:83)
+	at de.thm.mni.compilerbau.absyn.NamedTypeExpression.accept(NamedTypeExpression.java:28)
+	at de.thm.mni.compilerbau.phases._04a_tablebuild.TableBuilder$TableBuilderVisitor.visit(TableBuilder.java:119)
+	at de.thm.mni.compilerbau.absyn.TypeDeclaration.accept(TypeDeclaration.java:29)
+	at de.thm.mni.compilerbau.phases._04a_tablebuild.TableBuilder$TableBuilderVisitor.lambda$visit$2(TableBuilder.java:114)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at de.thm.mni.compilerbau.phases._04a_tablebuild.TableBuilder$TableBuilderVisitor.visit(TableBuilder.java:114)
+	at de.thm.mni.compilerbau.absyn.Program.accept(Program.java:29)
+	at de.thm.mni.compilerbau.phases._04a_tablebuild.TableBuilder.buildSymbolTable(TableBuilder.java:38)
+	at de.thm.mni.compilerbau.Main.main(Main.java:83)
+[2022-02-20 19:01:29.720851] Test not passed.
+[2022-02-20 19:01:29.720868] Running Score: 0/2
+
+[2022-02-20 19:01:29.720900] Evaluating 103_redeclaration_as_type.spl with the submitted solution.
+[2022-02-20 19:01:30.206999] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:30.207085] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/103_redeclaration_as_type.spl /home/temp/103_redeclaration_as_type.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    <empty>
+  level 1
+    A               --> type: int
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:30.207240] Test not passed.
+[2022-02-20 19:01:30.207260] Running Score: 0/3
+
+[2022-02-20 19:01:30.207288] Evaluating 104_must_be_reference_parameter.spl with the submitted solution.
+[2022-02-20 19:01:30.529049] Test subject results match (Compiler Failure).
+[2022-02-20 19:01:30.529195] Exit code matches the expected exit code (104).
+[2022-02-20 19:01:30.529239] Test passed.
+[2022-02-20 19:01:30.529256] Running Score: 1/4
+
+[2022-02-20 19:01:30.529284] Evaluating 105_redeclaration_as_procedure.spl with the submitted solution.
+[2022-02-20 19:01:31.032876] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:31.032961] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/105_redeclaration_as_procedure.spl /home/temp/105_redeclaration_as_procedure.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'f':
+  level 0
+    <empty>
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    f               --> proc: ()
+    int             --> type: int
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+Symbol table at end of procedure 'f':
+  level 0
+    <empty>
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    f               --> proc: ()
+    int             --> type: int
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+Symbol table at end of procedure 'main':
+  level 0
+    <empty>
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    f               --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+[2022-02-20 19:01:31.033264] Test not passed.
+[2022-02-20 19:01:31.033281] Running Score: 1/5
+
+[2022-02-20 19:01:31.033311] Evaluating 106_redeclaration_as_parameter.spl with the submitted solution.
+[2022-02-20 19:01:31.355545] Test subject results match (Compiler Failure).
+[2022-02-20 19:01:31.355590] Exit code matches the expected exit code (106).
+[2022-02-20 19:01:31.355624] Test passed.
+[2022-02-20 19:01:31.355642] Running Score: 2/6
+
+[2022-02-20 19:01:31.355669] Evaluating 107_redeclaration_as_variable.spl with the submitted solution.
+[2022-02-20 19:01:31.671689] Test subject results match (Compiler Failure).
+[2022-02-20 19:01:31.671842] Exit code matches the expected exit code (107).
+[2022-02-20 19:01:31.671886] Test passed.
+[2022-02-20 19:01:31.671903] Running Score: 3/7
+
+[2022-02-20 19:01:31.671932] Evaluating 112_undefined_procedure.spl with the submitted solution.
+[2022-02-20 19:01:32.171359] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:32.171438] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/112_undefined_procedure.spl /home/temp/112_undefined_procedure.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    <empty>
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+java.lang.NullPointerException
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.visit(VarAllocator.java:100)
+	at de.thm.mni.compilerbau.absyn.CallStatement.accept(CallStatement.java:35)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.lambda$visit$1(VarAllocator.java:94)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.visit(VarAllocator.java:94)
+	at de.thm.mni.compilerbau.absyn.ProcedureDeclaration.accept(ProcedureDeclaration.java:49)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.lambda$visit$0(VarAllocator.java:87)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.visit(VarAllocator.java:87)
+	at de.thm.mni.compilerbau.absyn.Program.accept(Program.java:29)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator.allocVars(VarAllocator.java:122)
+	at de.thm.mni.compilerbau.Main.main(Main.java:92)
+[2022-02-20 19:01:32.171659] Test not passed.
+[2022-02-20 19:01:32.171674] Running Score: 3/8
+
+[2022-02-20 19:01:32.171701] Evaluating 113_call_of_non_procedure.spl with the submitted solution.
+[2022-02-20 19:01:32.655255] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:32.655332] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/113_call_of_non_procedure.spl /home/temp/113_call_of_non_procedure.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    <empty>
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    f               --> type: int
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: class de.thm.mni.compilerbau.table.TypeEntry cannot be cast to class de.thm.mni.compilerbau.table.ProcedureEntry (de.thm.mni.compilerbau.table.TypeEntry and de.thm.mni.compilerbau.table.ProcedureEntry are in unnamed module of loader 'app')
+java.lang.ClassCastException: class de.thm.mni.compilerbau.table.TypeEntry cannot be cast to class de.thm.mni.compilerbau.table.ProcedureEntry (de.thm.mni.compilerbau.table.TypeEntry and de.thm.mni.compilerbau.table.ProcedureEntry are in unnamed module of loader 'app')
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.visit(VarAllocator.java:99)
+	at de.thm.mni.compilerbau.absyn.CallStatement.accept(CallStatement.java:35)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.lambda$visit$1(VarAllocator.java:94)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.visit(VarAllocator.java:94)
+	at de.thm.mni.compilerbau.absyn.ProcedureDeclaration.accept(ProcedureDeclaration.java:49)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.lambda$visit$0(VarAllocator.java:87)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.visit(VarAllocator.java:87)
+	at de.thm.mni.compilerbau.absyn.Program.accept(Program.java:29)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator.allocVars(VarAllocator.java:122)
+	at de.thm.mni.compilerbau.Main.main(Main.java:92)
+[2022-02-20 19:01:32.656701] Test not passed.
+[2022-02-20 19:01:32.656730] Running Score: 3/9
+
+[2022-02-20 19:01:32.656761] Evaluating 114_argument_type_mismatch.spl with the submitted solution.
+[2022-02-20 19:01:33.135831] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:33.135911] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/114_argument_type_mismatch.spl /home/temp/114_argument_type_mismatch.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'f':
+  level 0
+    a               --> var: ref int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    f               --> proc: (ref int)
+    int             --> type: int
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+Symbol table at end of procedure 'main':
+  level 0
+    a               --> var: array [3] of int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    f               --> proc: (ref int)
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:33.136139] Test not passed.
+[2022-02-20 19:01:33.136155] Running Score: 3/10
+
+[2022-02-20 19:01:33.136182] Evaluating 115_argument_must_be_variable.spl with the submitted solution.
+[2022-02-20 19:01:33.615420] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:33.615513] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/115_argument_must_be_variable.spl /home/temp/115_argument_must_be_variable.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'f':
+  level 0
+    a               --> var: ref int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    f               --> proc: (ref int)
+    int             --> type: int
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+Symbol table at end of procedure 'main':
+  level 0
+    <empty>
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    f               --> proc: (ref int)
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:33.615748] Test not passed.
+[2022-02-20 19:01:33.615764] Running Score: 3/11
+
+[2022-02-20 19:01:33.615792] Evaluating 116_procedure_too_few_arguments.spl with the submitted solution.
+[2022-02-20 19:01:34.087088] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:34.087701] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/116_procedure_too_few_arguments.spl /home/temp/116_procedure_too_few_arguments.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'f':
+  level 0
+    a               --> var: int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    f               --> proc: (int)
+    int             --> type: int
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+Symbol table at end of procedure 'main':
+  level 0
+    <empty>
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    f               --> proc: (int)
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:34.088059] Test not passed.
+[2022-02-20 19:01:34.088082] Running Score: 3/12
+
+[2022-02-20 19:01:34.088122] Evaluating 117_procedure_too_many_arguments.spl with the submitted solution.
+[2022-02-20 19:01:34.567272] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:34.567359] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/117_procedure_too_many_arguments.spl /home/temp/117_procedure_too_many_arguments.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'f':
+  level 0
+    a               --> var: int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    f               --> proc: (int)
+    int             --> type: int
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+Symbol table at end of procedure 'main':
+  level 0
+    <empty>
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    f               --> proc: (int)
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:34.567605] Test not passed.
+[2022-02-20 19:01:34.567624] Running Score: 3/13
+
+[2022-02-20 19:01:34.567651] Evaluating 121_undefined_variable.spl with the submitted solution.
+[2022-02-20 19:01:35.044553] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:35.044626] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/121_undefined_variable.spl /home/temp/121_undefined_variable.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    <empty>
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:35.045205] Test not passed.
+[2022-02-20 19:01:35.045234] Running Score: 3/14
+
+[2022-02-20 19:01:35.045265] Evaluating 122_not_a_variable.spl with the submitted solution.
+[2022-02-20 19:01:35.539919] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:35.540015] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/122_not_a_variable.spl /home/temp/122_not_a_variable.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'f':
+  level 0
+    <empty>
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    f               --> proc: ()
+    int             --> type: int
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+Symbol table at end of procedure 'main':
+  level 0
+    <empty>
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    f               --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:35.540262] Test not passed.
+[2022-02-20 19:01:35.540280] Running Score: 3/15
+
+[2022-02-20 19:01:35.540308] Evaluating 123_indexing_non_array.spl with the submitted solution.
+[2022-02-20 19:01:36.007670] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:36.007762] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/123_indexing_non_array.spl /home/temp/123_indexing_non_array.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    a               --> var: int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:36.008998] Test not passed.
+[2022-02-20 19:01:36.009048] Running Score: 3/16
+
+[2022-02-20 19:01:36.009081] Evaluating 124_indexing_with_non_integer.spl with the submitted solution.
+[2022-02-20 19:01:36.484674] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:36.484767] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/124_indexing_with_non_integer.spl /home/temp/124_indexing_with_non_integer.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    a               --> var: array [3] of int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:36.484935] Test not passed.
+[2022-02-20 19:01:36.484957] Running Score: 3/17
+
+[2022-02-20 19:01:36.484990] Evaluating 126_main_not_a_procedure.spl with the submitted solution.
+[2022-02-20 19:01:36.799711] Test subject results match (Compiler Failure).
+[2022-02-20 19:01:36.800961] Exit code matches the expected exit code (126).
+[2022-02-20 19:01:36.801032] Test passed.
+[2022-02-20 19:01:36.801052] Running Score: 4/18
+
+[2022-02-20 19:01:36.801083] Evaluating 127_main_must_not_have_parameters.spl with the submitted solution.
+[2022-02-20 19:01:37.227852] Test subject results match (Compiler Failure).
+[2022-02-20 19:01:37.227897] Exit code matches the expected exit code (127).
+[2022-02-20 19:01:37.228965] Test passed.
+[2022-02-20 19:01:37.228999] Running Score: 5/19
+
+[2022-02-20 19:01:37.229050] Evaluating acker.spl with the submitted solution.
+[2022-02-20 19:01:37.723118] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:37.723216] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/acker.spl /home/temp/acker.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'ackermann':
+  level 0
+    a               --> var: int
+    i               --> var: int
+    j               --> var: int
+    k               --> var: ref int
+  level 1
+    ackermann       --> proc: (int, int, ref int)
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+Symbol table at end of procedure 'main':
+  level 0
+    i               --> var: int
+    j               --> var: int
+    k               --> var: int
+  level 1
+    ackermann       --> proc: (int, int, ref int)
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:37.723480] Test not passed.
+[2022-02-20 19:01:37.723498] Running Score: 5/20
+
+[2022-02-20 19:01:37.723526] Evaluating bigtest.spl with the submitted solution.
+[2022-02-20 19:01:38.327863] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:38.328021] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/bigtest.spl /home/temp/bigtest.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'callbyval':
+  level 0
+    x               --> var: int
+    y               --> var: int
+  level 1
+    callbyval       --> proc: (int, int)
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    myInt           --> type: int
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+Symbol table at end of procedure 'callbyref':
+  level 0
+    x               --> var: ref int
+    y               --> var: ref int
+  level 1
+    callbyref       --> proc: (ref int, ref int)
+    callbyval       --> proc: (int, int)
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    myInt           --> type: int
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+    vektor          --> type: array [10] of int
+
+Symbol table at end of procedure 'callArray':
+  level 0
+    v               --> var: ref array [10] of int
+  level 1
+    callArray       --> proc: (ref array [10] of int)
+    callbyref       --> proc: (ref int, ref int)
+    callbyval       --> proc: (int, int)
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+[2022-02-20 19:01:38.328734] Test not passed.
+[2022-02-20 19:01:38.328763] Running Score: 5/21
+
+[2022-02-20 19:01:38.328795] Evaluating bits.spl with the submitted solution.
+[2022-02-20 19:01:38.825088] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:38.825157] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/bits.spl /home/temp/bits.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    arr             --> var: array [32] of int
+    eing            --> var: int
+    i               --> var: int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:38.825309] Test not passed.
+[2022-02-20 19:01:38.825325] Running Score: 5/22
+
+[2022-02-20 19:01:38.825352] Evaluating gcd.spl with the submitted solution.
+[2022-02-20 19:01:39.341679] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:39.343045] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/gcd.spl /home/temp/gcd.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    a               --> var: int
+    b               --> var: int
+    c               --> var: int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+Symbol table at end of procedure 'gcd':
+  level 0
+    a               --> var: int
+    b               --> var: int
+    r               --> var: ref int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    gcd             --> proc: (int, int, ref int)
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:39.343325] Test not passed.
+[2022-02-20 19:01:39.343343] Running Score: 5/23
+
+[2022-02-20 19:01:39.343375] Evaluating inttest.spl with the submitted solution.
+[2022-02-20 19:01:39.828354] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:39.828433] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/inttest.spl /home/temp/inttest.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    i1              --> var: int
+    i2              --> var: int
+    i3              --> var: int
+    i4              --> var: int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:39.828593] Test not passed.
+[2022-02-20 19:01:39.828609] Running Score: 5/24
+
+[2022-02-20 19:01:39.828643] Evaluating multiply.spl with the submitted solution.
+[2022-02-20 19:01:40.308634] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:40.308724] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/multiply.spl /home/temp/multiply.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    i               --> var: int
+    j               --> var: int
+    n               --> var: int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:40.308989] Test not passed.
+[2022-02-20 19:01:40.309028] Running Score: 5/25
+
+[2022-02-20 19:01:40.309059] Evaluating partind1.spl with the submitted solution.
+[2022-02-20 19:01:40.806906] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:40.806986] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/partind1.spl /home/temp/partind1.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'p':
+  level 0
+    i               --> var: int
+    x               --> var: ref array [7] of int
+  level 1
+    A               --> type: array [7] of int
+    B               --> type: array [5] of array [7] of int
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    p               --> proc: (ref array [7] of int)
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+Symbol table at end of procedure 'main':
+  level 0
+    b               --> var: array [5] of array [7] of int
+    i               --> var: int
+    j               --> var: int
+  level 1
+    A               --> type: array [7] of int
+    B               --> type: array [5] of array [7] of int
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    p               --> proc: (ref array [7] of int)
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:40.807251] Test not passed.
+[2022-02-20 19:01:40.807267] Running Score: 5/26
+
+[2022-02-20 19:01:40.807294] Evaluating partind2.spl with the submitted solution.
+[2022-02-20 19:01:41.304451] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:41.304561] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/partind2.spl /home/temp/partind2.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'p':
+  level 0
+    i               --> var: int
+    j               --> var: int
+    x               --> var: ref array [5] of array [7] of int
+  level 1
+    A               --> type: array [7] of int
+    B               --> type: array [5] of array [7] of int
+    C               --> type: array [3] of array [5] of array [7] of int
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    p               --> proc: (ref array [5] of array [7] of int)
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+Symbol table at end of procedure 'main':
+  level 0
+    c               --> var: array [3] of array [5] of array [7] of int
+    i               --> var: int
+    j               --> var: int
+    k               --> var: int
+  level 1
+    A               --> type: array [7] of int
+    B               --> type: array [5] of array [7] of int
+    C               --> type: array [3] of array [5] of array [7] of int
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    p               --> proc: (ref array [5] of array [7] of int)
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:41.304860] Test not passed.
+[2022-02-20 19:01:41.304878] Running Score: 5/27
+
+[2022-02-20 19:01:41.304911] Evaluating swap.spl with the submitted solution.
+[2022-02-20 19:01:41.783874] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:41.783964] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/swap.spl /home/temp/swap.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'swap':
+  level 0
+    k               --> var: int
+    m               --> var: ref int
+    n               --> var: ref int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    swap            --> proc: (ref int, ref int)
+    time            --> proc: (ref int)
+
+Symbol table at end of procedure 'main':
+  level 0
+    i               --> var: int
+    j               --> var: int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    swap            --> proc: (ref int, ref int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:41.784219] Test not passed.
+[2022-02-20 19:01:41.784236] Running Score: 5/28
+
+[2022-02-20 19:01:41.784264] Evaluating test1.spl with the submitted solution.
+[2022-02-20 19:01:42.319600] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:42.319677] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/test1.spl /home/temp/test1.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    x               --> var: int
+    y               --> var: int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:42.319856] Test not passed.
+[2022-02-20 19:01:42.319879] Running Score: 5/29
+
+[2022-02-20 19:01:42.320016] Evaluating test2.spl with the submitted solution.
+[2022-02-20 19:01:42.796729] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:42.796801] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/test2.spl /home/temp/test2.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'summe':
+  level 0
+    m               --> var: int
+    n               --> var: int
+    s               --> var: ref int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    summe           --> proc: (int, int, ref int)
+    time            --> proc: (ref int)
+
+Symbol table at end of procedure 'main':
+  level 0
+    s               --> var: int
+    x               --> var: int
+    y               --> var: int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    summe           --> proc: (int, int, ref int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:42.797062] Test not passed.
+[2022-02-20 19:01:42.797078] Running Score: 5/30
+
+[2022-02-20 19:01:42.797105] Evaluating test3.spl with the submitted solution.
+[2022-02-20 19:01:43.286053] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:43.286139] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/test3.spl /home/temp/test3.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'sort':
+  level 0
+    a               --> var: ref array [10] of int
+    i               --> var: int
+    j               --> var: int
+    t               --> var: int
+  level 1
+    A               --> type: array [10] of int
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    sort            --> proc: (ref array [10] of int)
+    time            --> proc: (ref int)
+
+Symbol table at end of procedure 'main':
+  level 0
+    a               --> var: array [10] of int
+    i               --> var: int
+  level 1
+    A               --> type: array [10] of int
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    sort            --> proc: (ref array [10] of int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:43.286513] Test not passed.
+[2022-02-20 19:01:43.286535] Running Score: 5/31
+
+[2022-02-20 19:01:43.286565] Evaluating test4.spl with the submitted solution.
+[2022-02-20 19:01:43.787684] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:43.787912] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/test4.spl /home/temp/test4.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'fak1':
+  level 0
+    m               --> var: ref int
+    n               --> var: int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    fak1            --> proc: (int, ref int)
+    int             --> type: int
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+Symbol table at end of procedure 'fak2':
+  level 0
+    m               --> var: ref int
+    n               --> var: int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    fak1            --> proc: (int, ref int)
+    fak2            --> proc: (int, ref int)
+    int             --> type: int
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+Symbol table at end of procedure 'main':
+  level 0
+    m               --> var: int
+    n               --> var: int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    fak1            --> proc: (int, ref int)
+    fak2            --> proc: (int, ref int)
+    int             --> type: int
+    main            --> proc: ()
+[2022-02-20 19:01:43.788214] Test not passed.
+[2022-02-20 19:01:43.788231] Running Score: 5/32
+
+[2022-02-20 19:01:43.788268] Evaluating test5.spl with the submitted solution.
+[2022-02-20 19:01:44.270669] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:44.270746] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/test5.spl /home/temp/test5.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    i               --> var: int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:44.270896] Test not passed.
+[2022-02-20 19:01:44.270912] Running Score: 5/33
+
+[2022-02-20 19:01:44.270940] Evaluating test7.spl with the submitted solution.
+[2022-02-20 19:01:44.749411] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:44.750580] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/test7.spl /home/temp/test7.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    a               --> var: array [3] of int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:44.750756] Test not passed.
+[2022-02-20 19:01:44.750773] Running Score: 5/34
+
+[2022-02-20 19:01:44.750802] Evaluating test8.spl with the submitted solution.
+[2022-02-20 19:01:45.237705] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:45.237780] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/test8.spl /home/temp/test8.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    a               --> var: array [3] of int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:45.237929] Test not passed.
+[2022-02-20 19:01:45.237944] Running Score: 5/35
+
+[2022-02-20 19:01:45.237973] Evaluating test9.spl with the submitted solution.
+[2022-02-20 19:01:45.708280] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:45.709135] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/test9.spl /home/temp/test9.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    a               --> var: array [3] of int
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:45.709316] Test not passed.
+[2022-02-20 19:01:45.709333] Running Score: 5/36
+
+[2022-02-20 19:01:45.709362] Evaluating threedim.spl with the submitted solution.
+[2022-02-20 19:01:46.201317] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:46.201396] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/threedim.spl /home/temp/threedim.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    a               --> var: array [5] of array [5] of array [5] of int
+    i               --> var: int
+    j               --> var: int
+    k               --> var: int
+  level 1
+    A               --> type: array [5] of array [5] of array [5] of int
+    M               --> type: array [5] of array [5] of int
+    V               --> type: array [5] of int
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:46.201568] Test not passed.
+[2022-02-20 19:01:46.201584] Running Score: 5/37
+
+[2022-02-20 19:01:46.201610] Evaluating twodim.spl with the submitted solution.
+[2022-02-20 19:01:46.684668] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:01:46.684750] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/twodim.spl /home/temp/twodim.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    a               --> var: array [5] of array [5] of int
+    i               --> var: int
+    j               --> var: int
+  level 1
+    A               --> type: array [5] of array [5] of int
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+de.thm.mni.compilerbau.utils.NotImplemented
+	at de.thm.mni.compilerbau.phases._06_codegen.CodeGenerator.generateCode(CodeGenerator.java:224)
+	at de.thm.mni.compilerbau.Main.main(Main.java:96)
+[2022-02-20 19:01:46.685111] Test not passed.
+[2022-02-20 19:01:46.685137] Running Score: 5/38
+
+[2022-02-20 19:01:46.685233] Final score: 5/38 (13%). 
+[2022-02-20 19:01:46.686585] 80% are needed to pass.
+[2022-02-20 19:01:46.882360] You have NOT PASSED this assignment.
+[2022-02-20 19:01:46.882708] You can try again. Deadline: 20.02.2022 23:59
+
+[2022-02-20 19:01:49.417046] === END Evaluation Log
+[2022-02-20 19:01:49.417208] NOTE: This evaluation log is also available at '/mnt/c/users/msall/documents/uni/CB/compilerbau/.submitscript/data/assignments/Aufgabe-2/submissions/[evaluated] 74066609-25d8-4bb2-9914-c0c2af9fb2ca/evaluation.log'
+[2022-02-20 19:01:49.417395] 
+[2022-02-20 19:05:11.889771] 
+[2022-02-20 19:05:11.890328] === Submitting ===
+[2022-02-20 19:05:13.503942] 
+[2022-02-20 19:05:13.506920] 
+[2022-02-20 19:05:13.507060] Selected variant 'Java SPL Compiler' for assignment 'Aufgabe-2'.
+[2022-02-20 19:05:14.735921] === Building submission ===
+[2022-02-20 19:05:14.736069] Running 'mvn clean compile'.
+[2022-02-20 19:05:14.736264] === Building submission finished ===
+[2022-02-20 19:05:17.657662] === Cleaning directory for submission ===
+[2022-02-20 19:05:17.663253] === Cleaning directory finished ===
+[2022-02-20 19:05:17.680196] === Starting Upload ===
+[2022-02-20 19:05:18.176211] === Upload finished ===
+[2022-02-20 19:05:18.176455] === BEGIN Upload Log
+[2022-02-20 19:05:18.176664] [2022-02-20 19:05:19.067060] Received submission e6be6ab5-41ec-4ef7-ad87-3ccaffb1a8d9
+[2022-02-20 19:05:19.067798] Ip: 10.196.108.159
+[2022-02-20 19:05:19.068038] Team members: [('Tercüman', 'Mehmet Duhan', '5296149'), ("M'Sallem", 'Samir Faycal Tahar', '5276295')]
+[2022-02-20 19:05:19.396039] Your submission was ACCEPTED for course 'Compilerbau-ws21', assignment 'Aufgabe-2'.
+[2022-02-20 19:05:19.396355] Your submission has the id e6be6ab5-41ec-4ef7-ad87-3ccaffb1a8d9.
+[2022-02-20 19:05:19.397121] It will be evaluated shortly. Please check back soon for your results.
+
+[2022-02-20 19:05:18.176885] === END Upload Log
+[2022-02-20 19:05:18.177053] Successfully submitted your solution. Please see the upload log above for more details.
+[2022-02-20 19:05:18.193329] Polling for results (Press CTRL + C to abort).
+[2022-02-20 19:05:18.271759] .
+[2022-02-20 19:05:19.349182] .
+[2022-02-20 19:05:20.427597] .
+[2022-02-20 19:05:21.503456] .
+[2022-02-20 19:05:22.600393] .
+[2022-02-20 19:05:23.676134] .
+[2022-02-20 19:05:24.748846] .
+[2022-02-20 19:05:25.817159] .
+[2022-02-20 19:05:26.906619] .
+[2022-02-20 19:05:27.981807] .
+[2022-02-20 19:05:29.050182] .
+[2022-02-20 19:05:30.124349] .
+[2022-02-20 19:05:31.183322] .
+[2022-02-20 19:05:32.280945] .
+[2022-02-20 19:05:33.365854] .
+[2022-02-20 19:05:34.435474] .
+[2022-02-20 19:05:35.508424] .
+[2022-02-20 19:05:36.580651] .
+[2022-02-20 19:05:37.680322] .
+[2022-02-20 19:05:38.765788] .
+[2022-02-20 19:05:39.833152] .
+[2022-02-20 19:05:40.910152] .
+[2022-02-20 19:05:42.001195] .
+[2022-02-20 19:05:43.076318] .
+[2022-02-20 19:05:44.155679] .
+[2022-02-20 19:05:45.243047] .
+[2022-02-20 19:05:46.323850] .
+[2022-02-20 19:05:47.431932] .
+[2022-02-20 19:05:48.512471] .
+[2022-02-20 19:05:49.587750] .
+[2022-02-20 19:05:50.671704] .
+[2022-02-20 19:05:51.756056] .
+[2022-02-20 19:05:52.868708] .
+[2022-02-20 19:05:53.945240] .
+[2022-02-20 19:05:55.016062] .
+[2022-02-20 19:05:56.088184] .
+[2022-02-20 19:05:57.301848] 
+=== Evaluation results for submission 'e6be6ab5-41ec-4ef7-ad87-3ccaffb1a8d9' retrieved. ===
+[2022-02-20 19:05:57.301987] You achieved the score 5/38 (13%).
+[2022-02-20 19:05:57.302134] You have NOT PASSED this assignment.
+[2022-02-20 19:06:00.598942] === BEGIN Evaluation Log
+[2022-02-20 19:06:00.599309] [2022-02-20 19:05:19.398634] Start of evaluation log for submission 'e6be6ab5-41ec-4ef7-ad87-3ccaffb1a8d9'.
+[2022-02-20 19:05:19.398983] Team member: ('Tercüman', 'Mehmet Duhan', '5296149')
+[2022-02-20 19:05:19.399163] Team member: ("M'Sallem", 'Samir Faycal Tahar', '5276295')
+[2022-02-20 19:05:19.429267] Preparing the sandbox
+[2022-02-20 19:05:20.167320] Unpacking submission in sandbox
+[2022-02-20 19:05:20.601619] Building the test subject
+[2022-02-20 19:05:20.601945] Identified the Java variant.
+[2022-02-20 19:05:20.734719] Building Java solution with maven.
+[2022-02-20 19:05:32.518685] Maven log:
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------< de.thm.mni.compilerbau.spl-reference:spl >--------------
+[INFO] Building spl 0.1
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- jflex-maven-plugin:1.7.0:generate (default) @ spl ---
+[INFO]   generated /home/solution/java/target/generated-sources/jflex/de/thm/mni/compilerbau/phases/_01_scanner/Scanner.java
+[INFO] 
+[INFO] --- cup-maven-plugin:11b-20160615:generate (default) @ spl ---
+Warning : Non terminal "Var" was declared but never used
+Warning : Non terminal "NotEmptyParam" was declared but never used
+Warning : Non terminal "TypeExpression" was declared but never used
+Warning : Non terminal "BinaryExpression" was declared but never used
+Warning : *** Shift/Reduce conflict found in state #91
+  between IfStatement ::= IF LPAREN Expression RPAREN Statement (*) 
+  and     IfStatement ::= IF LPAREN Expression RPAREN Statement (*) ELSE Statement 
+  under symbol ELSE
+  Resolved in favor of shifting.
+
+[INFO]   generated /home/solution/java/target/generated-sources/cup/de/thm/mni/compilerbau/phases/_02_03_parser/Parser.java
+[INFO]   generated /home/solution/java/target/generated-sources/cup/de/thm/mni/compilerbau/phases/_02_03_parser/Sym.java
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ spl ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/solution/java/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ spl ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 57 source files to /home/solution/java/target/classes
+[INFO] /home/solution/java/target/generated-sources/jflex/de/thm/mni/compilerbau/phases/_01_scanner/Scanner.java: /home/solution/java/target/generated-sources/jflex/de/thm/mni/compilerbau/phases/_01_scanner/Scanner.java uses or overrides a deprecated API.
+[INFO] /home/solution/java/target/generated-sources/jflex/de/thm/mni/compilerbau/phases/_01_scanner/Scanner.java: Recompile with -Xlint:deprecation for details.
+[INFO] /home/solution/java/target/generated-sources/cup/de/thm/mni/compilerbau/phases/_02_03_parser/Parser.java: /home/solution/java/target/generated-sources/cup/de/thm/mni/compilerbau/phases/_02_03_parser/Parser.java uses unchecked or unsafe operations.
+[INFO] /home/solution/java/target/generated-sources/cup/de/thm/mni/compilerbau/phases/_02_03_parser/Parser.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ spl ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/solution/java/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ spl ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ spl ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ spl ---
+[INFO] Building jar: /home/solution/java/target/spl.jar
+[INFO] 
+[INFO] --- maven-shade-plugin:3.1.0:shade (default) @ spl ---
+[INFO] Including com.github.vbmacher:java-cup-runtime:jar:11b-20160615 in the shaded jar.
+[INFO] Replacing original artifact with shaded artifact.
+[INFO] Replacing /home/solution/java/target/spl.jar with /home/solution/java/target/spl-0.1-shaded.jar
+[INFO] Dependency-reduced POM written at: /home/solution/java/dependency-reduced-pom.xml
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.569 s
+[INFO] Finished at: 2022-02-20T18:05:32Z
+[INFO] ------------------------------------------------------------------------
+[2022-02-20 19:05:32.653670] Beginning evaluation.
+[2022-02-20 19:05:32.653923] Evaluating 101_undefined_type.spl with the submitted solution.
+[2022-02-20 19:05:33.004855] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:05:33.004929] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/101_undefined_type.spl /home/temp/101_undefined_type.spl.s' (Limited to 50 lines/10000 characters):
+An error occurred: null
+java.lang.NullPointerException
+	at de.thm.mni.compilerbau.phases._04a_tablebuild.TableBuilder$TableBuilderVisitor.visit(TableBuilder.java:84)
+	at de.thm.mni.compilerbau.absyn.NamedTypeExpression.accept(NamedTypeExpression.java:28)
+	at de.thm.mni.compilerbau.phases._04a_tablebuild.TableBuilder$TableBuilderVisitor.visit(TableBuilder.java:119)
+	at de.thm.mni.compilerbau.absyn.TypeDeclaration.accept(TypeDeclaration.java:29)
+	at de.thm.mni.compilerbau.phases._04a_tablebuild.TableBuilder$TableBuilderVisitor.lambda$visit$2(TableBuilder.java:114)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at de.thm.mni.compilerbau.phases._04a_tablebuild.TableBuilder$TableBuilderVisitor.visit(TableBuilder.java:114)
+	at de.thm.mni.compilerbau.absyn.Program.accept(Program.java:29)
+	at de.thm.mni.compilerbau.phases._04a_tablebuild.TableBuilder.buildSymbolTable(TableBuilder.java:38)
+	at de.thm.mni.compilerbau.Main.main(Main.java:83)
+[2022-02-20 19:05:33.005069] Test not passed.
+[2022-02-20 19:05:33.006146] Running Score: 0/1
+
+[2022-02-20 19:05:33.006195] Evaluating 102_not_a_type.spl with the submitted solution.
+[2022-02-20 19:05:33.459836] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:05:33.459913] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/102_not_a_type.spl /home/temp/102_not_a_type.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'A':
+  level 0
+    <empty>
+  level 1
+    A               --> proc: ()
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: class de.thm.mni.compilerbau.table.ProcedureEntry cannot be cast to class de.thm.mni.compilerbau.table.TypeEntry (de.thm.mni.compilerbau.table.ProcedureEntry and de.thm.mni.compilerbau.table.TypeEntry are in unnamed module of loader 'app')
+java.lang.ClassCastException: class de.thm.mni.compilerbau.table.ProcedureEntry cannot be cast to class de.thm.mni.compilerbau.table.TypeEntry (de.thm.mni.compilerbau.table.ProcedureEntry and de.thm.mni.compilerbau.table.TypeEntry are in unnamed module of loader 'app')
+	at de.thm.mni.compilerbau.phases._04a_tablebuild.TableBuilder$TableBuilderVisitor.visit(TableBuilder.java:83)
+	at de.thm.mni.compilerbau.absyn.NamedTypeExpression.accept(NamedTypeExpression.java:28)
+	at de.thm.mni.compilerbau.phases._04a_tablebuild.TableBuilder$TableBuilderVisitor.visit(TableBuilder.java:119)
+	at de.thm.mni.compilerbau.absyn.TypeDeclaration.accept(TypeDeclaration.java:29)
+	at de.thm.mni.compilerbau.phases._04a_tablebuild.TableBuilder$TableBuilderVisitor.lambda$visit$2(TableBuilder.java:114)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at de.thm.mni.compilerbau.phases._04a_tablebuild.TableBuilder$TableBuilderVisitor.visit(TableBuilder.java:114)
+	at de.thm.mni.compilerbau.absyn.Program.accept(Program.java:29)
+	at de.thm.mni.compilerbau.phases._04a_tablebuild.TableBuilder.buildSymbolTable(TableBuilder.java:38)
+	at de.thm.mni.compilerbau.Main.main(Main.java:83)
+[2022-02-20 19:05:33.460187] Test not passed.
+[2022-02-20 19:05:33.460546] Running Score: 0/2
+
+[2022-02-20 19:05:33.460601] Evaluating 103_redeclaration_as_type.spl with the submitted solution.
+[2022-02-20 19:05:34.217872] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:05:34.217944] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/103_redeclaration_as_type.spl.x /home/tools/lib/start.o /home/temp/103_redeclaration_as_type.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:05:34.217989] Test not passed.
+[2022-02-20 19:05:34.218005] Running Score: 0/3
+
+[2022-02-20 19:05:34.218033] Evaluating 104_must_be_reference_parameter.spl with the submitted solution.
+[2022-02-20 19:05:34.532385] Test subject results match (Compiler Failure).
+[2022-02-20 19:05:34.532433] Exit code matches the expected exit code (104).
+[2022-02-20 19:05:34.532466] Test passed.
+[2022-02-20 19:05:34.532482] Running Score: 1/4
+
+[2022-02-20 19:05:34.532512] Evaluating 105_redeclaration_as_procedure.spl with the submitted solution.
+[2022-02-20 19:05:35.283470] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:05:35.283539] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/105_redeclaration_as_procedure.spl.x /home/tools/lib/start.o /home/temp/105_redeclaration_as_procedure.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:05:35.283589] Test not passed.
+[2022-02-20 19:05:35.283603] Running Score: 1/5
+
+[2022-02-20 19:05:35.283713] Evaluating 106_redeclaration_as_parameter.spl with the submitted solution.
+[2022-02-20 19:05:35.607676] Test subject results match (Compiler Failure).
+[2022-02-20 19:05:35.607973] Exit code matches the expected exit code (106).
+[2022-02-20 19:05:35.608021] Test passed.
+[2022-02-20 19:05:35.608038] Running Score: 2/6
+
+[2022-02-20 19:05:35.608068] Evaluating 107_redeclaration_as_variable.spl with the submitted solution.
+[2022-02-20 19:05:35.947115] Test subject results match (Compiler Failure).
+[2022-02-20 19:05:35.947149] Exit code matches the expected exit code (107).
+[2022-02-20 19:05:35.947179] Test passed.
+[2022-02-20 19:05:35.947194] Running Score: 3/7
+
+[2022-02-20 19:05:35.947219] Evaluating 112_undefined_procedure.spl with the submitted solution.
+[2022-02-20 19:05:36.414038] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:05:36.414137] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/112_undefined_procedure.spl /home/temp/112_undefined_procedure.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    <empty>
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+java.lang.NullPointerException
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.visit(VarAllocator.java:100)
+	at de.thm.mni.compilerbau.absyn.CallStatement.accept(CallStatement.java:35)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.lambda$visit$1(VarAllocator.java:94)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.visit(VarAllocator.java:94)
+	at de.thm.mni.compilerbau.absyn.ProcedureDeclaration.accept(ProcedureDeclaration.java:49)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.lambda$visit$0(VarAllocator.java:87)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.visit(VarAllocator.java:87)
+	at de.thm.mni.compilerbau.absyn.Program.accept(Program.java:29)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator.allocVars(VarAllocator.java:122)
+	at de.thm.mni.compilerbau.Main.main(Main.java:92)
+[2022-02-20 19:05:36.414354] Test not passed.
+[2022-02-20 19:05:36.414369] Running Score: 3/8
+
+[2022-02-20 19:05:36.414396] Evaluating 113_call_of_non_procedure.spl with the submitted solution.
+[2022-02-20 19:05:36.884525] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:05:36.884603] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/113_call_of_non_procedure.spl /home/temp/113_call_of_non_procedure.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    <empty>
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    f               --> type: int
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: class de.thm.mni.compilerbau.table.TypeEntry cannot be cast to class de.thm.mni.compilerbau.table.ProcedureEntry (de.thm.mni.compilerbau.table.TypeEntry and de.thm.mni.compilerbau.table.ProcedureEntry are in unnamed module of loader 'app')
+java.lang.ClassCastException: class de.thm.mni.compilerbau.table.TypeEntry cannot be cast to class de.thm.mni.compilerbau.table.ProcedureEntry (de.thm.mni.compilerbau.table.TypeEntry and de.thm.mni.compilerbau.table.ProcedureEntry are in unnamed module of loader 'app')
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.visit(VarAllocator.java:99)
+	at de.thm.mni.compilerbau.absyn.CallStatement.accept(CallStatement.java:35)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.lambda$visit$1(VarAllocator.java:94)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.visit(VarAllocator.java:94)
+	at de.thm.mni.compilerbau.absyn.ProcedureDeclaration.accept(ProcedureDeclaration.java:49)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.lambda$visit$0(VarAllocator.java:87)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.visit(VarAllocator.java:87)
+	at de.thm.mni.compilerbau.absyn.Program.accept(Program.java:29)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator.allocVars(VarAllocator.java:122)
+	at de.thm.mni.compilerbau.Main.main(Main.java:92)
+[2022-02-20 19:05:36.884824] Test not passed.
+[2022-02-20 19:05:36.884839] Running Score: 3/9
+
+[2022-02-20 19:05:36.884865] Evaluating 114_argument_type_mismatch.spl with the submitted solution.
+[2022-02-20 19:05:37.613816] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:05:37.614873] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/114_argument_type_mismatch.spl.x /home/tools/lib/start.o /home/temp/114_argument_type_mismatch.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:05:37.614931] Test not passed.
+[2022-02-20 19:05:37.614946] Running Score: 3/10
+
+[2022-02-20 19:05:37.614979] Evaluating 115_argument_must_be_variable.spl with the submitted solution.
+[2022-02-20 19:05:38.371709] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:05:38.373034] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/115_argument_must_be_variable.spl.x /home/tools/lib/start.o /home/temp/115_argument_must_be_variable.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:05:38.373108] Test not passed.
+[2022-02-20 19:05:38.373124] Running Score: 3/11
+
+[2022-02-20 19:05:38.373155] Evaluating 116_procedure_too_few_arguments.spl with the submitted solution.
+[2022-02-20 19:05:39.131582] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:05:39.132738] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/116_procedure_too_few_arguments.spl.x /home/tools/lib/start.o /home/temp/116_procedure_too_few_arguments.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:05:39.132821] Test not passed.
+[2022-02-20 19:05:39.132838] Running Score: 3/12
+
+[2022-02-20 19:05:39.132869] Evaluating 117_procedure_too_many_arguments.spl with the submitted solution.
+[2022-02-20 19:05:39.918298] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:05:39.918371] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/117_procedure_too_many_arguments.spl.x /home/tools/lib/start.o /home/temp/117_procedure_too_many_arguments.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:05:39.918425] Test not passed.
+[2022-02-20 19:05:39.918440] Running Score: 3/13
+
+[2022-02-20 19:05:39.918470] Evaluating 121_undefined_variable.spl with the submitted solution.
+[2022-02-20 19:05:40.659517] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:05:40.659595] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/121_undefined_variable.spl.x /home/tools/lib/start.o /home/temp/121_undefined_variable.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:05:40.659639] Test not passed.
+[2022-02-20 19:05:40.659653] Running Score: 3/14
+
+[2022-02-20 19:05:40.659681] Evaluating 122_not_a_variable.spl with the submitted solution.
+[2022-02-20 19:05:41.432630] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:05:41.433888] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/122_not_a_variable.spl.x /home/tools/lib/start.o /home/temp/122_not_a_variable.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:05:41.433948] Test not passed.
+[2022-02-20 19:05:41.433964] Running Score: 3/15
+
+[2022-02-20 19:05:41.433993] Evaluating 123_indexing_non_array.spl with the submitted solution.
+[2022-02-20 19:05:42.204308] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:05:42.204383] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/123_indexing_non_array.spl.x /home/tools/lib/start.o /home/temp/123_indexing_non_array.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:05:42.204425] Test not passed.
+[2022-02-20 19:05:42.204439] Running Score: 3/16
+
+[2022-02-20 19:05:42.204466] Evaluating 124_indexing_with_non_integer.spl with the submitted solution.
+[2022-02-20 19:05:42.938361] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:05:42.938427] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/124_indexing_with_non_integer.spl.x /home/tools/lib/start.o /home/temp/124_indexing_with_non_integer.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:05:42.938475] Test not passed.
+[2022-02-20 19:05:42.938489] Running Score: 3/17
+
+[2022-02-20 19:05:42.938517] Evaluating 126_main_not_a_procedure.spl with the submitted solution.
+[2022-02-20 19:05:43.263927] Test subject results match (Compiler Failure).
+[2022-02-20 19:05:43.263965] Exit code matches the expected exit code (126).
+[2022-02-20 19:05:43.263996] Test passed.
+[2022-02-20 19:05:43.264013] Running Score: 4/18
+
+[2022-02-20 19:05:43.264040] Evaluating 127_main_must_not_have_parameters.spl with the submitted solution.
+[2022-02-20 19:05:43.667641] Test subject results match (Compiler Failure).
+[2022-02-20 19:05:43.667684] Exit code matches the expected exit code (127).
+[2022-02-20 19:05:43.667714] Test passed.
+[2022-02-20 19:05:43.667730] Running Score: 5/19
+
+[2022-02-20 19:05:43.667756] Evaluating acker.spl with the submitted solution.
+[2022-02-20 19:05:44.431178] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:05:44.431243] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/acker.spl.x /home/tools/lib/start.o /home/temp/acker.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:05:44.431291] Test not passed.
+[2022-02-20 19:05:44.431306] Running Score: 5/20
+
+[2022-02-20 19:05:44.431332] Evaluating bigtest.spl with the submitted solution.
+[2022-02-20 19:05:45.332189] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:05:45.332257] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/bigtest.spl.x /home/tools/lib/start.o /home/temp/bigtest.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:05:45.332307] Test not passed.
+[2022-02-20 19:05:45.332321] Running Score: 5/21
+
+[2022-02-20 19:05:45.332349] Evaluating bits.spl with the submitted solution.
+[2022-02-20 19:05:46.079143] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:05:46.080345] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/bits.spl.x /home/tools/lib/start.o /home/temp/bits.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:05:46.080415] Test not passed.
+[2022-02-20 19:05:46.080430] Running Score: 5/22
+
+[2022-02-20 19:05:46.080459] Evaluating gcd.spl with the submitted solution.
+[2022-02-20 19:05:46.831707] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:05:46.833011] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/gcd.spl.x /home/tools/lib/start.o /home/temp/gcd.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:05:46.833100] Test not passed.
+[2022-02-20 19:05:46.833115] Running Score: 5/23
+
+[2022-02-20 19:05:46.833149] Evaluating inttest.spl with the submitted solution.
+[2022-02-20 19:05:47.566029] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:05:47.576872] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/inttest.spl.x /home/tools/lib/start.o /home/temp/inttest.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:05:47.576941] Test not passed.
+[2022-02-20 19:05:47.576964] Running Score: 5/24
+
+[2022-02-20 19:05:47.576994] Evaluating multiply.spl with the submitted solution.
+[2022-02-20 19:05:48.301736] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:05:48.301807] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/multiply.spl.x /home/tools/lib/start.o /home/temp/multiply.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:05:48.301854] Test not passed.
+[2022-02-20 19:05:48.301869] Running Score: 5/25
+
+[2022-02-20 19:05:48.301899] Evaluating partind1.spl with the submitted solution.
+[2022-02-20 19:05:49.051140] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:05:49.051209] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/partind1.spl.x /home/tools/lib/start.o /home/temp/partind1.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:05:49.051264] Test not passed.
+[2022-02-20 19:05:49.051307] Running Score: 5/26
+
+[2022-02-20 19:05:49.051343] Evaluating partind2.spl with the submitted solution.
+[2022-02-20 19:05:49.829559] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:05:49.829625] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/partind2.spl.x /home/tools/lib/start.o /home/temp/partind2.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:05:49.829671] Test not passed.
+[2022-02-20 19:05:49.829685] Running Score: 5/27
+
+[2022-02-20 19:05:49.829711] Evaluating swap.spl with the submitted solution.
+[2022-02-20 19:05:50.571518] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:05:50.571587] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/swap.spl.x /home/tools/lib/start.o /home/temp/swap.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:05:50.571639] Test not passed.
+[2022-02-20 19:05:50.571653] Running Score: 5/28
+
+[2022-02-20 19:05:50.571762] Evaluating test1.spl with the submitted solution.
+[2022-02-20 19:05:51.307661] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:05:51.307728] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/test1.spl.x /home/tools/lib/start.o /home/temp/test1.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:05:51.307776] Test not passed.
+[2022-02-20 19:05:51.307792] Running Score: 5/29
+
+[2022-02-20 19:05:51.307906] Evaluating test2.spl with the submitted solution.
+[2022-02-20 19:05:52.050328] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:05:52.050398] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/test2.spl.x /home/tools/lib/start.o /home/temp/test2.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:05:52.050444] Test not passed.
+[2022-02-20 19:05:52.050457] Running Score: 5/30
+
+[2022-02-20 19:05:52.050482] Evaluating test3.spl with the submitted solution.
+[2022-02-20 19:05:52.816303] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:05:52.816369] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/test3.spl.x /home/tools/lib/start.o /home/temp/test3.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:05:52.816417] Test not passed.
+[2022-02-20 19:05:52.816432] Running Score: 5/31
+
+[2022-02-20 19:05:52.816459] Evaluating test4.spl with the submitted solution.
+[2022-02-20 19:05:53.615166] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:05:53.615233] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/test4.spl.x /home/tools/lib/start.o /home/temp/test4.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:05:53.616247] Test not passed.
+[2022-02-20 19:05:53.616275] Running Score: 5/32
+
+[2022-02-20 19:05:53.616313] Evaluating test5.spl with the submitted solution.
+[2022-02-20 19:05:54.347671] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:05:54.347745] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/test5.spl.x /home/tools/lib/start.o /home/temp/test5.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:05:54.348947] Test not passed.
+[2022-02-20 19:05:54.348977] Running Score: 5/33
+
+[2022-02-20 19:05:54.349008] Evaluating test7.spl with the submitted solution.
+[2022-02-20 19:05:55.067782] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:05:55.068972] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/test7.spl.x /home/tools/lib/start.o /home/temp/test7.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:05:55.069070] Test not passed.
+[2022-02-20 19:05:55.069095] Running Score: 5/34
+
+[2022-02-20 19:05:55.069135] Evaluating test8.spl with the submitted solution.
+[2022-02-20 19:05:55.832031] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:05:55.833142] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/test8.spl.x /home/tools/lib/start.o /home/temp/test8.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:05:55.833209] Test not passed.
+[2022-02-20 19:05:55.833225] Running Score: 5/35
+
+[2022-02-20 19:05:55.833254] Evaluating test9.spl with the submitted solution.
+[2022-02-20 19:05:56.569395] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:05:56.570581] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/test9.spl.x /home/tools/lib/start.o /home/temp/test9.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:05:56.570645] Test not passed.
+[2022-02-20 19:05:56.570661] Running Score: 5/36
+
+[2022-02-20 19:05:56.570689] Evaluating threedim.spl with the submitted solution.
+[2022-02-20 19:05:57.353160] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:05:57.353225] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/threedim.spl.x /home/tools/lib/start.o /home/temp/threedim.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:05:57.353271] Test not passed.
+[2022-02-20 19:05:57.353285] Running Score: 5/37
+
+[2022-02-20 19:05:57.353311] Evaluating twodim.spl with the submitted solution.
+[2022-02-20 19:05:58.141378] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:05:58.142617] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/twodim.spl.x /home/tools/lib/start.o /home/temp/twodim.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:05:58.142686] Test not passed.
+[2022-02-20 19:05:58.142701] Running Score: 5/38
+
+[2022-02-20 19:05:58.142817] Final score: 5/38 (13%). 
+[2022-02-20 19:05:58.143030] 80% are needed to pass.
+[2022-02-20 19:05:58.393078] You have NOT PASSED this assignment.
+[2022-02-20 19:05:58.393442] You can try again. Deadline: 20.02.2022 23:59
+
+[2022-02-20 19:06:00.599648] === END Evaluation Log
+[2022-02-20 19:06:00.599878] NOTE: This evaluation log is also available at '/mnt/c/users/msall/documents/uni/CB/compilerbau/.submitscript/data/assignments/Aufgabe-2/submissions/[evaluated] e6be6ab5-41ec-4ef7-ad87-3ccaffb1a8d9/evaluation.log'
+[2022-02-20 19:06:00.600054] 
+[2022-02-20 19:20:48.429155] 
+[2022-02-20 19:20:48.429605] === Submitting ===
+[2022-02-20 19:20:49.124145] 
+[2022-02-20 19:20:49.127037] 
+[2022-02-20 19:20:49.127145] Selected variant 'Java SPL Compiler' for assignment 'Aufgabe-2'.
+[2022-02-20 19:20:50.155040] === Building submission ===
+[2022-02-20 19:20:50.155178] Running 'mvn clean compile'.
+[2022-02-20 19:20:50.155309] === Building submission finished ===
+[2022-02-20 19:20:53.140056] === Cleaning directory for submission ===
+[2022-02-20 19:20:53.145718] === Cleaning directory finished ===
+[2022-02-20 19:20:53.161725] === Starting Upload ===
+[2022-02-20 19:20:53.720692] === Upload finished ===
+[2022-02-20 19:20:53.720900] === BEGIN Upload Log
+[2022-02-20 19:20:53.721041] [2022-02-20 19:20:54.586152] Received submission f23166f7-de0b-44f1-a676-86a83f858103
+[2022-02-20 19:20:54.586786] Ip: 10.196.108.159
+[2022-02-20 19:20:54.586989] Team members: [('Tercüman', 'Mehmet Duhan', '5296149'), ("M'Sallem", 'Samir Faycal Tahar', '5276295')]
+[2022-02-20 19:20:54.966392] Your submission was ACCEPTED for course 'Compilerbau-ws21', assignment 'Aufgabe-2'.
+[2022-02-20 19:20:54.966697] Your submission has the id f23166f7-de0b-44f1-a676-86a83f858103.
+[2022-02-20 19:20:54.967225] It will be evaluated shortly. Please check back soon for your results.
+
+[2022-02-20 19:20:53.721172] === END Upload Log
+[2022-02-20 19:20:53.721330] Successfully submitted your solution. Please see the upload log above for more details.
+[2022-02-20 19:20:53.743942] Polling for results (Press CTRL + C to abort).
+[2022-02-20 19:20:53.828224] .
+[2022-02-20 19:20:54.911507] .
+[2022-02-20 19:20:55.972264] .
+[2022-02-20 19:20:57.043105] .
+[2022-02-20 19:20:58.123203] .
+[2022-02-20 19:20:59.191473] .
+[2022-02-20 19:21:00.272838] .
+[2022-02-20 19:21:01.333887] .
+[2022-02-20 19:21:02.406759] .
+[2022-02-20 19:21:03.506472] .
+[2022-02-20 19:21:04.575930] .
+[2022-02-20 19:21:05.636833] .
+[2022-02-20 19:21:06.700732] .
+[2022-02-20 19:21:07.777192] .
+[2022-02-20 19:21:08.886685] .
+[2022-02-20 19:21:09.975655] .
+[2022-02-20 19:21:11.057861] .
+[2022-02-20 19:21:12.125263] .
+[2022-02-20 19:21:13.215373] .
+[2022-02-20 19:21:14.300611] .
+[2022-02-20 19:21:15.386134] .
+[2022-02-20 19:21:16.455107] .
+[2022-02-20 19:21:17.528737] .
+[2022-02-20 19:21:18.621713] .
+[2022-02-20 19:21:19.698992] .
+[2022-02-20 19:21:20.773473] .
+[2022-02-20 19:21:21.851640] .
+[2022-02-20 19:21:22.938740] .
+[2022-02-20 19:21:24.025289] .
+[2022-02-20 19:21:25.104241] .
+[2022-02-20 19:21:26.180029] .
+[2022-02-20 19:21:27.256323] .
+[2022-02-20 19:21:28.340900] .
+[2022-02-20 19:21:29.409097] .
+[2022-02-20 19:21:30.481050] .
+[2022-02-20 19:21:31.560443] .
+[2022-02-20 19:21:32.751380] 
+=== Evaluation results for submission 'f23166f7-de0b-44f1-a676-86a83f858103' retrieved. ===
+[2022-02-20 19:21:32.751520] You achieved the score 8/38 (21%).
+[2022-02-20 19:21:32.751639] You have NOT PASSED this assignment.
+[2022-02-20 19:21:36.212225] === BEGIN Evaluation Log
+[2022-02-20 19:21:36.212566] [2022-02-20 19:20:54.968169] Start of evaluation log for submission 'f23166f7-de0b-44f1-a676-86a83f858103'.
+[2022-02-20 19:20:54.968492] Team member: ('Tercüman', 'Mehmet Duhan', '5296149')
+[2022-02-20 19:20:54.968666] Team member: ("M'Sallem", 'Samir Faycal Tahar', '5276295')
+[2022-02-20 19:20:54.998242] Preparing the sandbox
+[2022-02-20 19:20:55.752715] Unpacking submission in sandbox
+[2022-02-20 19:20:56.193921] Building the test subject
+[2022-02-20 19:20:56.194540] Identified the Java variant.
+[2022-02-20 19:20:56.328813] Building Java solution with maven.
+[2022-02-20 19:21:08.287073] Maven log:
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------< de.thm.mni.compilerbau.spl-reference:spl >--------------
+[INFO] Building spl 0.1
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- jflex-maven-plugin:1.7.0:generate (default) @ spl ---
+[INFO]   generated /home/solution/java/target/generated-sources/jflex/de/thm/mni/compilerbau/phases/_01_scanner/Scanner.java
+[INFO] 
+[INFO] --- cup-maven-plugin:11b-20160615:generate (default) @ spl ---
+Warning : Non terminal "Var" was declared but never used
+Warning : Non terminal "NotEmptyParam" was declared but never used
+Warning : Non terminal "TypeExpression" was declared but never used
+Warning : Non terminal "BinaryExpression" was declared but never used
+Warning : *** Shift/Reduce conflict found in state #91
+  between IfStatement ::= IF LPAREN Expression RPAREN Statement (*) 
+  and     IfStatement ::= IF LPAREN Expression RPAREN Statement (*) ELSE Statement 
+  under symbol ELSE
+  Resolved in favor of shifting.
+
+[INFO]   generated /home/solution/java/target/generated-sources/cup/de/thm/mni/compilerbau/phases/_02_03_parser/Parser.java
+[INFO]   generated /home/solution/java/target/generated-sources/cup/de/thm/mni/compilerbau/phases/_02_03_parser/Sym.java
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ spl ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/solution/java/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ spl ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 57 source files to /home/solution/java/target/classes
+[INFO] /home/solution/java/target/generated-sources/jflex/de/thm/mni/compilerbau/phases/_01_scanner/Scanner.java: /home/solution/java/target/generated-sources/jflex/de/thm/mni/compilerbau/phases/_01_scanner/Scanner.java uses or overrides a deprecated API.
+[INFO] /home/solution/java/target/generated-sources/jflex/de/thm/mni/compilerbau/phases/_01_scanner/Scanner.java: Recompile with -Xlint:deprecation for details.
+[INFO] /home/solution/java/target/generated-sources/cup/de/thm/mni/compilerbau/phases/_02_03_parser/Parser.java: /home/solution/java/target/generated-sources/cup/de/thm/mni/compilerbau/phases/_02_03_parser/Parser.java uses unchecked or unsafe operations.
+[INFO] /home/solution/java/target/generated-sources/cup/de/thm/mni/compilerbau/phases/_02_03_parser/Parser.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ spl ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/solution/java/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ spl ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ spl ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ spl ---
+[INFO] Building jar: /home/solution/java/target/spl.jar
+[INFO] 
+[INFO] --- maven-shade-plugin:3.1.0:shade (default) @ spl ---
+[INFO] Including com.github.vbmacher:java-cup-runtime:jar:11b-20160615 in the shaded jar.
+[INFO] Replacing original artifact with shaded artifact.
+[INFO] Replacing /home/solution/java/target/spl.jar with /home/solution/java/target/spl-0.1-shaded.jar
+[INFO] Dependency-reduced POM written at: /home/solution/java/dependency-reduced-pom.xml
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.767 s
+[INFO] Finished at: 2022-02-20T18:21:08Z
+[INFO] ------------------------------------------------------------------------
+[2022-02-20 19:21:08.431511] Beginning evaluation.
+[2022-02-20 19:21:08.433228] Evaluating 101_undefined_type.spl with the submitted solution.
+[2022-02-20 19:21:08.751142] Test subject results match (Compiler Failure).
+[2022-02-20 19:21:08.752442] Exit code matches the expected exit code (101).
+[2022-02-20 19:21:08.752500] Test passed.
+[2022-02-20 19:21:08.752519] Running Score: 1/1
+
+[2022-02-20 19:21:08.752549] Evaluating 102_not_a_type.spl with the submitted solution.
+[2022-02-20 19:21:09.199794] Test subject results match (Compiler Failure).
+[2022-02-20 19:21:09.199832] Exit code matches the expected exit code (102).
+[2022-02-20 19:21:09.199865] Test passed.
+[2022-02-20 19:21:09.199880] Running Score: 2/2
+
+[2022-02-20 19:21:09.199906] Evaluating 103_redeclaration_as_type.spl with the submitted solution.
+[2022-02-20 19:21:09.507398] Test subject results match (Compiler Failure).
+[2022-02-20 19:21:09.507443] Exit code matches the expected exit code (103).
+[2022-02-20 19:21:09.507533] Test passed.
+[2022-02-20 19:21:09.507766] Running Score: 3/3
+
+[2022-02-20 19:21:09.507813] Evaluating 104_must_be_reference_parameter.spl with the submitted solution.
+[2022-02-20 19:21:09.826182] Test subject results match (Compiler Failure).
+[2022-02-20 19:21:09.827682] Exit code matches the expected exit code (104).
+[2022-02-20 19:21:09.827741] Test passed.
+[2022-02-20 19:21:09.827759] Running Score: 4/4
+
+[2022-02-20 19:21:09.827792] Evaluating 105_redeclaration_as_procedure.spl with the submitted solution.
+[2022-02-20 19:21:10.593905] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:21:10.594014] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/105_redeclaration_as_procedure.spl.x /home/tools/lib/start.o /home/temp/105_redeclaration_as_procedure.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:21:10.594066] Test not passed.
+[2022-02-20 19:21:10.594081] Running Score: 4/5
+
+[2022-02-20 19:21:10.594113] Evaluating 106_redeclaration_as_parameter.spl with the submitted solution.
+[2022-02-20 19:21:10.923643] Test subject results match (Compiler Failure).
+[2022-02-20 19:21:10.923685] Exit code matches the expected exit code (106).
+[2022-02-20 19:21:10.923717] Test passed.
+[2022-02-20 19:21:10.923735] Running Score: 5/6
+
+[2022-02-20 19:21:10.923764] Evaluating 107_redeclaration_as_variable.spl with the submitted solution.
+[2022-02-20 19:21:11.258244] Test subject results match (Compiler Failure).
+[2022-02-20 19:21:11.258554] Exit code matches the expected exit code (107).
+[2022-02-20 19:21:11.258743] Test passed.
+[2022-02-20 19:21:11.258918] Running Score: 6/7
+
+[2022-02-20 19:21:11.259185] Evaluating 112_undefined_procedure.spl with the submitted solution.
+[2022-02-20 19:21:11.703691] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:21:11.703776] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/112_undefined_procedure.spl /home/temp/112_undefined_procedure.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    <empty>
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: null
+java.lang.NullPointerException
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.visit(VarAllocator.java:100)
+	at de.thm.mni.compilerbau.absyn.CallStatement.accept(CallStatement.java:35)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.lambda$visit$1(VarAllocator.java:94)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.visit(VarAllocator.java:94)
+	at de.thm.mni.compilerbau.absyn.ProcedureDeclaration.accept(ProcedureDeclaration.java:49)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.lambda$visit$0(VarAllocator.java:87)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.visit(VarAllocator.java:87)
+	at de.thm.mni.compilerbau.absyn.Program.accept(Program.java:29)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator.allocVars(VarAllocator.java:122)
+	at de.thm.mni.compilerbau.Main.main(Main.java:92)
+[2022-02-20 19:21:11.703995] Test not passed.
+[2022-02-20 19:21:11.704011] Running Score: 6/8
+
+[2022-02-20 19:21:11.704039] Evaluating 113_call_of_non_procedure.spl with the submitted solution.
+[2022-02-20 19:21:12.175614] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2022-02-20 19:21:12.175694] Output (stdout + stderr) of 'java -jar /home/solution/java/target/spl.jar /home/tests/113_call_of_non_procedure.spl /home/temp/113_call_of_non_procedure.spl.s' (Limited to 50 lines/10000 characters):
+Symbol table at end of procedure 'main':
+  level 0
+    <empty>
+  level 1
+    clearAll        --> proc: (int)
+    drawCircle      --> proc: (int, int, int, int)
+    drawLine        --> proc: (int, int, int, int, int)
+    exit            --> proc: ()
+    f               --> type: int
+    int             --> type: int
+    main            --> proc: ()
+    printc          --> proc: (int)
+    printi          --> proc: (int)
+    readc           --> proc: (ref int)
+    readi           --> proc: (ref int)
+    setPixel        --> proc: (int, int, int)
+    time            --> proc: (ref int)
+
+An error occurred: class de.thm.mni.compilerbau.table.TypeEntry cannot be cast to class de.thm.mni.compilerbau.table.ProcedureEntry (de.thm.mni.compilerbau.table.TypeEntry and de.thm.mni.compilerbau.table.ProcedureEntry are in unnamed module of loader 'app')
+java.lang.ClassCastException: class de.thm.mni.compilerbau.table.TypeEntry cannot be cast to class de.thm.mni.compilerbau.table.ProcedureEntry (de.thm.mni.compilerbau.table.TypeEntry and de.thm.mni.compilerbau.table.ProcedureEntry are in unnamed module of loader 'app')
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.visit(VarAllocator.java:99)
+	at de.thm.mni.compilerbau.absyn.CallStatement.accept(CallStatement.java:35)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.lambda$visit$1(VarAllocator.java:94)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.visit(VarAllocator.java:94)
+	at de.thm.mni.compilerbau.absyn.ProcedureDeclaration.accept(ProcedureDeclaration.java:49)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.lambda$visit$0(VarAllocator.java:87)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator$VariableAllocVisitor2.visit(VarAllocator.java:87)
+	at de.thm.mni.compilerbau.absyn.Program.accept(Program.java:29)
+	at de.thm.mni.compilerbau.phases._05_varalloc.VarAllocator.allocVars(VarAllocator.java:122)
+	at de.thm.mni.compilerbau.Main.main(Main.java:92)
+[2022-02-20 19:21:12.177093] Test not passed.
+[2022-02-20 19:21:12.177121] Running Score: 6/9
+
+[2022-02-20 19:21:12.177153] Evaluating 114_argument_type_mismatch.spl with the submitted solution.
+[2022-02-20 19:21:12.912753] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:21:12.913109] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/114_argument_type_mismatch.spl.x /home/tools/lib/start.o /home/temp/114_argument_type_mismatch.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:21:12.913170] Test not passed.
+[2022-02-20 19:21:12.913194] Running Score: 6/10
+
+[2022-02-20 19:21:12.913231] Evaluating 115_argument_must_be_variable.spl with the submitted solution.
+[2022-02-20 19:21:13.692632] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:21:13.693112] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/115_argument_must_be_variable.spl.x /home/tools/lib/start.o /home/temp/115_argument_must_be_variable.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:21:13.693182] Test not passed.
+[2022-02-20 19:21:13.693197] Running Score: 6/11
+
+[2022-02-20 19:21:13.693230] Evaluating 116_procedure_too_few_arguments.spl with the submitted solution.
+[2022-02-20 19:21:14.435823] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:21:14.435889] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/116_procedure_too_few_arguments.spl.x /home/tools/lib/start.o /home/temp/116_procedure_too_few_arguments.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:21:14.435941] Test not passed.
+[2022-02-20 19:21:14.435956] Running Score: 6/12
+
+[2022-02-20 19:21:14.435988] Evaluating 117_procedure_too_many_arguments.spl with the submitted solution.
+[2022-02-20 19:21:15.215699] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:21:15.215970] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/117_procedure_too_many_arguments.spl.x /home/tools/lib/start.o /home/temp/117_procedure_too_many_arguments.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:21:15.216035] Test not passed.
+[2022-02-20 19:21:15.216052] Running Score: 6/13
+
+[2022-02-20 19:21:15.216085] Evaluating 121_undefined_variable.spl with the submitted solution.
+[2022-02-20 19:21:15.993190] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:21:15.993282] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/121_undefined_variable.spl.x /home/tools/lib/start.o /home/temp/121_undefined_variable.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:21:15.993334] Test not passed.
+[2022-02-20 19:21:15.993349] Running Score: 6/14
+
+[2022-02-20 19:21:15.993381] Evaluating 122_not_a_variable.spl with the submitted solution.
+[2022-02-20 19:21:16.752913] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:21:16.752982] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/122_not_a_variable.spl.x /home/tools/lib/start.o /home/temp/122_not_a_variable.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:21:16.753043] Test not passed.
+[2022-02-20 19:21:16.753059] Running Score: 6/15
+
+[2022-02-20 19:21:16.753085] Evaluating 123_indexing_non_array.spl with the submitted solution.
+[2022-02-20 19:21:17.548409] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:21:17.548482] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/123_indexing_non_array.spl.x /home/tools/lib/start.o /home/temp/123_indexing_non_array.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:21:17.549095] Test not passed.
+[2022-02-20 19:21:17.549124] Running Score: 6/16
+
+[2022-02-20 19:21:17.549157] Evaluating 124_indexing_with_non_integer.spl with the submitted solution.
+[2022-02-20 19:21:18.291150] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:21:18.291221] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/124_indexing_with_non_integer.spl.x /home/tools/lib/start.o /home/temp/124_indexing_with_non_integer.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:21:18.292103] Test not passed.
+[2022-02-20 19:21:18.292134] Running Score: 6/17
+
+[2022-02-20 19:21:18.292164] Evaluating 126_main_not_a_procedure.spl with the submitted solution.
+[2022-02-20 19:21:18.620904] Test subject results match (Compiler Failure).
+[2022-02-20 19:21:18.620953] Exit code matches the expected exit code (126).
+[2022-02-20 19:21:18.621086] Test passed.
+[2022-02-20 19:21:18.621111] Running Score: 7/18
+
+[2022-02-20 19:21:18.621144] Evaluating 127_main_must_not_have_parameters.spl with the submitted solution.
+[2022-02-20 19:21:19.045300] Test subject results match (Compiler Failure).
+[2022-02-20 19:21:19.045345] Exit code matches the expected exit code (127).
+[2022-02-20 19:21:19.045382] Test passed.
+[2022-02-20 19:21:19.045406] Running Score: 8/19
+
+[2022-02-20 19:21:19.045438] Evaluating acker.spl with the submitted solution.
+[2022-02-20 19:21:19.796215] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:21:19.797114] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/acker.spl.x /home/tools/lib/start.o /home/temp/acker.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:21:19.797186] Test not passed.
+[2022-02-20 19:21:19.797204] Running Score: 8/20
+
+[2022-02-20 19:21:19.797239] Evaluating bigtest.spl with the submitted solution.
+[2022-02-20 19:21:20.680936] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:21:20.681039] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/bigtest.spl.x /home/tools/lib/start.o /home/temp/bigtest.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:21:20.681093] Test not passed.
+[2022-02-20 19:21:20.681108] Running Score: 8/21
+
+[2022-02-20 19:21:20.681249] Evaluating bits.spl with the submitted solution.
+[2022-02-20 19:21:21.427652] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:21:21.427763] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/bits.spl.x /home/tools/lib/start.o /home/temp/bits.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:21:21.427824] Test not passed.
+[2022-02-20 19:21:21.427845] Running Score: 8/22
+
+[2022-02-20 19:21:21.427882] Evaluating gcd.spl with the submitted solution.
+[2022-02-20 19:21:22.181219] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:21:22.181281] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/gcd.spl.x /home/tools/lib/start.o /home/temp/gcd.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:21:22.181329] Test not passed.
+[2022-02-20 19:21:22.181344] Running Score: 8/23
+
+[2022-02-20 19:21:22.181372] Evaluating inttest.spl with the submitted solution.
+[2022-02-20 19:21:22.931711] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:21:22.932891] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/inttest.spl.x /home/tools/lib/start.o /home/temp/inttest.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:21:22.932955] Test not passed.
+[2022-02-20 19:21:22.932972] Running Score: 8/24
+
+[2022-02-20 19:21:22.933005] Evaluating multiply.spl with the submitted solution.
+[2022-02-20 19:21:23.674707] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:21:23.675874] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/multiply.spl.x /home/tools/lib/start.o /home/temp/multiply.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:21:23.675942] Test not passed.
+[2022-02-20 19:21:23.675958] Running Score: 8/25
+
+[2022-02-20 19:21:23.675989] Evaluating partind1.spl with the submitted solution.
+[2022-02-20 19:21:24.436987] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:21:24.437091] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/partind1.spl.x /home/tools/lib/start.o /home/temp/partind1.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:21:24.437147] Test not passed.
+[2022-02-20 19:21:24.437163] Running Score: 8/26
+
+[2022-02-20 19:21:24.437198] Evaluating partind2.spl with the submitted solution.
+[2022-02-20 19:21:25.201725] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:21:25.201797] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/partind2.spl.x /home/tools/lib/start.o /home/temp/partind2.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:21:25.202995] Test not passed.
+[2022-02-20 19:21:25.203025] Running Score: 8/27
+
+[2022-02-20 19:21:25.203060] Evaluating swap.spl with the submitted solution.
+[2022-02-20 19:21:25.967414] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:21:25.968595] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/swap.spl.x /home/tools/lib/start.o /home/temp/swap.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:21:25.968662] Test not passed.
+[2022-02-20 19:21:25.968678] Running Score: 8/28
+
+[2022-02-20 19:21:25.968711] Evaluating test1.spl with the submitted solution.
+[2022-02-20 19:21:26.699405] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:21:26.700632] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/test1.spl.x /home/tools/lib/start.o /home/temp/test1.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:21:26.700711] Test not passed.
+[2022-02-20 19:21:26.700730] Running Score: 8/29
+
+[2022-02-20 19:21:26.700762] Evaluating test2.spl with the submitted solution.
+[2022-02-20 19:21:27.453768] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:21:27.454972] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/test2.spl.x /home/tools/lib/start.o /home/temp/test2.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:21:27.455039] Test not passed.
+[2022-02-20 19:21:27.455055] Running Score: 8/30
+
+[2022-02-20 19:21:27.455088] Evaluating test3.spl with the submitted solution.
+[2022-02-20 19:21:28.224708] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:21:28.224779] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/test3.spl.x /home/tools/lib/start.o /home/temp/test3.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:21:28.224830] Test not passed.
+[2022-02-20 19:21:28.224960] Running Score: 8/31
+
+[2022-02-20 19:21:28.225002] Evaluating test4.spl with the submitted solution.
+[2022-02-20 19:21:29.050700] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:21:29.051978] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/test4.spl.x /home/tools/lib/start.o /home/temp/test4.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:21:29.052056] Test not passed.
+[2022-02-20 19:21:29.052072] Running Score: 8/32
+
+[2022-02-20 19:21:29.052118] Evaluating test5.spl with the submitted solution.
+[2022-02-20 19:21:29.783259] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:21:29.783328] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/test5.spl.x /home/tools/lib/start.o /home/temp/test5.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:21:29.784521] Test not passed.
+[2022-02-20 19:21:29.784552] Running Score: 8/33
+
+[2022-02-20 19:21:29.784585] Evaluating test7.spl with the submitted solution.
+[2022-02-20 19:21:30.519592] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:21:30.519698] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/test7.spl.x /home/tools/lib/start.o /home/temp/test7.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:21:30.519752] Test not passed.
+[2022-02-20 19:21:30.519768] Running Score: 8/34
+
+[2022-02-20 19:21:30.519801] Evaluating test8.spl with the submitted solution.
+[2022-02-20 19:21:31.257589] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:21:31.257659] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/test8.spl.x /home/tools/lib/start.o /home/temp/test8.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:21:31.257711] Test not passed.
+[2022-02-20 19:21:31.257727] Running Score: 8/35
+
+[2022-02-20 19:21:31.257757] Evaluating test9.spl with the submitted solution.
+[2022-02-20 19:21:31.991060] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:21:31.991138] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/test9.spl.x /home/tools/lib/start.o /home/temp/test9.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:21:31.991186] Test not passed.
+[2022-02-20 19:21:31.991201] Running Score: 8/36
+
+[2022-02-20 19:21:31.991231] Evaluating threedim.spl with the submitted solution.
+[2022-02-20 19:21:32.748505] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:21:32.748578] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/threedim.spl.x /home/tools/lib/start.o /home/temp/threedim.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:21:32.749110] Test not passed.
+[2022-02-20 19:21:32.749141] Running Score: 8/37
+
+[2022-02-20 19:21:32.749175] Evaluating twodim.spl with the submitted solution.
+[2022-02-20 19:21:33.517939] Toolchain resulted in 'Linker Failure', which is not supposed to happen for working solutions. The associated log is listed below.
+[2022-02-20 19:21:33.519121] Output (stdout + stderr) of '/home/tools/ld -s /home/tools/lib/stdalone.lnk -o /home/temp/twodim.spl.x /home/tools/lib/start.o /home/temp/twodim.spl.o -L/home/tools/lib -lsplrts' (Limited to 50 lines/10000 characters):
+The following symbols are undefined:
+    main
+Error: 1 undefined symbol(s)
+[2022-02-20 19:21:33.519185] Test not passed.
+[2022-02-20 19:21:33.519201] Running Score: 8/38
+
+[2022-02-20 19:21:33.519316] Final score: 8/38 (21%). 
+[2022-02-20 19:21:33.519534] 80% are needed to pass.
+[2022-02-20 19:21:33.713613] You have NOT PASSED this assignment.
+[2022-02-20 19:21:33.713993] You can try again. Deadline: 20.02.2022 23:59
+
+[2022-02-20 19:21:36.212980] === END Evaluation Log
+[2022-02-20 19:21:36.213186] NOTE: This evaluation log is also available at '/mnt/c/users/msall/documents/uni/CB/compilerbau/.submitscript/data/assignments/Aufgabe-2/submissions/[evaluated] f23166f7-de0b-44f1-a676-86a83f858103/evaluation.log'
+[2022-02-20 19:21:36.213501] 
+[2022-02-20 19:22:25.248471] Sorry, again.

@@ -3,13 +3,15 @@ Identified Python 3.8.10 at /usr/bin/python3.8
 [Bootstrap] Identified 'pipenv, version 2020.11.15' at /usr/bin/python3.8 -m pipenv
 [Bootstrap] Running '/usr/bin/python3.8 -m pipenv install --python 3.8' to ensure the existence of a virtual environment.
 [Bootstrap] This may take a moment.
+Virtualenv already exists!
+Removing existing virtualenv...
 Creating a virtualenv for this project...
 Pipfile: /mnt/c/users/msall/documents/uni/CB/compilerbau/.submitscript/src/Pipfile
 Using /usr/bin/python3.8 (3.8.10) to create virtualenv...
-⠋ Creating virtual environment...⠙ Creating virtual environment...⠹ Creating virtual environment...created virtual environment CPython3.8.10.final.0-64 in 132ms
+⠋ Creating virtual environment...⠙ Creating virtual environment...⠹ Creating virtual environment...⠸ Creating virtual environment...created virtual environment CPython3.8.10.final.0-64 in 200ms
   creator CPython3Posix(dest=/home/samir/.local/share/virtualenvs/src-w06T69KL, clear=False, no_vcs_ignore=False, global=False)
   seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/home/samir/.local/share/virtualenv)
-    added seed packages: pip==21.3.1, setuptools==58.3.0, wheel==0.37.0
+    added seed packages: pip==21.3.1, setuptools==60.5.0, wheel==0.37.1
   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
 
 ✔ Successfully created virtual environment! 
