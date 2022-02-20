@@ -108,7 +108,7 @@ public class VarAllocator {
         }
 
         public void visit(WhileStatement whileStatement) {
-            whileStatement.accept(this);
+            whileStatement.body.accept(this);
         }
 
     }
