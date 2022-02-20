@@ -120,8 +120,8 @@ public class VarAllocator {
     public void allocVars(Program program, SymbolTable table) {
         //TODO (assignment 5): Allocate stack slots for all parameters and local variables
         VariableAllocVisitor variableAllocVisitor = new VariableAllocVisitor(table);
-        program.accept(variableAllocVisitor);
         VariableAllocVisitor2 variableAllocVisitor2 = new VariableAllocVisitor2(table);
+        program.accept(variableAllocVisitor);
         program.accept(variableAllocVisitor2);
 
 

@@ -35,6 +35,10 @@ public class ProcedureBodyChecker extends DoNothingVisitor {
             this.table = symbolTable;
         }
 
+        public void visit(Program program){
+            program.declarations.forEach(pd -> pd.accept(this));
+        }
+
         public void visit(WhileStatement whileStatement) {
             whileStatement.condition.accept((Visitor) this);
             if (whileStatement.condition.dataType != PrimitiveType.boolType) {
@@ -126,12 +130,6 @@ public class ProcedureBodyChecker extends DoNothingVisitor {
             }
         }
 
-        public void visit(NamedTypeExpression namedTypeExpression) {
-            if (!(table.lookup(namedTypeExpression.name) instanceof TypeEntry)) {
-                throw SplError.NotAType(namedTypeExpression.position, namedTypeExpression.name);
-            }
-            //eventuell noch nicht vollstädnig
-        }
 
         public void visit(NamedVariable namedVariable) {
             Entry entry = localTable.lookup(namedVariable.name, SplError.UndefinedVariable(namedVariable.position, namedVariable.name));
