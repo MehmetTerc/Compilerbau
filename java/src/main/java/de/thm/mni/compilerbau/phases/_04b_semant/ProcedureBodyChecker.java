@@ -40,7 +40,7 @@ public class ProcedureBodyChecker extends DoNothingVisitor {
         }
 
         public void visit(WhileStatement whileStatement) {
-            whileStatement.condition.accept((Visitor) this);
+            whileStatement.condition.accept( this);
             if (whileStatement.condition.dataType != PrimitiveType.boolType) {
                 throw SplError.WhileConditionMustBeBoolean(whileStatement.position);
             }
@@ -48,7 +48,7 @@ public class ProcedureBodyChecker extends DoNothingVisitor {
         }
 
         public void visit(IfStatement ifStatement) {
-            ifStatement.condition.accept((Visitor) this);
+            ifStatement.condition.accept(this);
             if (ifStatement.condition.dataType != PrimitiveType.boolType) {
                 throw SplError.IfConditionMustBeBoolean(ifStatement.position);
             }
