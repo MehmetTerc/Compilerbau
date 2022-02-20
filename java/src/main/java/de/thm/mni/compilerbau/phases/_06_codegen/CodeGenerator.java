@@ -97,6 +97,7 @@ public class CodeGenerator {
         }
 
         public void visit(AssignStatement assignStatement) {
+            register = new Register(8);
             assignStatement.target.accept(this);
             assignStatement.value.accept(this);
 
@@ -111,12 +112,13 @@ public class CodeGenerator {
             ArrayType arrayType= (ArrayType) arrayAccess.array.dataType;
             output.emitInstruction("add", register, new Register(0), arrayType.arraySize);
             output.emitInstruction("bgeu", register.minus(1), register, "_indexError");
-            output.emitInstruction("mul", register.minus(1), register.minus(1), arrayAccess.index.dataType.byteSize);
+            output.emitInstruction("mul", register.minus(1), register.minus(1), arrayType.baseType.byteSize);
             output.emitInstruction("add", register.minus(2), register.minus(2), register.minus(1));
             register = register.minus(1);
         }
 
         public void visit(WhileStatement whileStatement) {
+            register = new Register(8);
             String startLabel = "L" + lblCounter++;
             String endLabel = "L" + lblCounter++;
 
@@ -128,6 +130,7 @@ public class CodeGenerator {
         }
 
         public void visit(IfStatement ifStatement) {
+            register = new Register(8);
             if (ifStatement.elsePart instanceof EmptyStatement) {
                 String endlbl = "L" + lblCounter++;
                 logicOperator((BinaryExpression) ifStatement.condition, endlbl);
@@ -145,6 +148,7 @@ public class CodeGenerator {
         }
 
         public void visit(CallStatement callStatement) {
+            register = new Register(8);
             ProcedureEntry procedureEntry = (ProcedureEntry) localTable.lookup((callStatement.procedureName));
             for (int i = 0; i < callStatement.arguments.size(); i++) {
                 if (procedureEntry.parameterTypes.get(i).isReference) {
