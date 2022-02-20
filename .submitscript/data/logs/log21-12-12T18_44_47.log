@@ -1,21 +1,31 @@
+[2021-12-12 18:44:47.337509] Bootstrap log:
 Identified Python 3.8.10 at /usr/bin/python3.8
 [Bootstrap] Identified pip 20.0.2 from /usr/lib/python3/dist-packages/pip (python 3.8)' at /usr/bin/python3.8 -m pip
-[Bootstrap] Identified 'pipenv, version 2020.11.15' at /usr/bin/python3.8 -m pipenv
+[Bootstrap] Identified 'pipenv, version 2021.11.23' at /usr/bin/python3.8 -m pipenv
 [Bootstrap] Running '/usr/bin/python3.8 -m pipenv install --python 3.8' to ensure the existence of a virtual environment.
 [Bootstrap] This may take a moment.
+Virtualenv already exists!
+Removing existing virtualenv...
 Creating a virtualenv for this project...
-Pipfile: /mnt/c/users/msall/documents/uni/CB/compilerbau/.submitscript/src/Pipfile
+Pipfile: /mnt/c/users/msall/documents/uni/CB/.submitscript/src/Pipfile
 Using /usr/bin/python3.8 (3.8.10) to create virtualenv...
-⠋ Creating virtual environment...⠙ Creating virtual environment...⠹ Creating virtual environment...created virtual environment CPython3.8.10.final.0-64 in 132ms
-  creator CPython3Posix(dest=/home/samir/.local/share/virtualenvs/src-w06T69KL, clear=False, no_vcs_ignore=False, global=False)
-  seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/home/samir/.local/share/virtualenv)
+
+⠋ Creating virtual environment...
+⠙ Creating virtual environment...
+⠹ Creating virtual environment...created virtual environment CPython3.8.10.final.0-64 in 132ms
+  creator CPython3Posix(dest=/root/.local/share/virtualenvs/src-iKuWu0KK, clear=False, no_vcs_ignore=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/root/.local/share/virtualenv)
     added seed packages: pip==21.3.1, setuptools==58.3.0, wheel==0.37.0
   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
 
 ✔ Successfully created virtual environment! 
-Virtualenv location: /home/samir/.local/share/virtualenvs/src-w06T69KL
+Virtualenv location: /root/.local/share/virtualenvs/src-iKuWu0KK
 Installing dependencies from Pipfile.lock (da6003)...
 To activate this project's virtualenv, run pipenv shell.
 Alternatively, run a command inside the virtualenv with pipenv run.
 [Bootstrap] Running the script in a virtual environment.
 /usr/bin/python3.8 -m pipenv run python3 ./main.py
+
+[2021-12-12 18:44:47.338095] === Welcome ===
+[2021-12-12 18:44:47.380978] The server can not be reached. You may need to be logged in to the VPN.
+[2021-12-12 18:44:47.381293] Aborting.

@@ -1,0 +1,23 @@
+{
+    "accepted": true,
+    "immediate_evaluation": true,
+    "log": "[2022-02-20 18:57:08.561737] Received submission e1c38438-f40d-4143-98dd-d22feb22b2ba\n[2022-02-20 18:57:08.562335] Ip: 10.196.108.159\n[2022-02-20 18:57:08.562530] Team members: [('Terc\u00fcman', 'Mehmet Duhan', '5296149'), (\"M'Sallem\", 'Samir Faycal Tahar', '5276295')]\n[2022-02-20 18:57:08.926374] Your submission was ACCEPTED for course 'Compilerbau-ws21', assignment 'Aufgabe-2'.\n[2022-02-20 18:57:08.926671] Your submission has the id e1c38438-f40d-4143-98dd-d22feb22b2ba.\n[2022-02-20 18:57:08.927199] It will be evaluated shortly. Please check back soon for your results.\n",
+    "submission": {
+        "authors": [
+            {
+                "first_name": "Mehmet Duhan",
+                "last_name": "Terc\u00fcman",
+                "matriculation_number": "5296149"
+            },
+            {
+                "first_name": "Samir Faycal Tahar",
+                "last_name": "M'Sallem",
+                "matriculation_number": "5276295"
+            }
+        ],
+        "evaluation_result": null,
+        "id": "e1c38438-f40d-4143-98dd-d22feb22b2ba",
+        "timestamp_ns": 1645379828560237490,
+        "upload_log": "[2022-02-20 18:57:08.561737] Received submission e1c38438-f40d-4143-98dd-d22feb22b2ba\n[2022-02-20 18:57:08.562335] Ip: 10.196.108.159\n[2022-02-20 18:57:08.562530] Team members: [('Terc\u00fcman', 'Mehmet Duhan', '5296149'), (\"M'Sallem\", 'Samir Faycal Tahar', '5276295')]\n[2022-02-20 18:57:08.926374] Your submission was ACCEPTED for course 'Compilerbau-ws21', assignment 'Aufgabe-2'.\n[2022-02-20 18:57:08.926671] Your submission has the id e1c38438-f40d-4143-98dd-d22feb22b2ba.\n[2022-02-20 18:57:08.927199] It will be evaluated shortly. Please check back soon for your results.\n\n"
+    }
+}

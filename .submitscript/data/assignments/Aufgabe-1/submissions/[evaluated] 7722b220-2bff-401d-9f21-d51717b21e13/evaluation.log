@@ -1,0 +1,276 @@
+[2021-12-12 18:55:08.605488] Start of evaluation log for submission '7722b220-2bff-401d-9f21-d51717b21e13'.
+[2021-12-12 18:55:08.605797] Team member: ('Tercüman', 'Mehmet Duhan', '5296149')
+[2021-12-12 18:55:08.605966] Team member: ("M'Sallem", 'Samir Faycal Tahar', '5276295')
+[2021-12-12 18:55:08.643166] Preparing the sandbox
+[2021-12-12 18:55:09.370547] Unpacking submission in sandbox
+[2021-12-12 18:55:09.822838] Building the test subject
+[2021-12-12 18:55:09.823156] Identified the Java variant.
+[2021-12-12 18:55:09.960275] Building Java solution with maven.
+[2021-12-12 18:55:21.145972] Maven log:
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------< de.thm.mni.compilerbau.spl-reference:spl >--------------
+[INFO] Building spl 0.1
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- jflex-maven-plugin:1.7.0:generate (default) @ spl ---
+[INFO]   generated /home/solution/java/target/generated-sources/jflex/de/thm/mni/compilerbau/phases/_01_scanner/Scanner.java
+[INFO] 
+[INFO] --- cup-maven-plugin:11b-20160615:generate (default) @ spl ---
+Warning : Non terminal "Var" was declared but never used
+Warning : Non terminal "NotEmptyParam" was declared but never used
+Warning : Non terminal "TypeExpression" was declared but never used
+Warning : Non terminal "BinaryExpression" was declared but never used
+Warning : *** Shift/Reduce conflict found in state #91
+  between IfStatement ::= IF LPAREN Expression RPAREN Statement (*) 
+  and     IfStatement ::= IF LPAREN Expression RPAREN Statement (*) ELSE Statement 
+  under symbol ELSE
+  Resolved in favor of shifting.
+
+[INFO]   generated /home/solution/java/target/generated-sources/cup/de/thm/mni/compilerbau/phases/_02_03_parser/Parser.java
+[INFO]   generated /home/solution/java/target/generated-sources/cup/de/thm/mni/compilerbau/phases/_02_03_parser/Sym.java
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ spl ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/solution/java/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ spl ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 57 source files to /home/solution/java/target/classes
+[INFO] /home/solution/java/target/generated-sources/jflex/de/thm/mni/compilerbau/phases/_01_scanner/Scanner.java: /home/solution/java/target/generated-sources/jflex/de/thm/mni/compilerbau/phases/_01_scanner/Scanner.java uses or overrides a deprecated API.
+[INFO] /home/solution/java/target/generated-sources/jflex/de/thm/mni/compilerbau/phases/_01_scanner/Scanner.java: Recompile with -Xlint:deprecation for details.
+[INFO] /home/solution/java/target/generated-sources/cup/de/thm/mni/compilerbau/phases/_02_03_parser/Parser.java: /home/solution/java/target/generated-sources/cup/de/thm/mni/compilerbau/phases/_02_03_parser/Parser.java uses unchecked or unsafe operations.
+[INFO] /home/solution/java/target/generated-sources/cup/de/thm/mni/compilerbau/phases/_02_03_parser/Parser.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ spl ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/solution/java/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ spl ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ spl ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ spl ---
+[INFO] Building jar: /home/solution/java/target/spl.jar
+[INFO] 
+[INFO] --- maven-shade-plugin:3.1.0:shade (default) @ spl ---
+[INFO] Including com.github.vbmacher:java-cup-runtime:jar:11b-20160615 in the shaded jar.
+[INFO] Replacing original artifact with shaded artifact.
+[INFO] Replacing /home/solution/java/target/spl.jar with /home/solution/java/target/spl-0.1-shaded.jar
+[INFO] Dependency-reduced POM written at: /home/solution/java/dependency-reduced-pom.xml
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.952 s
+[INFO] Finished at: 2021-12-12T17:55:21Z
+[INFO] ------------------------------------------------------------------------
+[2021-12-12 18:55:21.282630] Beginning evaluation.
+[2021-12-12 18:55:21.282876] Evaluating acker.spl with the submitted solution.
+[2021-12-12 18:55:21.744353] Test subject results match (Success).
+[2021-12-12 18:55:21.755088] Outputs match.
+[2021-12-12 18:55:21.755158] Test passed.
+[2021-12-12 18:55:21.755174] Running Score: 1/1
+
+[2021-12-12 18:55:21.755206] Evaluating arrayasgn.spl with the submitted solution.
+[2021-12-12 18:55:22.155334] Test subject results match (Success).
+[2021-12-12 18:55:22.164695] Outputs match.
+[2021-12-12 18:55:22.164772] Test passed.
+[2021-12-12 18:55:22.164789] Running Score: 2/2
+
+[2021-12-12 18:55:22.164815] Evaluating arrayparm.spl with the submitted solution.
+[2021-12-12 18:55:22.572490] Test subject results match (Success).
+[2021-12-12 18:55:22.582266] Outputs match.
+[2021-12-12 18:55:22.582395] Test passed.
+[2021-12-12 18:55:22.582420] Running Score: 3/3
+
+[2021-12-12 18:55:22.582448] Evaluating assignment_without_semicolon.spl with the submitted solution.
+[2021-12-12 18:55:22.925768] Test subject results match (Compiler Failure).
+[2021-12-12 18:55:22.925805] Exit code matches the expected exit code (100).
+[2021-12-12 18:55:22.925839] Test passed.
+[2021-12-12 18:55:22.925855] Running Score: 4/4
+
+[2021-12-12 18:55:22.925882] Evaluating bigtest.spl with the submitted solution.
+[2021-12-12 18:55:23.521475] Test subject results match (Success).
+[2021-12-12 18:55:23.531385] Outputs match.
+[2021-12-12 18:55:23.531469] Test passed.
+[2021-12-12 18:55:23.531487] Running Score: 5/5
+
+[2021-12-12 18:55:23.531514] Evaluating bits.spl with the submitted solution.
+[2021-12-12 18:55:23.961749] Test subject results match (Success).
+[2021-12-12 18:55:23.972302] Outputs match.
+[2021-12-12 18:55:23.972378] Test passed.
+[2021-12-12 18:55:23.972395] Running Score: 6/6
+
+[2021-12-12 18:55:23.972424] Evaluating call_without_semicolon.spl with the submitted solution.
+[2021-12-12 18:55:24.307762] Test subject results match (Compiler Failure).
+[2021-12-12 18:55:24.308975] Exit code matches the expected exit code (100).
+[2021-12-12 18:55:24.309044] Test passed.
+[2021-12-12 18:55:24.309062] Running Score: 7/7
+
+[2021-12-12 18:55:24.309093] Evaluating drawTest.spl with the submitted solution.
+[2021-12-12 18:55:24.739356] Test subject results match (Success).
+[2021-12-12 18:55:24.749098] Outputs match.
+[2021-12-12 18:55:24.749249] Test passed.
+[2021-12-12 18:55:24.749273] Running Score: 8/8
+
+[2021-12-12 18:55:24.749302] Evaluating gcd.spl with the submitted solution.
+[2021-12-12 18:55:25.194573] Test subject results match (Success).
+[2021-12-12 18:55:25.204424] Outputs match.
+[2021-12-12 18:55:25.204499] Test passed.
+[2021-12-12 18:55:25.204515] Running Score: 9/9
+
+[2021-12-12 18:55:25.204543] Evaluating global_variable.spl with the submitted solution.
+[2021-12-12 18:55:25.540450] Test subject results match (Compiler Failure).
+[2021-12-12 18:55:25.541604] Exit code matches the expected exit code (100).
+[2021-12-12 18:55:25.541652] Test passed.
+[2021-12-12 18:55:25.541669] Running Score: 10/10
+
+[2021-12-12 18:55:25.541698] Evaluating lambda.spl with the submitted solution.
+[2021-12-12 18:55:26.497953] Test subject results match (Success).
+[2021-12-12 18:55:26.509552] Outputs match.
+[2021-12-12 18:55:26.509844] Test passed.
+[2021-12-12 18:55:26.510008] Running Score: 11/11
+
+[2021-12-12 18:55:26.510265] Evaluating multiply.spl with the submitted solution.
+[2021-12-12 18:55:26.963272] Test subject results match (Success).
+[2021-12-12 18:55:26.974280] Outputs match.
+[2021-12-12 18:55:26.974419] Test passed.
+[2021-12-12 18:55:26.974443] Running Score: 12/12
+
+[2021-12-12 18:55:26.974471] Evaluating partind1.spl with the submitted solution.
+[2021-12-12 18:55:27.448503] Test subject results match (Success).
+[2021-12-12 18:55:27.457344] Outputs match.
+[2021-12-12 18:55:27.457427] Test passed.
+[2021-12-12 18:55:27.457445] Running Score: 13/13
+
+[2021-12-12 18:55:27.457469] Evaluating partind2.spl with the submitted solution.
+[2021-12-12 18:55:27.929985] Test subject results match (Success).
+[2021-12-12 18:55:27.939754] Outputs match.
+[2021-12-12 18:55:27.939834] Test passed.
+[2021-12-12 18:55:27.939852] Running Score: 14/14
+
+[2021-12-12 18:55:27.939880] Evaluating queens.spl with the submitted solution.
+[2021-12-12 18:55:28.454158] Test subject results match (Success).
+[2021-12-12 18:55:28.463957] Outputs match.
+[2021-12-12 18:55:28.464031] Test passed.
+[2021-12-12 18:55:28.464047] Running Score: 15/15
+
+[2021-12-12 18:55:28.464071] Evaluating reftest.spl with the submitted solution.
+[2021-12-12 18:55:28.861003] Test subject results match (Success).
+[2021-12-12 18:55:28.870634] Outputs match.
+[2021-12-12 18:55:28.870703] Test passed.
+[2021-12-12 18:55:28.870719] Running Score: 16/16
+
+[2021-12-12 18:55:28.870816] Evaluating sierpinski.spl with the submitted solution.
+[2021-12-12 18:55:29.496477] Test subject results match (Success).
+[2021-12-12 18:55:29.506207] Outputs match.
+[2021-12-12 18:55:29.506386] Test passed.
+[2021-12-12 18:55:29.506414] Running Score: 17/17
+
+[2021-12-12 18:55:29.506443] Evaluating swap.spl with the submitted solution.
+[2021-12-12 18:55:29.935589] Test subject results match (Success).
+[2021-12-12 18:55:29.944869] Outputs match.
+[2021-12-12 18:55:29.944944] Test passed.
+[2021-12-12 18:55:29.944961] Running Score: 18/18
+
+[2021-12-12 18:55:29.944987] Evaluating test1.spl with the submitted solution.
+[2021-12-12 18:55:30.361177] Test subject results match (Success).
+[2021-12-12 18:55:30.371114] Outputs match.
+[2021-12-12 18:55:30.371192] Test passed.
+[2021-12-12 18:55:30.371209] Running Score: 19/19
+
+[2021-12-12 18:55:30.371237] Evaluating test2.spl with the submitted solution.
+[2021-12-12 18:55:30.795225] Test subject results match (Success).
+[2021-12-12 18:55:30.804977] Outputs match.
+[2021-12-12 18:55:30.805271] Test passed.
+[2021-12-12 18:55:30.805297] Running Score: 20/20
+
+[2021-12-12 18:55:30.805326] Evaluating test3.spl with the submitted solution.
+[2021-12-12 18:55:31.305559] Test subject results match (Success).
+[2021-12-12 18:55:31.315082] Outputs match.
+[2021-12-12 18:55:31.315149] Test passed.
+[2021-12-12 18:55:31.315164] Running Score: 21/21
+
+[2021-12-12 18:55:31.315193] Evaluating test4.spl with the submitted solution.
+[2021-12-12 18:55:31.760856] Test subject results match (Success).
+[2021-12-12 18:55:31.771120] Outputs match.
+[2021-12-12 18:55:31.771194] Test passed.
+[2021-12-12 18:55:31.771210] Running Score: 22/22
+
+[2021-12-12 18:55:31.771238] Evaluating test5.spl with the submitted solution.
+[2021-12-12 18:55:32.216737] Test subject results match (Success).
+[2021-12-12 18:55:32.227199] Outputs match.
+[2021-12-12 18:55:32.227274] Test passed.
+[2021-12-12 18:55:32.227290] Running Score: 23/23
+
+[2021-12-12 18:55:32.227316] Evaluating test6.spl with the submitted solution.
+[2021-12-12 18:55:32.680279] Test subject results match (Success).
+[2021-12-12 18:55:32.690689] Outputs match.
+[2021-12-12 18:55:32.690771] Test passed.
+[2021-12-12 18:55:32.690788] Running Score: 24/24
+
+[2021-12-12 18:55:32.690817] Evaluating test7.spl with the submitted solution.
+[2021-12-12 18:55:33.082106] Test subject results match (Success).
+[2021-12-12 18:55:33.092142] Outputs match.
+[2021-12-12 18:55:33.092300] Test passed.
+[2021-12-12 18:55:33.092324] Running Score: 25/25
+
+[2021-12-12 18:55:33.092356] Evaluating test8.spl with the submitted solution.
+[2021-12-12 18:55:33.485614] Test subject results match (Success).
+[2021-12-12 18:55:33.495164] Outputs match.
+[2021-12-12 18:55:33.495310] Test passed.
+[2021-12-12 18:55:33.495334] Running Score: 26/26
+
+[2021-12-12 18:55:33.495364] Evaluating test9.spl with the submitted solution.
+[2021-12-12 18:55:33.914474] Test subject results match (Success).
+[2021-12-12 18:55:33.925624] Outputs match.
+[2021-12-12 18:55:33.925923] Test passed.
+[2021-12-12 18:55:33.926105] Running Score: 27/27
+
+[2021-12-12 18:55:33.926331] Evaluating threedim.spl with the submitted solution.
+[2021-12-12 18:55:34.404302] Test subject results match (Success).
+[2021-12-12 18:55:34.414182] Outputs match.
+[2021-12-12 18:55:34.414269] Test passed.
+[2021-12-12 18:55:34.414287] Running Score: 28/28
+
+[2021-12-12 18:55:34.414315] Evaluating time.spl with the submitted solution.
+[2021-12-12 18:55:34.850700] Test subject results match (Success).
+[2021-12-12 18:55:34.860199] Outputs match.
+[2021-12-12 18:55:34.860273] Test passed.
+[2021-12-12 18:55:34.860291] Running Score: 29/29
+
+[2021-12-12 18:55:34.860322] Evaluating trailing_argument_comma.spl with the submitted solution.
+[2021-12-12 18:55:35.201721] Test subject results match (Compiler Failure).
+[2021-12-12 18:55:35.202927] Exit code matches the expected exit code (100).
+[2021-12-12 18:55:35.202975] Test passed.
+[2021-12-12 18:55:35.202993] Running Score: 30/30
+
+[2021-12-12 18:55:35.203022] Evaluating trailing_parameter_comma.spl with the submitted solution.
+[2021-12-12 18:55:35.547799] Test subject results match (Compiler Failure).
+[2021-12-12 18:55:35.549086] Exit code matches the expected exit code (100).
+[2021-12-12 18:55:35.549134] Test passed.
+[2021-12-12 18:55:35.549153] Running Score: 31/31
+
+[2021-12-12 18:55:35.549186] Evaluating twodim.spl with the submitted solution.
+[2021-12-12 18:55:36.087307] Test subject results match (Success).
+[2021-12-12 18:55:36.097246] Outputs match.
+[2021-12-12 18:55:36.097333] Test passed.
+[2021-12-12 18:55:36.097351] Running Score: 32/32
+
+[2021-12-12 18:55:36.097383] Evaluating unary_plus.spl with the submitted solution.
+[2021-12-12 18:55:36.451864] Test subject results match (Compiler Failure).
+[2021-12-12 18:55:36.451908] Exit code matches the expected exit code (100).
+[2021-12-12 18:55:36.451937] Test passed.
+[2021-12-12 18:55:36.451954] Running Score: 33/33
+
+[2021-12-12 18:55:36.452116] Final score: 33/33 (100%). 
+[2021-12-12 18:55:36.452557] 100% are needed to pass.
+[2021-12-12 18:55:36.649892] You have PASSED this assignment.
+

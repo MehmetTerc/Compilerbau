@@ -1,0 +1,41 @@
+[2021-12-12 18:29:36.501426] Bootstrap log:
+Identified Python 3.8.10 at /usr/bin/python3.8
+[Bootstrap] Identified pip 20.0.2 from /usr/lib/python3/dist-packages/pip (python 3.8)' at /usr/bin/python3.8 -m pip
+[Bootstrap] Identified 'pipenv, version 2020.11.15' at /usr/bin/python3.8 -m pipenv
+[Bootstrap] Running '/usr/bin/python3.8 -m pipenv install --python 3.8' to ensure the existence of a virtual environment.
+[Bootstrap] This may take a moment.
+Virtualenv already exists!
+Removing existing virtualenv...
+Creating a virtualenv for this project...
+Pipfile: /mnt/c/users/msall/documents/uni/CB/.submitscript/src/Pipfile
+Using /usr/bin/python3.8 (3.8.10) to create virtualenv...
+
+⠋ Creating virtual environment...
+⠙ Creating virtual environment...
+⠹ Creating virtual environment...
+⠸ Creating virtual environment...created virtual environment CPython3.8.10.final.0-64 in 223ms
+  creator CPython3Posix(dest=/home/samir/.local/share/virtualenvs/src-iKuWu0KK, clear=False, no_vcs_ignore=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/home/samir/.local/share/virtualenv)
+    added seed packages: pip==21.3.1, setuptools==58.3.0, wheel==0.37.0
+  activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+
+✔ Successfully created virtual environment! 
+Virtualenv location: /home/samir/.local/share/virtualenvs/src-iKuWu0KK
+Installing dependencies from Pipfile.lock (da6003)...
+An error occurred while installing certifi==2020.6.20 --hash=sha256:8fc0819f1f30ba15bdb34cceffb9ef04d99f420f68eb75d901e9560b8749fc41 --hash=sha256:5930595817496dd21bb8dc35dad090f1c2cd0adfaf21204bf6732ca5d8ee34d3! Will try again.
+An error occurred while installing chardet==3.0.4 --hash=sha256:84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae --hash=sha256:fc323ffcaeaed0e0a02bf4d117757b98aed530d9ed4531e3e15460124c106691! Will try again.
+An error occurred while installing datetime==4.3 --hash=sha256:5cef605bab8259ff61281762cdf3290e459fbf0b4719951d5fab967d5f2ea0ea --hash=sha256:371dba07417b929a4fa685c2f7a3eaa6a62d60c02947831f97d4df9a9e70dfd0! Will try again.
+An error occurred while installing idna==2.10; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3' --hash=sha256:b97d804b1e9b523befed77c48dacec60e6dcb0b5391d57af6a65a312a90648c0 --hash=sha256:b307872f855b18632ce0c21c5e45be78c0ea7ae4c15c828c20788b26921eb3f6! Will try again.
+An error occurred while installing pathlib==1.0.1 --hash=sha256:6940718dfc3eff4258203ad5021090933e5c04707d5ca8cc9e73c94a7894ea9f! Will try again.
+An error occurred while installing pytz==2020.4 --hash=sha256:3e6b7dd2d1e0a59084bcee14a17af60c5c562cdc16d828e8eba2e683d3a7e268 --hash=sha256:5c55e189b682d420be27c6995ba6edce0c0a77dd67bfbe2ae6607134d5851ffd! Will try again.
+An error occurred while installing requests==2.24.0 --hash=sha256:b3559a131db72c33ee969480840fff4bb6dd111de7dd27c8ee1f820f4f00231b --hash=sha256:fe75cc94a9443b9246fc7049224f75604b113c36acb93f87b80ed42c44cbb898! Will try again.
+An error occurred while installing semver==2.13.0 --hash=sha256:ced8b23dceb22134307c1b8abfa523da14198793d9787ac838e70e29e77458d4 --hash=sha256:fa0fe2722ee1c3f57eac478820c3a5ae2f624af8264cbdf9000c980ff7f75e3f! Will try again.
+Installing initially failed dependencies...
+To activate this project's virtualenv, run pipenv shell.
+Alternatively, run a command inside the virtualenv with pipenv run.
+[Bootstrap] Running the script in a virtual environment.
+/usr/bin/python3.8 -m pipenv run python3 ./main.py
+
+[2021-12-12 18:29:36.502025] === Welcome ===
+[2021-12-12 18:29:36.546269] The server can not be reached. You may need to be logged in to the VPN.
+[2021-12-12 18:29:36.546662] Aborting.

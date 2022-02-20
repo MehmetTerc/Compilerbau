@@ -1,0 +1,772 @@
+[2021-12-12 18:52:21.941541] Start of evaluation log for submission '45ed9f9b-7f7d-40bc-b5cc-327288be08e4'.
+[2021-12-12 18:52:21.941880] Team member: ('Tercüman', 'Mehmet Duhan', '5296149')
+[2021-12-12 18:52:21.942065] Team member: ("M'Sallem", 'Samir Faycal Tahar', '5276295')
+[2021-12-12 18:52:21.975021] Preparing the sandbox
+[2021-12-12 18:52:22.710937] Unpacking submission in sandbox
+[2021-12-12 18:52:23.147263] Building the test subject
+[2021-12-12 18:52:23.147632] Identified the Java variant.
+[2021-12-12 18:52:23.281335] Building Java solution with maven.
+[2021-12-12 18:52:34.406234] Maven log:
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------< de.thm.mni.compilerbau.spl-reference:spl >--------------
+[INFO] Building spl 0.1
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- jflex-maven-plugin:1.7.0:generate (default) @ spl ---
+[INFO]   generated /home/solution/java/target/generated-sources/jflex/de/thm/mni/compilerbau/phases/_01_scanner/Scanner.java
+[INFO] 
+[INFO] --- cup-maven-plugin:11b-20160615:generate (default) @ spl ---
+Warning : Non terminal "Var" was declared but never used
+Warning : Non terminal "NotEmptyParam" was declared but never used
+Warning : Non terminal "TypeExpression" was declared but never used
+Warning : Non terminal "BinaryExpression" was declared but never used
+Warning : *** Shift/Reduce conflict found in state #91
+  between IfStatement ::= IF LPAREN Expression RPAREN Statement (*) 
+  and     IfStatement ::= IF LPAREN Expression RPAREN Statement (*) ELSE Statement 
+  under symbol ELSE
+  Resolved in favor of shifting.
+
+[INFO]   generated /home/solution/java/target/generated-sources/cup/de/thm/mni/compilerbau/phases/_02_03_parser/Parser.java
+[INFO]   generated /home/solution/java/target/generated-sources/cup/de/thm/mni/compilerbau/phases/_02_03_parser/Sym.java
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ spl ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/solution/java/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ spl ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 57 source files to /home/solution/java/target/classes
+[INFO] /home/solution/java/target/generated-sources/jflex/de/thm/mni/compilerbau/phases/_01_scanner/Scanner.java: /home/solution/java/target/generated-sources/jflex/de/thm/mni/compilerbau/phases/_01_scanner/Scanner.java uses or overrides a deprecated API.
+[INFO] /home/solution/java/target/generated-sources/jflex/de/thm/mni/compilerbau/phases/_01_scanner/Scanner.java: Recompile with -Xlint:deprecation for details.
+[INFO] /home/solution/java/target/generated-sources/cup/de/thm/mni/compilerbau/phases/_02_03_parser/Parser.java: /home/solution/java/target/generated-sources/cup/de/thm/mni/compilerbau/phases/_02_03_parser/Parser.java uses unchecked or unsafe operations.
+[INFO] /home/solution/java/target/generated-sources/cup/de/thm/mni/compilerbau/phases/_02_03_parser/Parser.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ spl ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/solution/java/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ spl ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ spl ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ spl ---
+[INFO] Building jar: /home/solution/java/target/spl.jar
+[INFO] 
+[INFO] --- maven-shade-plugin:3.1.0:shade (default) @ spl ---
+[INFO] Including com.github.vbmacher:java-cup-runtime:jar:11b-20160615 in the shaded jar.
+[INFO] Replacing original artifact with shaded artifact.
+[INFO] Replacing /home/solution/java/target/spl.jar with /home/solution/java/target/spl-0.1-shaded.jar
+[INFO] Dependency-reduced POM written at: /home/solution/java/dependency-reduced-pom.xml
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.999 s
+[INFO] Finished at: 2021-12-12T17:52:34Z
+[INFO] ------------------------------------------------------------------------
+[2021-12-12 18:52:34.554869] Beginning evaluation.
+[2021-12-12 18:52:34.555126] Evaluating acker.spl with the submitted solution.
+[2021-12-12 18:52:34.875054] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2021-12-12 18:52:34.875125] Output (stderr) of 'java -jar /home/solution/java/target/spl.jar --absyn /home/tests/acker.spl /home/temp/acker.spl.s' (Limited to 50 lines/10000 characters):
+Usage error: Too many positional arguments!
+Usage: 'java -jar spl.jar' [OPTION] INPUT_FILE [OUTPUT_FILE]
+
+Executes all compiler phases up to (and including) the specified one.
+If no flag is specified, all phases are run and code is written to the output file.
+Options:
+  --tokens     Phase 1: Scans for tokens and prints them.
+  --parse      Phase 2: Parses the stream of tokens to check for syntax errors.
+  --absyn      Phase 3: Creates an abstract syntax tree from the input tokens and prints it.
+  --tables     Phase 4a: Builds a symbol table and prints its entries.
+  --semant     Phase 4b: Performs the semantic analysis.
+  --vars       Phase 5: Allocates memory space for variables and prints the amount of allocated memory.
+  --ershov     Enable register optimization using the ershov number.
+  --doWhile    Enable the do-while statement.
+  --help       Show this help.
+[2021-12-12 18:52:34.876354] Test not passed.
+[2021-12-12 18:52:34.876384] Running Score: 0/1
+
+[2021-12-12 18:52:34.876411] Evaluating arrayasgn.spl with the submitted solution.
+[2021-12-12 18:52:35.193691] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2021-12-12 18:52:35.193771] Output (stderr) of 'java -jar /home/solution/java/target/spl.jar --absyn /home/tests/arrayasgn.spl /home/temp/arrayasgn.spl.s' (Limited to 50 lines/10000 characters):
+Usage error: Too many positional arguments!
+Usage: 'java -jar spl.jar' [OPTION] INPUT_FILE [OUTPUT_FILE]
+
+Executes all compiler phases up to (and including) the specified one.
+If no flag is specified, all phases are run and code is written to the output file.
+Options:
+  --tokens     Phase 1: Scans for tokens and prints them.
+  --parse      Phase 2: Parses the stream of tokens to check for syntax errors.
+  --absyn      Phase 3: Creates an abstract syntax tree from the input tokens and prints it.
+  --tables     Phase 4a: Builds a symbol table and prints its entries.
+  --semant     Phase 4b: Performs the semantic analysis.
+  --vars       Phase 5: Allocates memory space for variables and prints the amount of allocated memory.
+  --ershov     Enable register optimization using the ershov number.
+  --doWhile    Enable the do-while statement.
+  --help       Show this help.
+[2021-12-12 18:52:35.193892] Test not passed.
+[2021-12-12 18:52:35.193910] Running Score: 0/2
+
+[2021-12-12 18:52:35.193935] Evaluating arrayparm.spl with the submitted solution.
+[2021-12-12 18:52:35.500392] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2021-12-12 18:52:35.500460] Output (stderr) of 'java -jar /home/solution/java/target/spl.jar --absyn /home/tests/arrayparm.spl /home/temp/arrayparm.spl.s' (Limited to 50 lines/10000 characters):
+Usage error: Too many positional arguments!
+Usage: 'java -jar spl.jar' [OPTION] INPUT_FILE [OUTPUT_FILE]
+
+Executes all compiler phases up to (and including) the specified one.
+If no flag is specified, all phases are run and code is written to the output file.
+Options:
+  --tokens     Phase 1: Scans for tokens and prints them.
+  --parse      Phase 2: Parses the stream of tokens to check for syntax errors.
+  --absyn      Phase 3: Creates an abstract syntax tree from the input tokens and prints it.
+  --tables     Phase 4a: Builds a symbol table and prints its entries.
+  --semant     Phase 4b: Performs the semantic analysis.
+  --vars       Phase 5: Allocates memory space for variables and prints the amount of allocated memory.
+  --ershov     Enable register optimization using the ershov number.
+  --doWhile    Enable the do-while statement.
+  --help       Show this help.
+[2021-12-12 18:52:35.501152] Test not passed.
+[2021-12-12 18:52:35.501180] Running Score: 0/3
+
+[2021-12-12 18:52:35.501206] Evaluating assignment_without_semicolon.spl with the submitted solution.
+[2021-12-12 18:52:35.802737] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2021-12-12 18:52:35.802805] Output (stderr) of 'java -jar /home/solution/java/target/spl.jar --absyn /home/tests/assignment_without_semicolon.spl /home/temp/assignment_without_semicolon.spl.s' (Limited to 50 lines/10000 characters):
+Usage error: Too many positional arguments!
+Usage: 'java -jar spl.jar' [OPTION] INPUT_FILE [OUTPUT_FILE]
+
+Executes all compiler phases up to (and including) the specified one.
+If no flag is specified, all phases are run and code is written to the output file.
+Options:
+  --tokens     Phase 1: Scans for tokens and prints them.
+  --parse      Phase 2: Parses the stream of tokens to check for syntax errors.
+  --absyn      Phase 3: Creates an abstract syntax tree from the input tokens and prints it.
+  --tables     Phase 4a: Builds a symbol table and prints its entries.
+  --semant     Phase 4b: Performs the semantic analysis.
+  --vars       Phase 5: Allocates memory space for variables and prints the amount of allocated memory.
+  --ershov     Enable register optimization using the ershov number.
+  --doWhile    Enable the do-while statement.
+  --help       Show this help.
+[2021-12-12 18:52:35.803982] Test not passed.
+[2021-12-12 18:52:35.804013] Running Score: 0/4
+
+[2021-12-12 18:52:35.804044] Evaluating bigtest.spl with the submitted solution.
+[2021-12-12 18:52:36.132758] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2021-12-12 18:52:36.132825] Output (stderr) of 'java -jar /home/solution/java/target/spl.jar --absyn /home/tests/bigtest.spl /home/temp/bigtest.spl.s' (Limited to 50 lines/10000 characters):
+Usage error: Too many positional arguments!
+Usage: 'java -jar spl.jar' [OPTION] INPUT_FILE [OUTPUT_FILE]
+
+Executes all compiler phases up to (and including) the specified one.
+If no flag is specified, all phases are run and code is written to the output file.
+Options:
+  --tokens     Phase 1: Scans for tokens and prints them.
+  --parse      Phase 2: Parses the stream of tokens to check for syntax errors.
+  --absyn      Phase 3: Creates an abstract syntax tree from the input tokens and prints it.
+  --tables     Phase 4a: Builds a symbol table and prints its entries.
+  --semant     Phase 4b: Performs the semantic analysis.
+  --vars       Phase 5: Allocates memory space for variables and prints the amount of allocated memory.
+  --ershov     Enable register optimization using the ershov number.
+  --doWhile    Enable the do-while statement.
+  --help       Show this help.
+[2021-12-12 18:52:36.132943] Test not passed.
+[2021-12-12 18:52:36.132965] Running Score: 0/5
+
+[2021-12-12 18:52:36.133002] Evaluating bits.spl with the submitted solution.
+[2021-12-12 18:52:36.435546] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2021-12-12 18:52:36.435617] Output (stderr) of 'java -jar /home/solution/java/target/spl.jar --absyn /home/tests/bits.spl /home/temp/bits.spl.s' (Limited to 50 lines/10000 characters):
+Usage error: Too many positional arguments!
+Usage: 'java -jar spl.jar' [OPTION] INPUT_FILE [OUTPUT_FILE]
+
+Executes all compiler phases up to (and including) the specified one.
+If no flag is specified, all phases are run and code is written to the output file.
+Options:
+  --tokens     Phase 1: Scans for tokens and prints them.
+  --parse      Phase 2: Parses the stream of tokens to check for syntax errors.
+  --absyn      Phase 3: Creates an abstract syntax tree from the input tokens and prints it.
+  --tables     Phase 4a: Builds a symbol table and prints its entries.
+  --semant     Phase 4b: Performs the semantic analysis.
+  --vars       Phase 5: Allocates memory space for variables and prints the amount of allocated memory.
+  --ershov     Enable register optimization using the ershov number.
+  --doWhile    Enable the do-while statement.
+  --help       Show this help.
+[2021-12-12 18:52:36.435730] Test not passed.
+[2021-12-12 18:52:36.435746] Running Score: 0/6
+
+[2021-12-12 18:52:36.436859] Evaluating call_without_semicolon.spl with the submitted solution.
+[2021-12-12 18:52:36.740421] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2021-12-12 18:52:36.740488] Output (stderr) of 'java -jar /home/solution/java/target/spl.jar --absyn /home/tests/call_without_semicolon.spl /home/temp/call_without_semicolon.spl.s' (Limited to 50 lines/10000 characters):
+Usage error: Too many positional arguments!
+Usage: 'java -jar spl.jar' [OPTION] INPUT_FILE [OUTPUT_FILE]
+
+Executes all compiler phases up to (and including) the specified one.
+If no flag is specified, all phases are run and code is written to the output file.
+Options:
+  --tokens     Phase 1: Scans for tokens and prints them.
+  --parse      Phase 2: Parses the stream of tokens to check for syntax errors.
+  --absyn      Phase 3: Creates an abstract syntax tree from the input tokens and prints it.
+  --tables     Phase 4a: Builds a symbol table and prints its entries.
+  --semant     Phase 4b: Performs the semantic analysis.
+  --vars       Phase 5: Allocates memory space for variables and prints the amount of allocated memory.
+  --ershov     Enable register optimization using the ershov number.
+  --doWhile    Enable the do-while statement.
+  --help       Show this help.
+[2021-12-12 18:52:36.740596] Test not passed.
+[2021-12-12 18:52:36.740612] Running Score: 0/7
+
+[2021-12-12 18:52:36.740636] Evaluating drawTest.spl with the submitted solution.
+[2021-12-12 18:52:37.060404] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2021-12-12 18:52:37.060480] Output (stderr) of 'java -jar /home/solution/java/target/spl.jar --absyn /home/tests/drawTest.spl /home/temp/drawTest.spl.s' (Limited to 50 lines/10000 characters):
+Usage error: Too many positional arguments!
+Usage: 'java -jar spl.jar' [OPTION] INPUT_FILE [OUTPUT_FILE]
+
+Executes all compiler phases up to (and including) the specified one.
+If no flag is specified, all phases are run and code is written to the output file.
+Options:
+  --tokens     Phase 1: Scans for tokens and prints them.
+  --parse      Phase 2: Parses the stream of tokens to check for syntax errors.
+  --absyn      Phase 3: Creates an abstract syntax tree from the input tokens and prints it.
+  --tables     Phase 4a: Builds a symbol table and prints its entries.
+  --semant     Phase 4b: Performs the semantic analysis.
+  --vars       Phase 5: Allocates memory space for variables and prints the amount of allocated memory.
+  --ershov     Enable register optimization using the ershov number.
+  --doWhile    Enable the do-while statement.
+  --help       Show this help.
+[2021-12-12 18:52:37.060598] Test not passed.
+[2021-12-12 18:52:37.060616] Running Score: 0/8
+
+[2021-12-12 18:52:37.060646] Evaluating gcd.spl with the submitted solution.
+[2021-12-12 18:52:37.372258] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2021-12-12 18:52:37.372320] Output (stderr) of 'java -jar /home/solution/java/target/spl.jar --absyn /home/tests/gcd.spl /home/temp/gcd.spl.s' (Limited to 50 lines/10000 characters):
+Usage error: Too many positional arguments!
+Usage: 'java -jar spl.jar' [OPTION] INPUT_FILE [OUTPUT_FILE]
+
+Executes all compiler phases up to (and including) the specified one.
+If no flag is specified, all phases are run and code is written to the output file.
+Options:
+  --tokens     Phase 1: Scans for tokens and prints them.
+  --parse      Phase 2: Parses the stream of tokens to check for syntax errors.
+  --absyn      Phase 3: Creates an abstract syntax tree from the input tokens and prints it.
+  --tables     Phase 4a: Builds a symbol table and prints its entries.
+  --semant     Phase 4b: Performs the semantic analysis.
+  --vars       Phase 5: Allocates memory space for variables and prints the amount of allocated memory.
+  --ershov     Enable register optimization using the ershov number.
+  --doWhile    Enable the do-while statement.
+  --help       Show this help.
+[2021-12-12 18:52:37.372427] Test not passed.
+[2021-12-12 18:52:37.372442] Running Score: 0/9
+
+[2021-12-12 18:52:37.372466] Evaluating global_variable.spl with the submitted solution.
+[2021-12-12 18:52:37.676528] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2021-12-12 18:52:37.676596] Output (stderr) of 'java -jar /home/solution/java/target/spl.jar --absyn /home/tests/global_variable.spl /home/temp/global_variable.spl.s' (Limited to 50 lines/10000 characters):
+Usage error: Too many positional arguments!
+Usage: 'java -jar spl.jar' [OPTION] INPUT_FILE [OUTPUT_FILE]
+
+Executes all compiler phases up to (and including) the specified one.
+If no flag is specified, all phases are run and code is written to the output file.
+Options:
+  --tokens     Phase 1: Scans for tokens and prints them.
+  --parse      Phase 2: Parses the stream of tokens to check for syntax errors.
+  --absyn      Phase 3: Creates an abstract syntax tree from the input tokens and prints it.
+  --tables     Phase 4a: Builds a symbol table and prints its entries.
+  --semant     Phase 4b: Performs the semantic analysis.
+  --vars       Phase 5: Allocates memory space for variables and prints the amount of allocated memory.
+  --ershov     Enable register optimization using the ershov number.
+  --doWhile    Enable the do-while statement.
+  --help       Show this help.
+[2021-12-12 18:52:37.677101] Test not passed.
+[2021-12-12 18:52:37.677127] Running Score: 0/10
+
+[2021-12-12 18:52:37.677154] Evaluating lambda.spl with the submitted solution.
+[2021-12-12 18:52:38.000429] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2021-12-12 18:52:38.000495] Output (stderr) of 'java -jar /home/solution/java/target/spl.jar --absyn /home/tests/lambda.spl /home/temp/lambda.spl.s' (Limited to 50 lines/10000 characters):
+Usage error: Too many positional arguments!
+Usage: 'java -jar spl.jar' [OPTION] INPUT_FILE [OUTPUT_FILE]
+
+Executes all compiler phases up to (and including) the specified one.
+If no flag is specified, all phases are run and code is written to the output file.
+Options:
+  --tokens     Phase 1: Scans for tokens and prints them.
+  --parse      Phase 2: Parses the stream of tokens to check for syntax errors.
+  --absyn      Phase 3: Creates an abstract syntax tree from the input tokens and prints it.
+  --tables     Phase 4a: Builds a symbol table and prints its entries.
+  --semant     Phase 4b: Performs the semantic analysis.
+  --vars       Phase 5: Allocates memory space for variables and prints the amount of allocated memory.
+  --ershov     Enable register optimization using the ershov number.
+  --doWhile    Enable the do-while statement.
+  --help       Show this help.
+[2021-12-12 18:52:38.001104] Test not passed.
+[2021-12-12 18:52:38.001131] Running Score: 0/11
+
+[2021-12-12 18:52:38.001158] Evaluating multiply.spl with the submitted solution.
+[2021-12-12 18:52:38.304937] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2021-12-12 18:52:38.304997] Output (stderr) of 'java -jar /home/solution/java/target/spl.jar --absyn /home/tests/multiply.spl /home/temp/multiply.spl.s' (Limited to 50 lines/10000 characters):
+Usage error: Too many positional arguments!
+Usage: 'java -jar spl.jar' [OPTION] INPUT_FILE [OUTPUT_FILE]
+
+Executes all compiler phases up to (and including) the specified one.
+If no flag is specified, all phases are run and code is written to the output file.
+Options:
+  --tokens     Phase 1: Scans for tokens and prints them.
+  --parse      Phase 2: Parses the stream of tokens to check for syntax errors.
+  --absyn      Phase 3: Creates an abstract syntax tree from the input tokens and prints it.
+  --tables     Phase 4a: Builds a symbol table and prints its entries.
+  --semant     Phase 4b: Performs the semantic analysis.
+  --vars       Phase 5: Allocates memory space for variables and prints the amount of allocated memory.
+  --ershov     Enable register optimization using the ershov number.
+  --doWhile    Enable the do-while statement.
+  --help       Show this help.
+[2021-12-12 18:52:38.305119] Test not passed.
+[2021-12-12 18:52:38.305135] Running Score: 0/12
+
+[2021-12-12 18:52:38.305160] Evaluating partind1.spl with the submitted solution.
+[2021-12-12 18:52:38.605790] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2021-12-12 18:52:38.605860] Output (stderr) of 'java -jar /home/solution/java/target/spl.jar --absyn /home/tests/partind1.spl /home/temp/partind1.spl.s' (Limited to 50 lines/10000 characters):
+Usage error: Too many positional arguments!
+Usage: 'java -jar spl.jar' [OPTION] INPUT_FILE [OUTPUT_FILE]
+
+Executes all compiler phases up to (and including) the specified one.
+If no flag is specified, all phases are run and code is written to the output file.
+Options:
+  --tokens     Phase 1: Scans for tokens and prints them.
+  --parse      Phase 2: Parses the stream of tokens to check for syntax errors.
+  --absyn      Phase 3: Creates an abstract syntax tree from the input tokens and prints it.
+  --tables     Phase 4a: Builds a symbol table and prints its entries.
+  --semant     Phase 4b: Performs the semantic analysis.
+  --vars       Phase 5: Allocates memory space for variables and prints the amount of allocated memory.
+  --ershov     Enable register optimization using the ershov number.
+  --doWhile    Enable the do-while statement.
+  --help       Show this help.
+[2021-12-12 18:52:38.607054] Test not passed.
+[2021-12-12 18:52:38.607081] Running Score: 0/13
+
+[2021-12-12 18:52:38.607110] Evaluating partind2.spl with the submitted solution.
+[2021-12-12 18:52:38.913271] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2021-12-12 18:52:38.914503] Output (stderr) of 'java -jar /home/solution/java/target/spl.jar --absyn /home/tests/partind2.spl /home/temp/partind2.spl.s' (Limited to 50 lines/10000 characters):
+Usage error: Too many positional arguments!
+Usage: 'java -jar spl.jar' [OPTION] INPUT_FILE [OUTPUT_FILE]
+
+Executes all compiler phases up to (and including) the specified one.
+If no flag is specified, all phases are run and code is written to the output file.
+Options:
+  --tokens     Phase 1: Scans for tokens and prints them.
+  --parse      Phase 2: Parses the stream of tokens to check for syntax errors.
+  --absyn      Phase 3: Creates an abstract syntax tree from the input tokens and prints it.
+  --tables     Phase 4a: Builds a symbol table and prints its entries.
+  --semant     Phase 4b: Performs the semantic analysis.
+  --vars       Phase 5: Allocates memory space for variables and prints the amount of allocated memory.
+  --ershov     Enable register optimization using the ershov number.
+  --doWhile    Enable the do-while statement.
+  --help       Show this help.
+[2021-12-12 18:52:38.914631] Test not passed.
+[2021-12-12 18:52:38.914647] Running Score: 0/14
+
+[2021-12-12 18:52:38.914674] Evaluating queens.spl with the submitted solution.
+[2021-12-12 18:52:39.216780] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2021-12-12 18:52:39.216854] Output (stderr) of 'java -jar /home/solution/java/target/spl.jar --absyn /home/tests/queens.spl /home/temp/queens.spl.s' (Limited to 50 lines/10000 characters):
+Usage error: Too many positional arguments!
+Usage: 'java -jar spl.jar' [OPTION] INPUT_FILE [OUTPUT_FILE]
+
+Executes all compiler phases up to (and including) the specified one.
+If no flag is specified, all phases are run and code is written to the output file.
+Options:
+  --tokens     Phase 1: Scans for tokens and prints them.
+  --parse      Phase 2: Parses the stream of tokens to check for syntax errors.
+  --absyn      Phase 3: Creates an abstract syntax tree from the input tokens and prints it.
+  --tables     Phase 4a: Builds a symbol table and prints its entries.
+  --semant     Phase 4b: Performs the semantic analysis.
+  --vars       Phase 5: Allocates memory space for variables and prints the amount of allocated memory.
+  --ershov     Enable register optimization using the ershov number.
+  --doWhile    Enable the do-while statement.
+  --help       Show this help.
+[2021-12-12 18:52:39.216969] Test not passed.
+[2021-12-12 18:52:39.216984] Running Score: 0/15
+
+[2021-12-12 18:52:39.217052] Evaluating reftest.spl with the submitted solution.
+[2021-12-12 18:52:39.529261] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2021-12-12 18:52:39.529330] Output (stderr) of 'java -jar /home/solution/java/target/spl.jar --absyn /home/tests/reftest.spl /home/temp/reftest.spl.s' (Limited to 50 lines/10000 characters):
+Usage error: Too many positional arguments!
+Usage: 'java -jar spl.jar' [OPTION] INPUT_FILE [OUTPUT_FILE]
+
+Executes all compiler phases up to (and including) the specified one.
+If no flag is specified, all phases are run and code is written to the output file.
+Options:
+  --tokens     Phase 1: Scans for tokens and prints them.
+  --parse      Phase 2: Parses the stream of tokens to check for syntax errors.
+  --absyn      Phase 3: Creates an abstract syntax tree from the input tokens and prints it.
+  --tables     Phase 4a: Builds a symbol table and prints its entries.
+  --semant     Phase 4b: Performs the semantic analysis.
+  --vars       Phase 5: Allocates memory space for variables and prints the amount of allocated memory.
+  --ershov     Enable register optimization using the ershov number.
+  --doWhile    Enable the do-while statement.
+  --help       Show this help.
+[2021-12-12 18:52:39.529438] Test not passed.
+[2021-12-12 18:52:39.529453] Running Score: 0/16
+
+[2021-12-12 18:52:39.529477] Evaluating sierpinski.spl with the submitted solution.
+[2021-12-12 18:52:39.856584] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2021-12-12 18:52:39.856656] Output (stderr) of 'java -jar /home/solution/java/target/spl.jar --absyn /home/tests/sierpinski.spl /home/temp/sierpinski.spl.s' (Limited to 50 lines/10000 characters):
+Usage error: Too many positional arguments!
+Usage: 'java -jar spl.jar' [OPTION] INPUT_FILE [OUTPUT_FILE]
+
+Executes all compiler phases up to (and including) the specified one.
+If no flag is specified, all phases are run and code is written to the output file.
+Options:
+  --tokens     Phase 1: Scans for tokens and prints them.
+  --parse      Phase 2: Parses the stream of tokens to check for syntax errors.
+  --absyn      Phase 3: Creates an abstract syntax tree from the input tokens and prints it.
+  --tables     Phase 4a: Builds a symbol table and prints its entries.
+  --semant     Phase 4b: Performs the semantic analysis.
+  --vars       Phase 5: Allocates memory space for variables and prints the amount of allocated memory.
+  --ershov     Enable register optimization using the ershov number.
+  --doWhile    Enable the do-while statement.
+  --help       Show this help.
+[2021-12-12 18:52:39.857168] Test not passed.
+[2021-12-12 18:52:39.857199] Running Score: 0/17
+
+[2021-12-12 18:52:39.857230] Evaluating swap.spl with the submitted solution.
+[2021-12-12 18:52:40.174869] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2021-12-12 18:52:40.174937] Output (stderr) of 'java -jar /home/solution/java/target/spl.jar --absyn /home/tests/swap.spl /home/temp/swap.spl.s' (Limited to 50 lines/10000 characters):
+Usage error: Too many positional arguments!
+Usage: 'java -jar spl.jar' [OPTION] INPUT_FILE [OUTPUT_FILE]
+
+Executes all compiler phases up to (and including) the specified one.
+If no flag is specified, all phases are run and code is written to the output file.
+Options:
+  --tokens     Phase 1: Scans for tokens and prints them.
+  --parse      Phase 2: Parses the stream of tokens to check for syntax errors.
+  --absyn      Phase 3: Creates an abstract syntax tree from the input tokens and prints it.
+  --tables     Phase 4a: Builds a symbol table and prints its entries.
+  --semant     Phase 4b: Performs the semantic analysis.
+  --vars       Phase 5: Allocates memory space for variables and prints the amount of allocated memory.
+  --ershov     Enable register optimization using the ershov number.
+  --doWhile    Enable the do-while statement.
+  --help       Show this help.
+[2021-12-12 18:52:40.175048] Test not passed.
+[2021-12-12 18:52:40.175063] Running Score: 0/18
+
+[2021-12-12 18:52:40.175088] Evaluating test1.spl with the submitted solution.
+[2021-12-12 18:52:40.489520] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2021-12-12 18:52:40.489592] Output (stderr) of 'java -jar /home/solution/java/target/spl.jar --absyn /home/tests/test1.spl /home/temp/test1.spl.s' (Limited to 50 lines/10000 characters):
+Usage error: Too many positional arguments!
+Usage: 'java -jar spl.jar' [OPTION] INPUT_FILE [OUTPUT_FILE]
+
+Executes all compiler phases up to (and including) the specified one.
+If no flag is specified, all phases are run and code is written to the output file.
+Options:
+  --tokens     Phase 1: Scans for tokens and prints them.
+  --parse      Phase 2: Parses the stream of tokens to check for syntax errors.
+  --absyn      Phase 3: Creates an abstract syntax tree from the input tokens and prints it.
+  --tables     Phase 4a: Builds a symbol table and prints its entries.
+  --semant     Phase 4b: Performs the semantic analysis.
+  --vars       Phase 5: Allocates memory space for variables and prints the amount of allocated memory.
+  --ershov     Enable register optimization using the ershov number.
+  --doWhile    Enable the do-while statement.
+  --help       Show this help.
+[2021-12-12 18:52:40.489702] Test not passed.
+[2021-12-12 18:52:40.489717] Running Score: 0/19
+
+[2021-12-12 18:52:40.489742] Evaluating test2.spl with the submitted solution.
+[2021-12-12 18:52:40.795689] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2021-12-12 18:52:40.795758] Output (stderr) of 'java -jar /home/solution/java/target/spl.jar --absyn /home/tests/test2.spl /home/temp/test2.spl.s' (Limited to 50 lines/10000 characters):
+Usage error: Too many positional arguments!
+Usage: 'java -jar spl.jar' [OPTION] INPUT_FILE [OUTPUT_FILE]
+
+Executes all compiler phases up to (and including) the specified one.
+If no flag is specified, all phases are run and code is written to the output file.
+Options:
+  --tokens     Phase 1: Scans for tokens and prints them.
+  --parse      Phase 2: Parses the stream of tokens to check for syntax errors.
+  --absyn      Phase 3: Creates an abstract syntax tree from the input tokens and prints it.
+  --tables     Phase 4a: Builds a symbol table and prints its entries.
+  --semant     Phase 4b: Performs the semantic analysis.
+  --vars       Phase 5: Allocates memory space for variables and prints the amount of allocated memory.
+  --ershov     Enable register optimization using the ershov number.
+  --doWhile    Enable the do-while statement.
+  --help       Show this help.
+[2021-12-12 18:52:40.795867] Test not passed.
+[2021-12-12 18:52:40.795882] Running Score: 0/20
+
+[2021-12-12 18:52:40.795907] Evaluating test3.spl with the submitted solution.
+[2021-12-12 18:52:41.095414] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2021-12-12 18:52:41.095483] Output (stderr) of 'java -jar /home/solution/java/target/spl.jar --absyn /home/tests/test3.spl /home/temp/test3.spl.s' (Limited to 50 lines/10000 characters):
+Usage error: Too many positional arguments!
+Usage: 'java -jar spl.jar' [OPTION] INPUT_FILE [OUTPUT_FILE]
+
+Executes all compiler phases up to (and including) the specified one.
+If no flag is specified, all phases are run and code is written to the output file.
+Options:
+  --tokens     Phase 1: Scans for tokens and prints them.
+  --parse      Phase 2: Parses the stream of tokens to check for syntax errors.
+  --absyn      Phase 3: Creates an abstract syntax tree from the input tokens and prints it.
+  --tables     Phase 4a: Builds a symbol table and prints its entries.
+  --semant     Phase 4b: Performs the semantic analysis.
+  --vars       Phase 5: Allocates memory space for variables and prints the amount of allocated memory.
+  --ershov     Enable register optimization using the ershov number.
+  --doWhile    Enable the do-while statement.
+  --help       Show this help.
+[2021-12-12 18:52:41.095592] Test not passed.
+[2021-12-12 18:52:41.095607] Running Score: 0/21
+
+[2021-12-12 18:52:41.095632] Evaluating test4.spl with the submitted solution.
+[2021-12-12 18:52:41.398946] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2021-12-12 18:52:41.399015] Output (stderr) of 'java -jar /home/solution/java/target/spl.jar --absyn /home/tests/test4.spl /home/temp/test4.spl.s' (Limited to 50 lines/10000 characters):
+Usage error: Too many positional arguments!
+Usage: 'java -jar spl.jar' [OPTION] INPUT_FILE [OUTPUT_FILE]
+
+Executes all compiler phases up to (and including) the specified one.
+If no flag is specified, all phases are run and code is written to the output file.
+Options:
+  --tokens     Phase 1: Scans for tokens and prints them.
+  --parse      Phase 2: Parses the stream of tokens to check for syntax errors.
+  --absyn      Phase 3: Creates an abstract syntax tree from the input tokens and prints it.
+  --tables     Phase 4a: Builds a symbol table and prints its entries.
+  --semant     Phase 4b: Performs the semantic analysis.
+  --vars       Phase 5: Allocates memory space for variables and prints the amount of allocated memory.
+  --ershov     Enable register optimization using the ershov number.
+  --doWhile    Enable the do-while statement.
+  --help       Show this help.
+[2021-12-12 18:52:41.399121] Test not passed.
+[2021-12-12 18:52:41.399136] Running Score: 0/22
+
+[2021-12-12 18:52:41.399161] Evaluating test5.spl with the submitted solution.
+[2021-12-12 18:52:41.743086] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2021-12-12 18:52:41.743147] Output (stderr) of 'java -jar /home/solution/java/target/spl.jar --absyn /home/tests/test5.spl /home/temp/test5.spl.s' (Limited to 50 lines/10000 characters):
+Usage error: Too many positional arguments!
+Usage: 'java -jar spl.jar' [OPTION] INPUT_FILE [OUTPUT_FILE]
+
+Executes all compiler phases up to (and including) the specified one.
+If no flag is specified, all phases are run and code is written to the output file.
+Options:
+  --tokens     Phase 1: Scans for tokens and prints them.
+  --parse      Phase 2: Parses the stream of tokens to check for syntax errors.
+  --absyn      Phase 3: Creates an abstract syntax tree from the input tokens and prints it.
+  --tables     Phase 4a: Builds a symbol table and prints its entries.
+  --semant     Phase 4b: Performs the semantic analysis.
+  --vars       Phase 5: Allocates memory space for variables and prints the amount of allocated memory.
+  --ershov     Enable register optimization using the ershov number.
+  --doWhile    Enable the do-while statement.
+  --help       Show this help.
+[2021-12-12 18:52:41.743255] Test not passed.
+[2021-12-12 18:52:41.743269] Running Score: 0/23
+
+[2021-12-12 18:52:41.743295] Evaluating test6.spl with the submitted solution.
+[2021-12-12 18:52:42.058991] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2021-12-12 18:52:42.059059] Output (stderr) of 'java -jar /home/solution/java/target/spl.jar --absyn /home/tests/test6.spl /home/temp/test6.spl.s' (Limited to 50 lines/10000 characters):
+Usage error: Too many positional arguments!
+Usage: 'java -jar spl.jar' [OPTION] INPUT_FILE [OUTPUT_FILE]
+
+Executes all compiler phases up to (and including) the specified one.
+If no flag is specified, all phases are run and code is written to the output file.
+Options:
+  --tokens     Phase 1: Scans for tokens and prints them.
+  --parse      Phase 2: Parses the stream of tokens to check for syntax errors.
+  --absyn      Phase 3: Creates an abstract syntax tree from the input tokens and prints it.
+  --tables     Phase 4a: Builds a symbol table and prints its entries.
+  --semant     Phase 4b: Performs the semantic analysis.
+  --vars       Phase 5: Allocates memory space for variables and prints the amount of allocated memory.
+  --ershov     Enable register optimization using the ershov number.
+  --doWhile    Enable the do-while statement.
+  --help       Show this help.
+[2021-12-12 18:52:42.059167] Test not passed.
+[2021-12-12 18:52:42.059183] Running Score: 0/24
+
+[2021-12-12 18:52:42.059207] Evaluating test7.spl with the submitted solution.
+[2021-12-12 18:52:42.374889] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2021-12-12 18:52:42.374964] Output (stderr) of 'java -jar /home/solution/java/target/spl.jar --absyn /home/tests/test7.spl /home/temp/test7.spl.s' (Limited to 50 lines/10000 characters):
+Usage error: Too many positional arguments!
+Usage: 'java -jar spl.jar' [OPTION] INPUT_FILE [OUTPUT_FILE]
+
+Executes all compiler phases up to (and including) the specified one.
+If no flag is specified, all phases are run and code is written to the output file.
+Options:
+  --tokens     Phase 1: Scans for tokens and prints them.
+  --parse      Phase 2: Parses the stream of tokens to check for syntax errors.
+  --absyn      Phase 3: Creates an abstract syntax tree from the input tokens and prints it.
+  --tables     Phase 4a: Builds a symbol table and prints its entries.
+  --semant     Phase 4b: Performs the semantic analysis.
+  --vars       Phase 5: Allocates memory space for variables and prints the amount of allocated memory.
+  --ershov     Enable register optimization using the ershov number.
+  --doWhile    Enable the do-while statement.
+  --help       Show this help.
+[2021-12-12 18:52:42.375072] Test not passed.
+[2021-12-12 18:52:42.375088] Running Score: 0/25
+
+[2021-12-12 18:52:42.375113] Evaluating test8.spl with the submitted solution.
+[2021-12-12 18:52:42.700401] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2021-12-12 18:52:42.700473] Output (stderr) of 'java -jar /home/solution/java/target/spl.jar --absyn /home/tests/test8.spl /home/temp/test8.spl.s' (Limited to 50 lines/10000 characters):
+Usage error: Too many positional arguments!
+Usage: 'java -jar spl.jar' [OPTION] INPUT_FILE [OUTPUT_FILE]
+
+Executes all compiler phases up to (and including) the specified one.
+If no flag is specified, all phases are run and code is written to the output file.
+Options:
+  --tokens     Phase 1: Scans for tokens and prints them.
+  --parse      Phase 2: Parses the stream of tokens to check for syntax errors.
+  --absyn      Phase 3: Creates an abstract syntax tree from the input tokens and prints it.
+  --tables     Phase 4a: Builds a symbol table and prints its entries.
+  --semant     Phase 4b: Performs the semantic analysis.
+  --vars       Phase 5: Allocates memory space for variables and prints the amount of allocated memory.
+  --ershov     Enable register optimization using the ershov number.
+  --doWhile    Enable the do-while statement.
+  --help       Show this help.
+[2021-12-12 18:52:42.700581] Test not passed.
+[2021-12-12 18:52:42.700596] Running Score: 0/26
+
+[2021-12-12 18:52:42.700622] Evaluating test9.spl with the submitted solution.
+[2021-12-12 18:52:43.018833] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2021-12-12 18:52:43.018900] Output (stderr) of 'java -jar /home/solution/java/target/spl.jar --absyn /home/tests/test9.spl /home/temp/test9.spl.s' (Limited to 50 lines/10000 characters):
+Usage error: Too many positional arguments!
+Usage: 'java -jar spl.jar' [OPTION] INPUT_FILE [OUTPUT_FILE]
+
+Executes all compiler phases up to (and including) the specified one.
+If no flag is specified, all phases are run and code is written to the output file.
+Options:
+  --tokens     Phase 1: Scans for tokens and prints them.
+  --parse      Phase 2: Parses the stream of tokens to check for syntax errors.
+  --absyn      Phase 3: Creates an abstract syntax tree from the input tokens and prints it.
+  --tables     Phase 4a: Builds a symbol table and prints its entries.
+  --semant     Phase 4b: Performs the semantic analysis.
+  --vars       Phase 5: Allocates memory space for variables and prints the amount of allocated memory.
+  --ershov     Enable register optimization using the ershov number.
+  --doWhile    Enable the do-while statement.
+  --help       Show this help.
+[2021-12-12 18:52:43.019036] Test not passed.
+[2021-12-12 18:52:43.019057] Running Score: 0/27
+
+[2021-12-12 18:52:43.019083] Evaluating threedim.spl with the submitted solution.
+[2021-12-12 18:52:43.323479] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2021-12-12 18:52:43.323547] Output (stderr) of 'java -jar /home/solution/java/target/spl.jar --absyn /home/tests/threedim.spl /home/temp/threedim.spl.s' (Limited to 50 lines/10000 characters):
+Usage error: Too many positional arguments!
+Usage: 'java -jar spl.jar' [OPTION] INPUT_FILE [OUTPUT_FILE]
+
+Executes all compiler phases up to (and including) the specified one.
+If no flag is specified, all phases are run and code is written to the output file.
+Options:
+  --tokens     Phase 1: Scans for tokens and prints them.
+  --parse      Phase 2: Parses the stream of tokens to check for syntax errors.
+  --absyn      Phase 3: Creates an abstract syntax tree from the input tokens and prints it.
+  --tables     Phase 4a: Builds a symbol table and prints its entries.
+  --semant     Phase 4b: Performs the semantic analysis.
+  --vars       Phase 5: Allocates memory space for variables and prints the amount of allocated memory.
+  --ershov     Enable register optimization using the ershov number.
+  --doWhile    Enable the do-while statement.
+  --help       Show this help.
+[2021-12-12 18:52:43.323653] Test not passed.
+[2021-12-12 18:52:43.323758] Running Score: 0/28
+
+[2021-12-12 18:52:43.323800] Evaluating time.spl with the submitted solution.
+[2021-12-12 18:52:43.655848] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2021-12-12 18:52:43.655913] Output (stderr) of 'java -jar /home/solution/java/target/spl.jar --absyn /home/tests/time.spl /home/temp/time.spl.s' (Limited to 50 lines/10000 characters):
+Usage error: Too many positional arguments!
+Usage: 'java -jar spl.jar' [OPTION] INPUT_FILE [OUTPUT_FILE]
+
+Executes all compiler phases up to (and including) the specified one.
+If no flag is specified, all phases are run and code is written to the output file.
+Options:
+  --tokens     Phase 1: Scans for tokens and prints them.
+  --parse      Phase 2: Parses the stream of tokens to check for syntax errors.
+  --absyn      Phase 3: Creates an abstract syntax tree from the input tokens and prints it.
+  --tables     Phase 4a: Builds a symbol table and prints its entries.
+  --semant     Phase 4b: Performs the semantic analysis.
+  --vars       Phase 5: Allocates memory space for variables and prints the amount of allocated memory.
+  --ershov     Enable register optimization using the ershov number.
+  --doWhile    Enable the do-while statement.
+  --help       Show this help.
+[2021-12-12 18:52:43.656021] Test not passed.
+[2021-12-12 18:52:43.656036] Running Score: 0/29
+
+[2021-12-12 18:52:43.656063] Evaluating trailing_argument_comma.spl with the submitted solution.
+[2021-12-12 18:52:44.007378] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2021-12-12 18:52:44.007445] Output (stderr) of 'java -jar /home/solution/java/target/spl.jar --absyn /home/tests/trailing_argument_comma.spl /home/temp/trailing_argument_comma.spl.s' (Limited to 50 lines/10000 characters):
+Usage error: Too many positional arguments!
+Usage: 'java -jar spl.jar' [OPTION] INPUT_FILE [OUTPUT_FILE]
+
+Executes all compiler phases up to (and including) the specified one.
+If no flag is specified, all phases are run and code is written to the output file.
+Options:
+  --tokens     Phase 1: Scans for tokens and prints them.
+  --parse      Phase 2: Parses the stream of tokens to check for syntax errors.
+  --absyn      Phase 3: Creates an abstract syntax tree from the input tokens and prints it.
+  --tables     Phase 4a: Builds a symbol table and prints its entries.
+  --semant     Phase 4b: Performs the semantic analysis.
+  --vars       Phase 5: Allocates memory space for variables and prints the amount of allocated memory.
+  --ershov     Enable register optimization using the ershov number.
+  --doWhile    Enable the do-while statement.
+  --help       Show this help.
+[2021-12-12 18:52:44.007556] Test not passed.
+[2021-12-12 18:52:44.007570] Running Score: 0/30
+
+[2021-12-12 18:52:44.007596] Evaluating trailing_parameter_comma.spl with the submitted solution.
+[2021-12-12 18:52:44.307378] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2021-12-12 18:52:44.307449] Output (stderr) of 'java -jar /home/solution/java/target/spl.jar --absyn /home/tests/trailing_parameter_comma.spl /home/temp/trailing_parameter_comma.spl.s' (Limited to 50 lines/10000 characters):
+Usage error: Too many positional arguments!
+Usage: 'java -jar spl.jar' [OPTION] INPUT_FILE [OUTPUT_FILE]
+
+Executes all compiler phases up to (and including) the specified one.
+If no flag is specified, all phases are run and code is written to the output file.
+Options:
+  --tokens     Phase 1: Scans for tokens and prints them.
+  --parse      Phase 2: Parses the stream of tokens to check for syntax errors.
+  --absyn      Phase 3: Creates an abstract syntax tree from the input tokens and prints it.
+  --tables     Phase 4a: Builds a symbol table and prints its entries.
+  --semant     Phase 4b: Performs the semantic analysis.
+  --vars       Phase 5: Allocates memory space for variables and prints the amount of allocated memory.
+  --ershov     Enable register optimization using the ershov number.
+  --doWhile    Enable the do-while statement.
+  --help       Show this help.
+[2021-12-12 18:52:44.307556] Test not passed.
+[2021-12-12 18:52:44.307571] Running Score: 0/31
+
+[2021-12-12 18:52:44.307596] Evaluating twodim.spl with the submitted solution.
+[2021-12-12 18:52:44.625822] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2021-12-12 18:52:44.625890] Output (stderr) of 'java -jar /home/solution/java/target/spl.jar --absyn /home/tests/twodim.spl /home/temp/twodim.spl.s' (Limited to 50 lines/10000 characters):
+Usage error: Too many positional arguments!
+Usage: 'java -jar spl.jar' [OPTION] INPUT_FILE [OUTPUT_FILE]
+
+Executes all compiler phases up to (and including) the specified one.
+If no flag is specified, all phases are run and code is written to the output file.
+Options:
+  --tokens     Phase 1: Scans for tokens and prints them.
+  --parse      Phase 2: Parses the stream of tokens to check for syntax errors.
+  --absyn      Phase 3: Creates an abstract syntax tree from the input tokens and prints it.
+  --tables     Phase 4a: Builds a symbol table and prints its entries.
+  --semant     Phase 4b: Performs the semantic analysis.
+  --vars       Phase 5: Allocates memory space for variables and prints the amount of allocated memory.
+  --ershov     Enable register optimization using the ershov number.
+  --doWhile    Enable the do-while statement.
+  --help       Show this help.
+[2021-12-12 18:52:44.625996] Test not passed.
+[2021-12-12 18:52:44.626011] Running Score: 0/32
+
+[2021-12-12 18:52:44.626039] Evaluating unary_plus.spl with the submitted solution.
+[2021-12-12 18:52:44.945639] Submission exited with exit code 1, which is not allowed. Allowed: [0, 99, 140, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+[2021-12-12 18:52:44.945701] Output (stderr) of 'java -jar /home/solution/java/target/spl.jar --absyn /home/tests/unary_plus.spl /home/temp/unary_plus.spl.s' (Limited to 50 lines/10000 characters):
+Usage error: Too many positional arguments!
+Usage: 'java -jar spl.jar' [OPTION] INPUT_FILE [OUTPUT_FILE]
+
+Executes all compiler phases up to (and including) the specified one.
+If no flag is specified, all phases are run and code is written to the output file.
+Options:
+  --tokens     Phase 1: Scans for tokens and prints them.
+  --parse      Phase 2: Parses the stream of tokens to check for syntax errors.
+  --absyn      Phase 3: Creates an abstract syntax tree from the input tokens and prints it.
+  --tables     Phase 4a: Builds a symbol table and prints its entries.
+  --semant     Phase 4b: Performs the semantic analysis.
+  --vars       Phase 5: Allocates memory space for variables and prints the amount of allocated memory.
+  --ershov     Enable register optimization using the ershov number.
+  --doWhile    Enable the do-while statement.
+  --help       Show this help.
+[2021-12-12 18:52:44.946867] Test not passed.
+[2021-12-12 18:52:44.946897] Running Score: 0/33
+
+[2021-12-12 18:52:44.946986] Final score: 0/33 (0%). 
+[2021-12-12 18:52:44.947211] 100% are needed to pass.
+[2021-12-12 18:52:45.135701] You have NOT PASSED this assignment.
+[2021-12-12 18:52:45.136058] You can try again. Deadline: 12.12.2021 23:59
+
