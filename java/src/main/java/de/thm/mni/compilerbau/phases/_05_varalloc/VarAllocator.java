@@ -101,6 +101,9 @@ public class VarAllocator {
                 outgoingAreaSize = procedureEntry.stackLayout.argumentAreaSize;
             }
         }
+        public void visit(CompoundStatement compoundStatement) {
+            compoundStatement.statements.forEach(cs->cs.accept(this));
+        }
 
         public void visit(IfStatement ifStatement) {
             ifStatement.thenPart.accept(this);
