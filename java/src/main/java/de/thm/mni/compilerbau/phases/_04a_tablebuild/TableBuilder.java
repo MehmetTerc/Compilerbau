@@ -27,17 +27,15 @@ import java.util.stream.Collectors;
 public class TableBuilder extends DoNothingVisitor {
     private final boolean showTables;
 
-    public SymbolTable globalTable = TableInitializer.initializeGlobalTable();
-
-    public SymbolTable localTable;
-
     public TableBuilder(boolean showTables) {
         this.showTables = showTables;
     }
 
     public SymbolTable buildSymbolTable(Program program) {
         //TODO (assignment 4a): Initialize a symbol table with all predefined symbols and fill it with user-defined symbols
-        program.accept(this);
+        SymbolTable globalTable=TableInitializer.initializeGlobalTable();
+        TableBuilderVisitor tableBuilderVisitor=new TableBuilderVisitor((globalTable));
+        program.accept(tableBuilderVisitor);
         Entry mainError = globalTable.lookup(new Identifier("main"), SplError.MainIsMissing());
 
         if (!(mainError instanceof ProcedureEntry)) {
@@ -65,59 +63,69 @@ public class TableBuilder extends DoNothingVisitor {
         System.out.println(entry.localTable.toString());
     }
 
-    @Override
-    public void visit(ArrayTypeExpression arrayTypeExpression) {
-        arrayTypeExpression.baseType.accept(this);
-        arrayTypeExpression.dataType = new ArrayType(
-                arrayTypeExpression.baseType.dataType, arrayTypeExpression.arraySize);
-    }
+    private class TableBuilderVisitor extends DoNothingVisitor {
+        private SymbolTable globalTable;
+        private SymbolTable localTable;
 
-    @Override
-    public void visit(NamedTypeExpression namedTypeExpression) {
-        TypeEntry entry = (TypeEntry) globalTable.lookup(namedTypeExpression.name);
-        namedTypeExpression.dataType = entry.type;
-    }
-
-    @Override
-    public void visit(ParameterDeclaration parameterDeclaration) {
-        parameterDeclaration.typeExpression.accept(this);
-        if (parameterDeclaration.typeExpression.dataType instanceof ArrayType && !parameterDeclaration.isReference) {
-            throw SplError.MustBeAReferenceParameter(parameterDeclaration.position, parameterDeclaration.name);
+        public TableBuilderVisitor(SymbolTable symbolTable) {
+            this.globalTable = symbolTable;
         }
 
-        localTable.enter(parameterDeclaration.name,
-                new VariableEntry(parameterDeclaration.typeExpression.dataType, parameterDeclaration.isReference),
-                SplError.RedeclarationAsParameter(parameterDeclaration.position, parameterDeclaration.name));
-    }
+        @Override
+        public void visit(ArrayTypeExpression arrayTypeExpression) {
+            arrayTypeExpression.baseType.accept(this);
+            arrayTypeExpression.dataType = new ArrayType(
+                    arrayTypeExpression.baseType.dataType, arrayTypeExpression.arraySize);
+        }
 
-    @Override
-    public void visit(ProcedureDeclaration procedureDeclaration) {
-        List<ParameterType> paraType = new ArrayList<>();
-        localTable = new SymbolTable(globalTable);
-        procedureDeclaration.parameters.forEach(n -> {
-            n.accept(this);
-            paraType.add(new ParameterType(n.typeExpression.dataType, n.isReference));
-        });
-        procedureDeclaration.variables.forEach((m -> m.accept(this)));
-        globalTable.enter(procedureDeclaration.name, new ProcedureEntry(localTable, paraType));
-        printSymbolTableAtEndOfProcedure(procedureDeclaration.name, new ProcedureEntry(localTable, paraType));
-    }
+        @Override
+        public void visit(NamedTypeExpression namedTypeExpression) {
+            TypeEntry entry = (TypeEntry) globalTable.lookup(namedTypeExpression.name);
+            namedTypeExpression.dataType = entry.type;
+        }
 
-    @Override
-    public void visit(Program program) {
-        program.declarations.forEach(d -> d.accept(this));
-    }
+        @Override
+        public void visit(ParameterDeclaration parameterDeclaration) {
+            parameterDeclaration.typeExpression.accept(this);
+            if (parameterDeclaration.typeExpression.dataType instanceof ArrayType && !parameterDeclaration.isReference) {
+                throw SplError.MustBeAReferenceParameter(parameterDeclaration.position, parameterDeclaration.name);
+            }
 
-    @Override
-    public void visit(TypeDeclaration typeDeclaration) {
-        typeDeclaration.typeExpression.accept(this);
-        globalTable.enter(typeDeclaration.name, new TypeEntry(typeDeclaration.typeExpression.dataType));
-    }
+            localTable.enter(parameterDeclaration.name,
+                    new VariableEntry(parameterDeclaration.typeExpression.dataType, parameterDeclaration.isReference),
+                    SplError.RedeclarationAsParameter(parameterDeclaration.position, parameterDeclaration.name));
+        }
 
-    @Override
-    public void visit(VariableDeclaration variableDeclaration) {
-        variableDeclaration.typeExpression.accept(this);
-        localTable.enter(variableDeclaration.name, new VariableEntry(variableDeclaration.typeExpression.dataType, false), SplError.RedeclarationAsVariable(variableDeclaration.position, variableDeclaration.name));
+        @Override
+        public void visit(ProcedureDeclaration procedureDeclaration) {
+            List<ParameterType> paraType = new ArrayList<>();
+            localTable = new SymbolTable(globalTable);
+            procedureDeclaration.parameters.forEach(n -> {
+                n.accept(this);
+                paraType.add(new ParameterType(n.typeExpression.dataType, n.isReference));
+            });
+            procedureDeclaration.variables.forEach((m -> m.accept(this)));
+            globalTable.enter(procedureDeclaration.name, new ProcedureEntry(localTable, paraType));
+            printSymbolTableAtEndOfProcedure(procedureDeclaration.name, new ProcedureEntry(localTable, paraType));
+        }
+
+        @Override
+        public void visit(Program program) {
+            program.declarations.forEach(d -> d.accept(this));
+        }
+
+        @Override
+        public void visit(TypeDeclaration typeDeclaration) {
+            typeDeclaration.typeExpression.accept(this);
+            globalTable.enter(typeDeclaration.name, new TypeEntry(typeDeclaration.typeExpression.dataType));
+        }
+
+        @Override
+        public void visit(VariableDeclaration variableDeclaration) {
+            variableDeclaration.typeExpression.accept(this);
+            localTable.enter(variableDeclaration.name, new VariableEntry(variableDeclaration.typeExpression.dataType, false), SplError.RedeclarationAsVariable(variableDeclaration.position, variableDeclaration.name));
+        }
+
     }
 
 }
