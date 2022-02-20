@@ -149,6 +149,12 @@ public class ProcedureBodyChecker extends DoNothingVisitor {
         public void visit(CompoundStatement compoundStatement){
             compoundStatement.statements.forEach(cs->cs.accept(this));
         }
+
+        public void visit(VariableExpression variableExpression) {
+            variableExpression.variable.accept(this);
+            variableExpression.dataType = variableExpression.variable.dataType;
+        }
+
     }
 
 }
