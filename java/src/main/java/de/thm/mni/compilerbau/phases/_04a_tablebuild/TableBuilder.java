@@ -34,7 +34,7 @@ public class TableBuilder extends DoNothingVisitor {
     public SymbolTable buildSymbolTable(Program program) {
         //TODO (assignment 4a): Initialize a symbol table with all predefined symbols and fill it with user-defined symbols
         SymbolTable globalTable=TableInitializer.initializeGlobalTable();
-        TableBuilderVisitor tableBuilderVisitor=new TableBuilderVisitor((globalTable));
+        TableBuilderVisitor tableBuilderVisitor=new TableBuilderVisitor(globalTable);
         program.accept(tableBuilderVisitor);
         Entry mainError = globalTable.lookup(new Identifier("main"), SplError.MainIsMissing());
 
@@ -80,8 +80,11 @@ public class TableBuilder extends DoNothingVisitor {
 
         @Override
         public void visit(NamedTypeExpression namedTypeExpression) {
-            TypeEntry entry = (TypeEntry) globalTable.lookup(namedTypeExpression.name);
-            namedTypeExpression.dataType = entry.type;
+            Entry entry = globalTable.lookup(namedTypeExpression.name,SplError.UndefinedType(namedTypeExpression.position,namedTypeExpression.name));
+            if(!(entry instanceof TypeEntry)){
+                throw SplError.NotAType(namedTypeExpression.position,namedTypeExpression.name);
+            }
+            namedTypeExpression.dataType = ((TypeEntry)entry).type;
         }
 
         @Override
@@ -117,7 +120,8 @@ public class TableBuilder extends DoNothingVisitor {
         @Override
         public void visit(TypeDeclaration typeDeclaration) {
             typeDeclaration.typeExpression.accept(this);
-            globalTable.enter(typeDeclaration.name, new TypeEntry(typeDeclaration.typeExpression.dataType));
+            TypeEntry typeEntry=new TypeEntry(typeDeclaration.typeExpression.dataType);
+            globalTable.enter(typeDeclaration.name,typeEntry,SplError.RedeclarationAsType(typeDeclaration.position,typeDeclaration.name));
         }
 
         @Override
