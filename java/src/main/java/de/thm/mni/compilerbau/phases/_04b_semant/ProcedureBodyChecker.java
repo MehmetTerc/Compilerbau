@@ -58,7 +58,8 @@ public class ProcedureBodyChecker extends DoNothingVisitor {
 
 
         public void visit(AssignStatement assignStatement) {
-            assignStatement.accept((Visitor) this);
+            assignStatement.target.accept (this);
+            assignStatement.value.accept(this);
             if (assignStatement.target.dataType != PrimitiveType.intType) {
                 throw SplError.AssignmentRequiresIntegers(assignStatement.position);
             }
@@ -76,6 +77,8 @@ public class ProcedureBodyChecker extends DoNothingVisitor {
             if (arrayAccess.index.dataType != PrimitiveType.intType) {
                 throw SplError.IndexingWithNonInteger(arrayAccess.position);
             }
+            ArrayType arrayType =  (ArrayType) arrayAccess.array.dataType;
+            arrayAccess.dataType = arrayType.baseType;
         }
 
         public void visit(CallStatement callStatement) {
