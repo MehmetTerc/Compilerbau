@@ -88,7 +88,9 @@ public class CodeGenerator {
         public void visit(NamedVariable namedVariable) {
             VariableEntry variableEntry = (VariableEntry) localTable.lookup(namedVariable.name);
             output.emitInstruction("add", register, new Register(25), variableEntry.offset);
-            //eventuell Ergänzen
+            if(variableEntry.isReference){
+                output.emitInstruction("ldw", register, register, 0);
+            }
             register = register.next();
         }
 
@@ -178,7 +180,7 @@ public class CodeGenerator {
             }
             procedureDeclaration.body.forEach(n->n.accept(this));
             if(!procedureEntry.stackLayout.isLeafProcedure()){
-                output.emitInstruction("ldw", new Register(31), new Register(25), procedureEntry.stackLayout.oldFramePointerOffset(), "load return register");
+                output.emitInstruction("ldw", new Register(31), new Register(25), procedureEntry.stackLayout.oldReturnAddressOffset(), "load return register");
             }
             output.emitInstruction("ldw",new Register(25),new Register(29),procedureEntry.stackLayout.oldFramePointerOffset(), "restore FP" );
             output.emitInstruction("add",new Register(29), new Register(29),procedureEntry.stackLayout.frameSize(),"release Frame");
