@@ -34,6 +34,7 @@ public class CodeGenerator {
 
         public void visit(IntLiteral intLiteral) {
             output.emitInstruction("add", register, new Register(0), intLiteral.value);
+            register=register.next();
         }
 
         public void visit(BinaryExpression binaryExpression) {
@@ -62,22 +63,22 @@ public class CodeGenerator {
 
             switch (binaryExpression.operator) {
                 case EQU:
-                    output.emitInstruction("bne", register.minus(2), register.minus(1), label);
+                    output.emitInstruction("bne", register.minus(1), register, label);
                     break;
                 case NEQ:
-                    output.emitInstruction("beq", register.minus(2), register.minus(1), label);
+                    output.emitInstruction("beq", register.minus(1), register, label);
                     break;
                 case GRE:
-                    output.emitInstruction("blt", register.minus(2), register.minus(1), label);
+                    output.emitInstruction("blt", register.minus(1), register, label);
                     break;
                 case LSE:
-                    output.emitInstruction("bgt", register.minus(2), register.minus(1), label);
+                    output.emitInstruction("bgt", register.minus(1), register, label);
                     break;
                 case GRT:
-                    output.emitInstruction("ble", register.minus(2), register.minus(1), label);
+                    output.emitInstruction("ble", register.minus(1), register, label);
                     break;
                 case LST:
-                    output.emitInstruction("bge", register.minus(2), register.minus(1), label);
+                    output.emitInstruction("bge", register.minus(1), register, label);
                     break;
 
             }
@@ -101,7 +102,7 @@ public class CodeGenerator {
             assignStatement.target.accept(this);
             assignStatement.value.accept(this);
 
-            output.emitInstruction("stw", register.minus(1), register.minus(2), 0);
+            output.emitInstruction("stw", register, register.minus(1), 0);
             register = register.minus(2);
 
         }
@@ -158,7 +159,7 @@ public class CodeGenerator {
                     callStatement.arguments.get(i).accept(this);
                 }
 
-                output.emitInstruction("stw", register.minus(1), new Register(29), procedureEntry.parameterTypes.get(i).offset);
+                output.emitInstruction("stw", register, new Register(29), procedureEntry.parameterTypes.get(i).offset);
                 register = register.minus(1);
             }
             output.emitInstruction("jal", callStatement.procedureName.toString());
