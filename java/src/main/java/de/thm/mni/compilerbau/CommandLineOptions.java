@@ -12,7 +12,7 @@ public class CommandLineOptions {
     public PhaseOption phaseOption = null;
     public boolean ershovOptimization = false;
     public boolean doWhileEnabled = false;
-    public String inFilename = "";
+    public String inFilename = "tests/runtime_tests/bigtest.spl";
     public String outFilename = "";
     //tests/runtime_tests/fak.spl
 

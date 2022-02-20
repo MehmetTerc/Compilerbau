@@ -108,8 +108,8 @@ public class CodeGenerator {
         public void visit(ArrayAccess arrayAccess) {
             arrayAccess.array.accept(this);
             arrayAccess.index.accept(this);
-
-            output.emitInstruction("add", register, new Register(0), ((ArrayType) arrayAccess.array.dataType).arraySize);
+            ArrayType arrayType= (ArrayType) arrayAccess.array.dataType;
+            output.emitInstruction("add", register, new Register(0), arrayType.arraySize);
             output.emitInstruction("bgeu", register.minus(1), register, "_indexError");
             output.emitInstruction("mul", register.minus(1), register.minus(1), arrayAccess.index.dataType.byteSize);
             output.emitInstruction("add", register.minus(2), register.minus(2), register.minus(1));
