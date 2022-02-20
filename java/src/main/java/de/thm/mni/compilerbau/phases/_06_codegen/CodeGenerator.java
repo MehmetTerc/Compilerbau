@@ -67,27 +67,72 @@ public class CodeGenerator {
 
             switch (binaryExpression.operator) {
                 case EQU:
-                    output.emitInstruction("equ", register.minus(2), register.minus(1), label);
+                    output.emitInstruction("bne", register.minus(2), register.minus(1), label);
                     break;
                 case NEQ:
-                    output.emitInstruction("neq", register.minus(2), register.minus(1), label);
+                    output.emitInstruction("beq", register.minus(2), register.minus(1), label);
                     break;
                 case GRE:
-                    output.emitInstruction("gre", register.minus(2), register.minus(1), label);
+                    output.emitInstruction("blt", register.minus(2), register.minus(1), label);
                     break;
                 case LSE:
-                    output.emitInstruction("lse", register.minus(2), register.minus(1), label);
+                    output.emitInstruction("bgt", register.minus(2), register.minus(1), label);
                     break;
                 case GRT:
-                    output.emitInstruction("grt", register.minus(2), register.minus(1), label);
+                    output.emitInstruction("ble", register.minus(2), register.minus(1), label);
                     break;
                 case LST:
-                    output.emitInstruction("lst", register.minus(2), register.minus(1), label);
+                    output.emitInstruction("bge", register.minus(2), register.minus(1), label);
                     break;
 
             }
             register = register.minus(2);
         }
+
+        public void visit(NamedVariable namedVariable) {
+            VariableEntry variableEntry = (VariableEntry) localTable.lookup(namedVariable.name);
+            output.emitInstruction("add", register, new Register(25), variableEntry.offset);
+            //eventuell Ergänzen
+            register = register.next();
+        }
+
+        public void visit(VariableExpression variableExpression) {
+            variableExpression.variable.accept(this);
+            output.emitInstruction("ldw", register.minus(1), register.minus(1), 0);
+        }
+
+        public void visit(AssignStatement assignStatement) {
+            assignStatement.target.accept(this);
+            assignStatement.value.accept(this);
+
+            output.emitInstruction("stw", register.minus(1), register.minus(2), 0);
+            register = register.minus(2);
+
+        }
+
+        public void visit(ArrayAccess arrayAccess){
+            arrayAccess.array.accept(this);
+            arrayAccess.index.accept(this);
+            //noch zu ergänzen
+        }
+
+        public void visit(WhileStatement whileStatement) {
+            String startLabel="L"+lblCounter++;
+            String endLabel="L"+lblCounter++;
+
+            output.emitLabel(startLabel);
+            logicOperator((BinaryExpression) whileStatement.condition,endLabel);
+            whileStatement.body.accept(this);
+            output.emitInstruction("j",startLabel);
+            output.emitLabel(endLabel);
+        }
+
+        public void visit(IfStatement ifStatement){
+
+        }
+
+
+
 
 
     }
