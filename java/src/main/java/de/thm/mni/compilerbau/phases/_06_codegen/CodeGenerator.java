@@ -216,11 +216,8 @@ public class CodeGenerator {
 
     public void generateCode(Program program, SymbolTable table) {
         assemblerProlog();
-
+        CodeGeneratorVisitor codeGeneratorVisitor = new CodeGeneratorVisitor(table);
+        program.accept(codeGeneratorVisitor);
         //TODO (assignment 6): generate eco32 assembler code for the spl program
-        //Visitorklasse
-
-
-        throw new NotImplemented();
     }
 }
