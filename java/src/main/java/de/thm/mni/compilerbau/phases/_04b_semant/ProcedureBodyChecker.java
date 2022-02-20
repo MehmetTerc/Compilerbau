@@ -23,11 +23,11 @@ public class ProcedureBodyChecker extends DoNothingVisitor {
     public void checkProcedures(Program program, SymbolTable globalTable) {
         //TODO (assignment 4b): Check all procedure bodies for semantic errors
         ProcedureBodyCheckerVisitor procedureBodyCheckerVisitor = new ProcedureBodyCheckerVisitor(globalTable);
-        program.accept( procedureBodyCheckerVisitor);
+        program.accept(procedureBodyCheckerVisitor);
 
     }
 
-    class ProcedureBodyCheckerVisitor extends DoNothingVisitor{
+    class ProcedureBodyCheckerVisitor extends DoNothingVisitor {
         private SymbolTable table;
 
         public ProcedureBodyCheckerVisitor(SymbolTable symbolTable) {
@@ -39,13 +39,16 @@ public class ProcedureBodyChecker extends DoNothingVisitor {
             if (whileStatement.condition.dataType != PrimitiveType.boolType) {
                 throw SplError.WhileConditionMustBeBoolean(whileStatement.position);
             }
+            whileStatement.body.accept(this);
         }
 
         public void visit(IfStatement ifStatement) {
             ifStatement.condition.accept((Visitor) this);
             if (ifStatement.condition.dataType != PrimitiveType.boolType) {
-                throw SplError.WhileConditionMustBeBoolean(ifStatement.position);
+                throw SplError.IfConditionMustBeBoolean(ifStatement.position);
             }
+            ifStatement.thenPart.accept(this);
+            ifStatement.elsePart.accept(this);
         }
 
 
@@ -60,17 +63,17 @@ public class ProcedureBodyChecker extends DoNothingVisitor {
         }
 
         public void visit(ArrayAccess arrayAccess) {
-            arrayAccess.accept( this);
+            arrayAccess.array.accept(this);
             if (!(arrayAccess.array.dataType instanceof ArrayType)) {
                 throw SplError.IndexingNonArray(arrayAccess.position);
             }
+            arrayAccess.index.accept(this);
             if (arrayAccess.index.dataType != PrimitiveType.intType) {
                 throw SplError.IndexingWithNonInteger(arrayAccess.position);
             }
         }
 
         public void visit(CallStatement callStatement) {
-            callStatement.arguments.forEach(n -> n.accept( this));
             Entry entry = table.lookup(callStatement.procedureName, SplError.UndefinedProcedure(callStatement.position, callStatement.procedureName));
             if (!(entry instanceof ProcedureEntry)) {
                 throw SplError.CallOfNonProcedure(callStatement.position, callStatement.procedureName);
@@ -82,23 +85,37 @@ public class ProcedureBodyChecker extends DoNothingVisitor {
             if (procedureEntry.parameterTypes.size() < callStatement.arguments.size()) {
                 throw SplError.TooManyArguments(callStatement.position, callStatement.procedureName);
             }
+            for (int i = 0; i < callStatement.arguments.size(); i++) {
+                if (procedureEntry.parameterTypes.get(i).isReference && !(callStatement.arguments.get(i) instanceof VariableExpression)) {
+                    throw SplError.ArgumentMustBeAVariable(callStatement.position, callStatement.procedureName, i + 1);
+                }
+                if (procedureEntry.parameterTypes.get(i).type != callStatement.arguments.get(i).dataType) {
+                    throw SplError.ArgumentTypeMismatch(callStatement.position, callStatement.procedureName, i + 1);
+                }
+                callStatement.arguments.get(i).accept(this);
+            }
+
+        }
+
+        protected void checkType(Type expected, Type actual, SplError error) throws SplError {
+            if(!expected.equals(actual)){
+                throw error;
+            }
         }
 
         public void visit(BinaryExpression binaryExpression) {
-            binaryExpression.accept((Visitor) this);
-
-            if (binaryExpression.leftOperand.dataType != binaryExpression.rightOperand.dataType) {
-                throw SplError.OperatorDifferentTypes(binaryExpression.position);
-            }
-
-            if (binaryExpression.operator.isComparison() && (binaryExpression.leftOperand.dataType != PrimitiveType.intType ||
-                    binaryExpression.rightOperand.dataType != PrimitiveType.intType)) {
-                throw SplError.ComparisonNonInteger(binaryExpression.position);
-            }
-
-            if (binaryExpression.operator.isArithmetic() && (binaryExpression.leftOperand.dataType != PrimitiveType.intType ||
-                    binaryExpression.rightOperand.dataType != PrimitiveType.intType)) {
-                throw SplError.ArithmeticOperatorNonInteger(binaryExpression.position);
+            binaryExpression.leftOperand.accept(this);
+            binaryExpression.rightOperand.accept(this);
+            if(binaryExpression.operator.isArithmetic()){
+                if (binaryExpression.leftOperand.dataType.equals(PrimitiveType.boolType) && binaryExpression.rightOperand.dataType.equals(PrimitiveType.boolType)) throw SplError.ArithmeticOperatorNonInteger(binaryExpression.position);
+                checkType(PrimitiveType.intType, binaryExpression.leftOperand.dataType, SplError.OperatorDifferentTypes(binaryExpression.position));
+                checkType(PrimitiveType.intType, binaryExpression.rightOperand.dataType, SplError.OperatorDifferentTypes(binaryExpression.position));
+                binaryExpression.dataType = PrimitiveType.intType;
+            } else {
+                if (binaryExpression.leftOperand.dataType.equals(PrimitiveType.boolType) && binaryExpression.rightOperand.dataType.equals(PrimitiveType.boolType)) throw SplError.ComparisonNonInteger(binaryExpression.position);
+                checkType(PrimitiveType.intType, binaryExpression.leftOperand.dataType, SplError.OperatorDifferentTypes(binaryExpression.position));
+                checkType(PrimitiveType.intType, binaryExpression.rightOperand.dataType, SplError.OperatorDifferentTypes(binaryExpression.position));
+                binaryExpression.dataType = PrimitiveType.boolType;
             }
         }
 
@@ -110,12 +127,19 @@ public class ProcedureBodyChecker extends DoNothingVisitor {
         }
 
         public void visit(NamedVariable namedVariable) {
-            namedVariable.accept((Visitor) this);
-            Entry entry = table.lookup(namedVariable.name , SplError.UndefinedVariable(namedVariable.position, namedVariable.name));
+            Entry entry = table.lookup(namedVariable.name, SplError.UndefinedVariable(namedVariable.position, namedVariable.name));
             if (!(entry instanceof VariableEntry)) {
                 throw SplError.NotAVariable(namedVariable.position, namedVariable.name);
             }
             namedVariable.dataType = ((VariableEntry) entry).type;
+        }
+
+        public void visit(IntLiteral intLiteral){
+            intLiteral.dataType=PrimitiveType.intType;
+        }
+
+        public void visit(CompoundStatement compoundStatement){
+            compoundStatement.statements.forEach(cs->cs.accept(this));
         }
     }
 
