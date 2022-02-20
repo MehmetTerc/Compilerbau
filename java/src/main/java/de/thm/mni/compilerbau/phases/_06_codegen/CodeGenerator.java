@@ -19,13 +19,6 @@ public class CodeGenerator {
     private final CodePrinter output;
     private final boolean ershovOptimization;
 
-    /**
-     * Initializes the code generator.
-     *
-     * @param output             The PrintWriter to the output file.
-     * @param ershovOptimization Whether the ershov register optimization should be used (--ershov)
-     */
-
     private class CodeGeneratorVisitor extends DoNothingVisitor {
         SymbolTable localTable;
         SymbolTable globalTable;
@@ -110,32 +103,90 @@ public class CodeGenerator {
 
         }
 
-        public void visit(ArrayAccess arrayAccess){
+        public void visit(ArrayAccess arrayAccess) {
             arrayAccess.array.accept(this);
             arrayAccess.index.accept(this);
-            //noch zu ergänzen
+
+            output.emitInstruction("add", register, new Register(0), ((ArrayType) arrayAccess.array.dataType).arraySize);
+            output.emitInstruction("bgeu", register.minus(1), register, "_indexError");
+            output.emitInstruction("mul", register.minus(1), register.minus(1), arrayAccess.index.dataType.byteSize);
+            output.emitInstruction("add", register.minus(2), register.minus(2), register.minus(1));
+            register = register.minus(1);
         }
 
         public void visit(WhileStatement whileStatement) {
-            String startLabel="L"+lblCounter++;
-            String endLabel="L"+lblCounter++;
+            String startLabel = "L" + lblCounter++;
+            String endLabel = "L" + lblCounter++;
 
             output.emitLabel(startLabel);
-            logicOperator((BinaryExpression) whileStatement.condition,endLabel);
+            logicOperator((BinaryExpression) whileStatement.condition, endLabel);
             whileStatement.body.accept(this);
-            output.emitInstruction("j",startLabel);
+            output.emitInstruction("j", startLabel);
             output.emitLabel(endLabel);
         }
 
-        public void visit(IfStatement ifStatement){
+        public void visit(IfStatement ifStatement) {
+            if (ifStatement.elsePart instanceof EmptyStatement) {
+                String endlbl = "L" + lblCounter++;
+                logicOperator((BinaryExpression) ifStatement.condition, endlbl);
+                ifStatement.thenPart.accept(this);
+                output.emitLabel(endlbl);
+            } else {
+                String startLbl = "L" + lblCounter++;
+                String endLbl = "L" + lblCounter++;
 
+                logicOperator((BinaryExpression) ifStatement.condition, endLbl);
+                output.emitLabel(startLbl);
+                ifStatement.elsePart.accept(this);
+                output.emitLabel(endLbl);
+            }
+        }
+
+        public void visit(CallStatement callStatement) {
+            ProcedureEntry procedureEntry = (ProcedureEntry) localTable.lookup((callStatement.procedureName));
+            for (int i = 0; i < callStatement.arguments.size(); i++) {
+                if (procedureEntry.parameterTypes.get(i).isReference) {
+                    VariableExpression variableExpression = (VariableExpression) callStatement.arguments.get(i);
+                    variableExpression.variable.accept(this);
+                } else {
+                    callStatement.arguments.get(i).accept(this);
+                }
+
+                output.emitInstruction("stw", register.minus(1), new Register(29), procedureEntry.parameterTypes.get(i).offset);
+                register = register.minus(1);
+            }
+            output.emitInstruction("jal", callStatement.procedureName.toString());
+        }
+
+        public void visit(ProcedureDeclaration procedureDeclaration) {
+            ProcedureEntry procedureEntry = (ProcedureEntry) globalTable.lookup(procedureDeclaration.name);
+            output.emitExport(procedureDeclaration.name.toString());
+            output.emitLabel(procedureDeclaration.name.toString());
+            localTable = procedureEntry.localTable;
+            output.emitInstruction("sub", new Register(29), new Register(29), procedureEntry.stackLayout.frameSize(), "allocate frame");
+            output.emitInstruction("stw", new Register(25), new Register(29), procedureEntry.stackLayout.oldFramePointerOffset(), "save old FP");
+            output.emitInstruction("add", new Register(25), new Register(29), procedureEntry.stackLayout.frameSize(), "new FP");
+            if (!procedureEntry.stackLayout.isLeafProcedure()) {
+                output.emitInstruction("stw", new Register(31), new Register(25), procedureEntry.stackLayout.oldReturnAddressOffset(), "save old return register");
+            }
+            procedureDeclaration.body.forEach(n->n.accept(this));
+            if(!procedureEntry.stackLayout.isLeafProcedure()){
+                output.emitInstruction("ldw", new Register(31), new Register(25), procedureEntry.stackLayout.oldFramePointerOffset(), "load return register");
+            }
+            output.emitInstruction("ldw",new Register(25),new Register(29),procedureEntry.stackLayout.oldFramePointerOffset(), "restore FP" );
+            output.emitInstruction("add",new Register(29), new Register(29),procedureEntry.stackLayout.frameSize(),"release Frame");
+            output.emitInstruction("jr",new Register(31),"return to Adress");
         }
 
 
-
-
-
     }
+
+    /**
+     * Initializes the code generator.
+     *
+     * @param output             The PrintWriter to the output file.
+     * @param ershovOptimization Whether the ershov register optimization should be used (--ershov)
+     */
 
     public CodeGenerator(PrintWriter output, boolean ershovOptimization) {
         this.output = new CodePrinter(output);
